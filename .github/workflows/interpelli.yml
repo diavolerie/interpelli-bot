@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: "*/10 * * * *"
 
+permissions:
+  contents: write
+
 concurrency:
   group: interpelli-monitor
   cancel-in-progress: false
@@ -32,6 +35,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PYTHONUNBUFFERED: "1"
         run: python monitor_interpelli.py
 
       - name: Commit updated state
@@ -39,5 +43,26 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add state.json
-          git diff --cached --quiet || git commit -m "Update state.json [skip ci]"
-          git push
+
+          if git diff --cached --quiet; then
+            echo "Nessuna modifica a state.json, salto il commit."
+            exit 0
+          fi
+
+          git commit -m "Update state.json [skip ci]"
+
+          attempt=1
+          max_attempts=5
+          until [ "$attempt" -gt "$max_attempts" ]; do
+            echo "Tentativo di push #$attempt..."
+            if git pull --rebase origin main && git push; then
+              echo "Push riuscito."
+              exit 0
+            fi
+            echo "Push fallito, ritento tra qualche secondo..."
+            sleep $((RANDOM % 10 + 5))
+            attempt=$((attempt + 1))
+          done
+
+          echo "Push fallito dopo $max_attempts tentativi."
+          exit 1

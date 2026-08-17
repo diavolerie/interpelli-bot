@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: "*/10 * * * *"
 
+permissions:
+  contents: write
+
 concurrency:
   group: interpelli-monitor
   cancel-in-progress: false

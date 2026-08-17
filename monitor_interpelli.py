@@ -5,7 +5,7 @@ import os
 import re
 import time
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -13,6 +13,26 @@ from bs4 import BeautifulSoup
 BASE_DIR = Path(__file__).resolve().parent
 SITES_PATH = BASE_DIR / "sites.json"
 STATE_PATH = BASE_DIR / "state.json"
+
+PROVINCES = [
+    "bergamo", "brescia", "como", "cremona", "lecco", "lodi", "mantova",
+    "milano", "monza", "monza brianza", "pavia", "sondrio", "varese"
+]
+
+PROVINCE_CODES = {
+    "BG": "Bergamo",
+    "BS": "Brescia",
+    "CO": "Como",
+    "CR": "Cremona",
+    "LC": "Lecco",
+    "LO": "Lodi",
+    "MN": "Mantova",
+    "MI": "Milano",
+    "MB": "Monza Brianza",
+    "PV": "Pavia",
+    "SO": "Sondrio",
+    "VA": "Varese"
+}
 
 def load_json(path, default):
     if path.exists():
@@ -43,11 +63,51 @@ def send_telegram(message):
     )
     response.raise_for_status()
 
-def looks_relevant(text, href, keywords):
-    blob = f"{text} {href}".lower()
-    return any(keyword.lower() in blob for keyword in keywords)
+def contains_any(blob, keywords):
+    blob_cf = blob.casefold()
+    return any(keyword.casefold() in blob_cf for keyword in keywords if keyword.strip())
 
-def extract_items(site_name, base_url, html_text, keywords):
+def looks_relevant(text, href, generic_keywords, target_keywords):
+    blob = f"{text} {href}"
+    generic_ok = contains_any(blob, generic_keywords) if generic_keywords else True
+    target_ok = contains_any(blob, target_keywords) if target_keywords else True
+    return generic_ok and target_ok
+
+def extract_province(text, url):
+    blob = f"{text} {url}".casefold()
+    host = urlparse(url).netloc.casefold()
+
+    for prov in PROVINCES:
+        if prov in blob or prov in host:
+            return prov.title()
+
+    match = re.search(r"provincia di ([A-Za-zÀ-ÖØ-öø-ÿ' -]+)", text, re.IGNORECASE)
+    if match:
+        return normalize_text(match.group(1)).title()
+
+    for code, name in PROVINCE_CODES.items():
+        if re.search(rf"\b{code}\b", text, re.IGNORECASE):
+            return name
+
+    return "Non trovata"
+
+def extract_comune(text):
+    text = normalize_text(text)
+
+    patterns = [
+        r"Comune di ([A-Za-zÀ-ÖØ-öø-ÿ' -]+)",
+        r"\b([A-Za-zÀ-ÖØ-öø-ÿ' -]+)\s*\((BG|BS|CO|CR|LC|LO|MN|MI|MB|PV|SO|VA)\)",
+        r"\b([A-Za-zÀ-ÖØ-öø-ÿ' -]+),\s*(BG|BS|CO|CR|LC|LO|MN|MI|MB|PV|SO|VA)\b",
+    ]
+
+    for pattern in patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            return normalize_text(match.group(1)).title()
+
+    return "Non trovato"
+
+def extract_items(site_name, base_url, html_text, generic_keywords, target_keywords):
     soup = BeautifulSoup(html_text, "html.parser")
     items = []
 
@@ -59,8 +119,18 @@ def extract_items(site_name, base_url, html_text, keywords):
 
         full_url = urljoin(base_url, href)
 
-        if not looks_relevant(text, full_url, keywords):
+        parent_text = ""
+        if a.parent:
+            parent_text = normalize_text(a.parent.get_text(" ", strip=True))
+
+        row_text = parent_text or text
+        combined_text = f"{text} {row_text}"
+
+        if not looks_relevant(combined_text, full_url, generic_keywords, target_keywords):
             continue
+
+        provincia = extract_province(combined_text, full_url)
+        comune = extract_comune(combined_text)
 
         raw = f"{site_name}|{text}|{full_url}"
         item_id = hashlib.sha256(raw.encode("utf-8")).hexdigest()
@@ -69,7 +139,9 @@ def extract_items(site_name, base_url, html_text, keywords):
             "id": item_id,
             "site": site_name,
             "title": text or "(senza titolo)",
-            "url": full_url
+            "url": full_url,
+            "provincia": provincia,
+            "comune": comune
         })
 
     dedup = {}
@@ -78,7 +150,6 @@ def extract_items(site_name, base_url, html_text, keywords):
     return list(dedup.values())
 
 def main():
-
     session = requests.Session()
     session.headers.update({
         "User-Agent": "Mozilla/5.0",
@@ -99,12 +170,13 @@ def main():
 
         name = site["name"]
         url = site["url"]
-        keywords = site.get("keywords", [])
+        generic_keywords = site.get("generic_keywords", [])
+        target_keywords = site.get("target_keywords", [])
 
         try:
-            r = session.get(url, timeout=30)
-            r.raise_for_status()
-            items = extract_items(name, url, r.text, keywords)
+            response = session.get(url, timeout=30)
+            response.raise_for_status()
+            items = extract_items(name, url, response.text, generic_keywords, target_keywords)
 
             for item in items:
                 new_seen.add(item["id"])
@@ -117,11 +189,13 @@ def main():
     first_run = not state.get("initialized", False)
 
     if not first_run and found_now:
-        found_now.sort(key=lambda x: (x["site"], x["title"]))
+        found_now.sort(key=lambda x: (x["site"], x["provincia"], x["title"]))
         for item in found_now:
             msg = (
                 f"Nuovo possibile interpello trovato\n"
                 f"Sito: {item['site']}\n"
+                f"Provincia: {item['provincia']}\n"
+                f"Comune: {item['comune']}\n"
                 f"Titolo: {item['title']}\n"
                 f"Link: {item['url']}"
             )

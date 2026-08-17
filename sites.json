@@ -3,20 +3,18 @@
     "name": "USR Lombardia - Interpelli",
     "url": "https://www.mim.gov.it/web/usr-lombardia/interpelli-ricerca-supplenti",
     "enabled": true,
-    "keywords": [
+    "generic_keywords": [
       "interpello",
       "supplenza",
+      "ricerca supplenti"
+    ],
+    "target_keywords": [
       "spagnolo",
       "lingua spagnola",
-      "a022",
-      "a-22",
+      "ac22",
       "ac24",
-      "a24",
-      "a-24",
-      "as2c",
       "ac25",
-      "a25",
-      "a-25",
+      "as2c",
       "am2c"
     ]
   }

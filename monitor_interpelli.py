@@ -381,7 +381,7 @@ def save_state(state):
 def send_telegram_message(text):
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
         log.warning("Telegram non configurato (token/chat_id mancanti), skip invio.")
-        return
+        return False
     api_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     try:
         resp = requests.post(
@@ -395,8 +395,10 @@ def send_telegram_message(text):
             timeout=REQUEST_TIMEOUT,
         )
         resp.raise_for_status()
+        return True
     except requests.RequestException as exc:
         log.error("Errore invio Telegram: %s", exc)
+        return False
 
 def notify_new_item(site_name, item):
     detail_note = " (classe trovata nel dettaglio)" if item["found_in_detail"] else ""
@@ -407,7 +409,7 @@ def notify_new_item(site_name, item):
         f"Provincia: {item['province']} | Comune: {item['comune']}\n"
         f"{item['url']}"
     )
-    send_telegram_message(text)
+    return send_telegram_message(text)
 
 def notify_error(site_name, exc):
     text = f"⚠️ Errore controllando {site_name}: {exc}"
@@ -471,23 +473,32 @@ def main():
 
         new_relevant_items = [it for it in relevant_items if it["id"] not in notified_ids]
 
+        actually_notified_ids = set()
         if not first_run:
             for item in new_relevant_items:
-                notify_new_item(site_name, item)
+                if notify_new_item(site_name, item):
+                    actually_notified_ids.add(item["id"])
+                # Se l'invio fallisce (token mancante, Telegram giu', ecc.)
+                # l'id NON entra in actually_notified_ids: al prossimo run
+                # sara' di nuovo tra i "nuovi da notificare" e si ritentera'.
         else:
             log.info(
                 "%s: %d annunci rilevanti trovati al primo avvio (non notificati).",
                 site_name, len(new_relevant_items),
             )
+            # Al primo avvio non notifichiamo di proposito: questi id vanno
+            # comunque segnati come "notified" per non spammare tutto lo
+            # storico appena il bot va a regime.
+            actually_notified_ids = {it["id"] for it in new_relevant_items}
 
         # aggiorna stato: evaluated = unione di tutto cio' che e' stato
         # VERAMENTE verificato (target trovato nell'elenco, o dettaglio
         # aperto con successo) - esclude gli id saltati per tetto massimo
         # o per errore di rete, che vanno ritentati al prossimo run;
-        # notified = unione dei rilevanti gia' notificati (o presenti al
-        # primo avvio).
+        # notified = id per cui l'invio Telegram e' davvero riuscito (o
+        # gli id gia' notificati/presenti al primo avvio).
         evaluated_ids |= (all_candidate_ids - unresolved_ids)
-        notified_ids |= {it["id"] for it in relevant_items}
+        notified_ids |= actually_notified_ids
 
         state["evaluated"][site_name] = sorted(evaluated_ids)
         state["notified"][site_name] = sorted(notified_ids)

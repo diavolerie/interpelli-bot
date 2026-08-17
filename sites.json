@@ -1,21 +1,85 @@
-[
+
   {
-    "name": "USR Lombardia - Interpelli",
-    "url": "https://www.mim.gov.it/web/usr-lombardia/interpelli-ricerca-supplenti",
+    "name": "USR Lombardia - Bergamo",
+    "url": "https://www.mim.gov.it/web/bergamo/interpelli-ricerca-supplenti",
     "enabled": true,
-    "generic_keywords": [
-      "interpello",
-      "supplenza",
-      "ricerca supplenti"
-    ],
-    "target_keywords": [
-      "spagnolo",
-      "lingua spagnola",
-      "ac22",
-      "ac24",
-      "ac25",
-      "as2c",
-      "am2c"
-    ]
+    "generic_keywords": ["interpello", "supplenza", "ricerca supplenti"],
+    "target_keywords": ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
+  },
+  {
+    "name": "USR Lombardia - Brescia",
+    "url": "https://www.mim.gov.it/web/brescia/interpelli-ricerca-supplenti",
+    "enabled": true,
+    "generic_keywords": ["interpello", "supplenza", "ricerca supplenti"],
+    "target_keywords": ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
+  },
+  {
+    "name": "USR Lombardia - Como",
+    "url": "https://www.mim.gov.it/web/como/interpelli-ricerca-supplenti",
+    "enabled": true,
+    "generic_keywords": ["interpello", "supplenza", "ricerca supplenti"],
+    "target_keywords": ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
+  },
+  {
+    "name": "USR Lombardia - Cremona",
+    "url": "https://www.mim.gov.it/web/cremona/interpelli-ricerca-supplenti",
+    "enabled": true,
+    "generic_keywords": ["interpello", "supplenza", "ricerca supplenti"],
+    "target_keywords": ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
+  },
+  {
+    "name": "USR Lombardia - Lecco",
+    "url": "https://www.mim.gov.it/web/lecco/interpelli-ricerca-supplenti",
+    "enabled": true,
+    "generic_keywords": ["interpello", "supplenza", "ricerca supplenti"],
+    "target_keywords": ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
+  },
+  {
+    "name": "USR Lombardia - Lodi",
+    "url": "https://www.mim.gov.it/web/lodi/interpelli-ricerca-supplenti",
+    "enabled": true,
+    "generic_keywords": ["interpello", "supplenza", "ricerca supplenti"],
+    "target_keywords": ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
+  },
+  {
+    "name": "USR Lombardia - Mantova",
+    "url": "https://www.mim.gov.it/web/mantova/interpelli-ricerca-supplenti",
+    "enabled": true,
+    "generic_keywords": ["interpello", "supplenza", "ricerca supplenti"],
+    "target_keywords": ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
+  },
+  {
+    "name": "USR Lombardia - Milano",
+    "url": "https://www.mim.gov.it/web/milano/interpelli-ricerca-supplenti",
+    "enabled": true,
+    "generic_keywords": ["interpello", "supplenza", "ricerca supplenti"],
+    "target_keywords": ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
+  },
+  {
+    "name": "USR Lombardia - Monza e Brianza",
+    "url": "https://www.mim.gov.it/web/monza-brianza/interpelli-ricerca-supplenti",
+    "enabled": true,
+    "generic_keywords": ["interpello", "supplenza", "ricerca supplenti"],
+    "target_keywords": ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
+  },
+  {
+    "name": "USR Lombardia - Pavia",
+    "url": "https://www.mim.gov.it/web/pavia/interpelli-ricerca-supplenti",
+    "enabled": true,
+    "generic_keywords": ["interpello", "supplenza", "ricerca supplenti"],
+    "target_keywords": ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
+  },
+  {
+    "name": "USR Lombardia - Sondrio",
+    "url": "https://www.mim.gov.it/web/sondrio/interpelli-ricerca-supplenti",
+    "enabled": true,
+    "generic_keywords": ["interpello", "supplenza", "ricerca supplenti"],
+    "target_keywords": ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
+  },
+  {
+    "name": "USR Lombardia - Varese",
+    "url": "https://www.mim.gov.it/web/varese/interpelli-ricerca-supplenti",
+    "enabled": true,
+    "generic_keywords": ["interpello", "supplenza", "ricerca supplenti"],
+    "target_keywords": ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
   }
-]

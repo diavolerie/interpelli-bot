@@ -116,7 +116,10 @@ def extract_comune(text):
     return "Non trovato"
 
 
-def extract_items(site_name, base_url, html_text, generic_keywords, target_keywords):
+def extract_candidates(site_name, base_url, html_text, generic_keywords):
+    """Trova tutti i link che sembrano un interpello (solo generic_keywords),
+    senza ancora filtrare per materia. Il controllo target_keywords viene
+    fatto dopo, in main(), perché a volte serve aprire la pagina di dettaglio."""
     soup = BeautifulSoup(html_text, "html.parser")
     items = []
 
@@ -140,15 +143,10 @@ def extract_items(site_name, base_url, html_text, generic_keywords, target_keywo
 
         combined_text = f"{text} {container_text}"
 
-        if not looks_relevant(combined_text, full_url, generic_keywords, target_keywords):
+        blob = f"{combined_text} {full_url}"
+        if generic_keywords and not contains_any(blob, generic_keywords):
             continue
 
-        provincia = extract_province(combined_text, full_url)
-        comune = extract_comune(combined_text)
-
-        # L'hash si basa solo sul sito + URL: se il testo del link cambia
-        # leggermente (es. aggiornamenti di formattazione) l'annuncio non
-        # viene considerato "nuovo" una seconda volta.
         raw = f"{site_name}|{full_url}"
         item_id = hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
@@ -157,14 +155,28 @@ def extract_items(site_name, base_url, html_text, generic_keywords, target_keywo
             "site": site_name,
             "title": text or "(senza titolo)",
             "url": full_url,
-            "provincia": provincia,
-            "comune": comune
+            "combined_text": combined_text
         })
 
     dedup = {}
     for item in items:
         dedup[item["id"]] = item
     return list(dedup.values())
+
+
+def matches_target(combined_text, url, target_keywords):
+    if not target_keywords:
+        return True
+    return contains_any(f"{combined_text} {url}", target_keywords)
+
+
+def fetch_detail_text(session, url):
+    """Scarica la pagina di dettaglio e ne estrae il testo visibile,
+    usato come seconda verifica quando l'elenco non basta."""
+    response = session.get(url, timeout=30)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+    return normalize_text(soup.get_text(" ", strip=True))
 
 
 def main():
@@ -194,12 +206,46 @@ def main():
         try:
             response = session.get(url, timeout=30)
             response.raise_for_status()
-            items = extract_items(name, url, response.text, generic_keywords, target_keywords)
+            candidates = extract_candidates(name, url, response.text, generic_keywords)
 
-            for item in items:
+            for item in candidates:
+                already_seen = item["id"] in old_seen
                 new_seen.add(item["id"])
-                if item["id"] not in old_seen:
-                    found_now.append(item)
+
+                if already_seen:
+                    # Annuncio già notificato o già scartato in passato:
+                    # non serve ricontrollarlo né riscaricarlo.
+                    continue
+
+                is_match = matches_target(item["combined_text"], item["url"], target_keywords)
+
+                # Se la materia non compare nell'elenco, proviamo ad aprire
+                # la pagina di dettaglio: alcune province (es. Milano) non
+                # mettono la classe di concorso nel titolo dell'elenco.
+                if not is_match and target_keywords:
+                    try:
+                        detail_text = fetch_detail_text(session, item["url"])
+                        if contains_any(detail_text, target_keywords):
+                            is_match = True
+                            item["combined_text"] = f"{item['combined_text']} {detail_text}"
+                        time.sleep(0.5)
+                    except Exception as e:
+                        errors.append(f"{name} (dettaglio {item['url']}): {e}")
+
+                if not is_match:
+                    continue
+
+                provincia = extract_province(item["combined_text"], item["url"])
+                comune = extract_comune(item["combined_text"])
+
+                found_now.append({
+                    "id": item["id"],
+                    "site": name,
+                    "title": item["title"],
+                    "url": item["url"],
+                    "provincia": provincia,
+                    "comune": comune
+                })
 
         except Exception as e:
             errors.append(f"{name}: {e}")

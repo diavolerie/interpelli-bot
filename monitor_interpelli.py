@@ -34,19 +34,23 @@ PROVINCE_CODES = {
     "VA": "Varese"
 }
 
+
 def load_json(path, default):
     if path.exists():
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
     return default
 
+
 def save_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
+
 def normalize_text(text):
     text = html.unescape(text or "")
     return re.sub(r"\s+", " ", text).strip()
+
 
 def send_telegram(message):
     token = os.environ["TELEGRAM_TOKEN"]
@@ -63,15 +67,18 @@ def send_telegram(message):
     )
     response.raise_for_status()
 
+
 def contains_any(blob, keywords):
     blob_cf = blob.casefold()
     return any(keyword.casefold() in blob_cf for keyword in keywords if keyword.strip())
+
 
 def looks_relevant(text, href, generic_keywords, target_keywords):
     blob = f"{text} {href}"
     generic_ok = contains_any(blob, generic_keywords) if generic_keywords else True
     target_ok = contains_any(blob, target_keywords) if target_keywords else True
     return generic_ok and target_ok
+
 
 def extract_province(text, url):
     blob = f"{text} {url}".casefold()
@@ -91,6 +98,7 @@ def extract_province(text, url):
 
     return "Non trovata"
 
+
 def extract_comune(text):
     text = normalize_text(text)
 
@@ -107,6 +115,7 @@ def extract_comune(text):
 
     return "Non trovato"
 
+
 def extract_items(site_name, base_url, html_text, generic_keywords, target_keywords):
     soup = BeautifulSoup(html_text, "html.parser")
     items = []
@@ -119,12 +128,17 @@ def extract_items(site_name, base_url, html_text, generic_keywords, target_keywo
 
         full_url = urljoin(base_url, href)
 
-        parent_text = ""
-        if a.parent:
-            parent_text = normalize_text(a.parent.get_text(" ", strip=True))
+        container = (
+            a.find_parent("tr")
+            or a.find_parent("li")
+            or a.find_parent("article")
+            or a.parent
+        )
+        container_text = normalize_text(
+            container.get_text(" ", strip=True)
+        ) if container else text
 
-        row_text = parent_text or text
-        combined_text = f"{text} {row_text}"
+        combined_text = f"{text} {container_text}"
 
         if not looks_relevant(combined_text, full_url, generic_keywords, target_keywords):
             continue
@@ -132,7 +146,10 @@ def extract_items(site_name, base_url, html_text, generic_keywords, target_keywo
         provincia = extract_province(combined_text, full_url)
         comune = extract_comune(combined_text)
 
-        raw = f"{site_name}|{text}|{full_url}"
+        # L'hash si basa solo sul sito + URL: se il testo del link cambia
+        # leggermente (es. aggiornamenti di formattazione) l'annuncio non
+        # viene considerato "nuovo" una seconda volta.
+        raw = f"{site_name}|{full_url}"
         item_id = hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
         items.append({
@@ -148,6 +165,7 @@ def extract_items(site_name, base_url, html_text, generic_keywords, target_keywo
     for item in items:
         dedup[item["id"]] = item
     return list(dedup.values())
+
 
 def main():
     session = requests.Session()
@@ -209,6 +227,7 @@ def main():
     state["initialized"] = True
     state["last_run"] = int(time.time())
     save_json(STATE_PATH, state)
+
 
 if __name__ == "__main__":
     main()

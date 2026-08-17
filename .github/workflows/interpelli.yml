@@ -3,10 +3,7 @@ name: Monitor Interpelli
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
-
-permissions:
-  contents: write
+    - cron: "*/10 * * * *"
 
 concurrency:
   group: interpelli-monitor
@@ -19,12 +16,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
         with:
           persist-credentials: true
 
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
@@ -33,7 +30,7 @@ jobs:
 
       - name: Run monitor
         env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python monitor_interpelli.py
 

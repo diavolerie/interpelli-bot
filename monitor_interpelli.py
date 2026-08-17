@@ -78,7 +78,6 @@ def extract_items(site_name, base_url, html_text, keywords):
     return list(dedup.values())
 
 def main():
-    send_telegram("Test Telegram OK")
 
     session = requests.Session()
     session.headers.update({

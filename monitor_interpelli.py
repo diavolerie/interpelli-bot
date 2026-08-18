@@ -37,6 +37,7 @@ import sys
 import time
 import hashlib
 import logging
+import difflib
 from urllib.parse import urljoin
 
 import requests
@@ -48,6 +49,7 @@ from bs4 import BeautifulSoup
 
 SITES_FILE = "sites.json"
 STATE_FILE = "state.json"
+SCHOOLS_FILE = "schools.json"
 
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
@@ -134,6 +136,140 @@ def extract_provincia_comune(text):
     return (provincia or "Non trovata"), (comune or "Non trovato")
 
 # ---------------------------------------------------------------------------
+# Indice scuole (schools.json) e matching
+# ---------------------------------------------------------------------------
+
+# Mappa "suffisso nome sito" -> nome provincia come compare in schools.json,
+# usata come area di ricerca quando il comune non e' stato individuato.
+SITE_TO_PROVINCIA = {
+    "Bergamo": "BERGAMO",
+    "Brescia": "BRESCIA",
+    "Como": "COMO",
+    "Cremona": "CREMONA",
+    "Lecco": "LECCO",
+    "Lodi": "LODI",
+    "Mantova": "MANTOVA",
+    "Milano": "MILANO",
+    "Monza e Brianza": "MONZA E DELLA BRIANZA",
+    "Pavia": "PAVIA",
+    "Sondrio": "SONDRIO",
+    "Varese": "VARESE",
+}
+
+CODE_PATTERN = re.compile(r"\b[A-Z]{2}[A-Z0-9]{8}\b")
+
+# Soglia minima di somiglianza (0-1) per accettare un abbinamento fuzzy
+# sul nome scuola. Sotto questa soglia preferiamo non abbinare nulla
+# piuttosto che rischiare di mostrare i dati della scuola sbagliata.
+FUZZY_MATCH_THRESHOLD = 0.55
+
+def load_schools():
+    if not os.path.exists(SCHOOLS_FILE):
+        log.warning("%s non trovato: il matching scuole sara' disattivato.", SCHOOLS_FILE)
+        return []
+    with open(SCHOOLS_FILE, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def build_school_indexes(schools):
+    """Costruisce due indici per la ricerca rapida:
+    - by_code: codice istituto/meccanografico (maiuscolo) -> record scuola
+    - by_comune: nome comune (maiuscolo) -> lista di record scuola
+    """
+    by_code = {}
+    by_comune = {}
+    for s in schools:
+        for code in (s.get("codice_istituto"), s.get("codice_meccanografico")):
+            if code:
+                by_code[code.upper()] = s
+        comune = s.get("comune", "").upper()
+        if comune:
+            by_comune.setdefault(comune, []).append(s)
+    return by_code, by_comune
+
+def site_provincia_hint(site_name):
+    """Ricava il nome provincia (come in schools.json) dal nome del sito,
+    es. 'USR Lombardia - Como' -> 'COMO'."""
+    for suffix, provincia in SITE_TO_PROVINCIA.items():
+        if site_name.endswith(suffix):
+            return provincia
+    return None
+
+def find_school_by_code(text, by_code):
+    """Cerca un codice meccanografico/istituto valido dentro il testo.
+    E' il metodo di abbinamento piu' affidabile: se il codice compare,
+    identifica la scuola in modo univoco."""
+    for candidate in CODE_PATTERN.findall(text.upper()):
+        if candidate in by_code:
+            return by_code[candidate]
+    return None
+
+def find_school_by_name(title, comune_hint, site_name, by_comune):
+    """Fallback quando non c'e' un codice nel testo: confronta il titolo
+    dell'annuncio con i nomi delle scuole, ristretto al comune gia'
+    individuato (se noto) o, in mancanza, all'intera provincia del sito.
+    Ritorna None se nessun candidato supera la soglia minima di
+    somiglianza, per evitare abbinamenti inventati."""
+    candidates = []
+    if comune_hint and comune_hint not in ("Non trovato", "Non trovata"):
+        candidates = by_comune.get(comune_hint.upper(), [])
+
+    if not candidates:
+        provincia = site_provincia_hint(site_name)
+        if provincia:
+            for comune, schools_in_comune in by_comune.items():
+                candidates.extend(
+                    s for s in schools_in_comune if s.get("provincia") == provincia
+                )
+
+    if not candidates:
+        return None
+
+    title_norm = normalize_text(title)
+
+    # Il titolo spesso finisce con "- COMUNE" (es. "IC Capponi - MILANO").
+    # Lo togliamo prima del confronto: altrimenti scuole il cui nome
+    # ufficiale contiene per caso il nome del comune (es. "CPIA 5 MILANO")
+    # otterrebbero un punteggio artificialmente alto solo per quello.
+    if comune_hint and comune_hint not in ("Non trovato", "Non trovata"):
+        suffix = f"- {comune_hint}"
+        if title_norm.casefold().endswith(suffix.casefold()):
+            title_norm = title_norm[: -len(suffix)].strip(" -")
+
+    title_cf = title_norm.casefold()
+    best, best_score = None, 0.0
+
+    for s in candidates:
+        for field in ("nome_scuola", "nome_istituto"):
+            name = s.get(field, "")
+            if not name:
+                continue
+            name_cf = name.casefold()
+            # match forte: il nome della scuola compare per intero nel titolo
+            # (o viceversa) - ma solo se abbastanza lungo da essere significativo,
+            # altrimenti parole corte/comuni darebbero falsi positivi.
+            if len(name_cf) >= 6 and (name_cf in title_cf or title_cf in name_cf):
+                score = 0.9
+            else:
+                score = difflib.SequenceMatcher(None, name_cf, title_cf).ratio()
+            if score > best_score:
+                best_score, best = score, s
+
+    if best_score >= FUZZY_MATCH_THRESHOLD:
+        return best
+    return None
+
+def match_school(title, extra_text, comune_hint, site_name, by_code, by_comune):
+    """Prova ad abbinare un annuncio a una scuola specifica di schools.json.
+    1) cerca un codice meccanografico/istituto in titolo+testo aggiuntivo
+       (piu' affidabile, nessuna soglia di incertezza);
+    2) altrimenti prova un confronto fuzzy sul nome, ristretto per area.
+    """
+    by_code_match = find_school_by_code(f"{title} {extra_text}", by_code)
+    if by_code_match:
+        return by_code_match
+    return find_school_by_name(title, comune_hint, site_name, by_comune)
+
+# ---------------------------------------------------------------------------
 # Rete
 # ---------------------------------------------------------------------------
 
@@ -173,31 +309,32 @@ def detail_page_matches_target(url, target_keywords):
     dettaglio e' HTML, controlla anche fino a MAX_PDF_LINKS_PER_DETAIL PDF
     eventualmente allegati.
 
-    Ritorna una tupla (match, errore). errore=True solo se il fetch della
-    RISORSA PRINCIPALE fallisce (link diretto al PDF, o pagina HTML): in
-    tal caso l'annuncio va ritentato al prossimo run. Un fallimento nel
-    leggere un singolo PDF allegato secondario viene solo loggato e non
-    blocca il resto (l'HTML e' comunque stato controllato).
+    Ritorna una tupla (match, errore, testo_esaminato):
+    - match: True se trovata una target_keyword.
+    - errore: True se la richiesta e' fallita (l'annuncio va ritentato).
+    - testo_esaminato: tutto il testo letto (pagina + PDF), utile poi per
+      cercarci dentro un codice meccanografico/istituto della scuola.
     """
     try:
         if is_pdf_url(url):
             pdf_bytes = fetch_bytes(url)
             text = extract_pdf_text(pdf_bytes)
-            return contains_any(text, target_keywords), False
+            return contains_any(text, target_keywords), False, text
 
         html = fetch(url)
     except requests.RequestException as exc:
         log.warning("Impossibile aprire pagina di dettaglio %s: %s", url, exc)
-        return False, True
+        return False, True, ""
     except Exception as exc:
         log.warning("Errore leggendo PDF %s: %s", url, exc)
-        return False, True
+        return False, True, ""
 
     soup = BeautifulSoup(html, "html.parser")
     text = normalize_text(soup.get_text(" ", strip=True))
     if contains_any(text, target_keywords):
-        return True, False
+        return True, False, text
 
+    combined_text = text
     pdf_links = [
         urljoin(url, a["href"])
         for a in soup.find_all("a", href=True)
@@ -210,10 +347,9 @@ def detail_page_matches_target(url, target_keywords):
         except Exception as exc:
             log.warning("Impossibile leggere PDF allegato %s: %s", pdf_url, exc)
             continue
-        if contains_any(pdf_text, target_keywords):
-            return True, False
+        combined_text = f"{combined_text} {pdf_text}"
 
-    return False, False
+    return contains_any(combined_text, target_keywords), False, combined_text
 
 # ---------------------------------------------------------------------------
 # Estrazione annunci da una pagina-elenco
@@ -277,6 +413,7 @@ def extract_items(
 
         found_in_detail = False
         target_ok = contains_any(blob, target_keywords)
+        detail_text = ""
 
         if not target_ok and check_details:
             already_evaluated = item_id in known_ids
@@ -289,7 +426,9 @@ def extract_items(
                 unresolved_ids.add(item_id)
             else:
                 detail_checks_done += 1
-                detail_match, detail_error = detail_page_matches_target(full_url, target_keywords)
+                detail_match, detail_error, detail_text = detail_page_matches_target(
+                    full_url, target_keywords
+                )
                 if detail_error:
                     unresolved_ids.add(item_id)
                 elif detail_match:
@@ -309,6 +448,7 @@ def extract_items(
             "comune": comune,
             "url": full_url,
             "found_in_detail": found_in_detail,
+            "match_text": f"{blob} {detail_text}",
         })
 
     if check_details:
@@ -400,15 +540,31 @@ def send_telegram_message(text):
         log.error("Errore invio Telegram: %s", exc)
         return False
 
-def notify_new_item(site_name, item):
+def notify_new_item(site_name, item, school):
     detail_note = " (classe trovata nel dettaglio)" if item["found_in_detail"] else ""
-    text = (
-        f"📢 Nuovo interpello spagnolo{detail_note}\n"
-        f"Sito: {site_name}\n"
-        f"Titolo: {item['title']}\n"
-        f"Provincia: {item['province']} | Comune: {item['comune']}\n"
-        f"{item['url']}"
-    )
+    lines = [
+        f"📢 Nuovo interpello spagnolo{detail_note}",
+        f"Sito: {site_name}",
+        f"Titolo: {item['title']}",
+    ]
+
+    if school:
+        nome = school.get("nome_scuola") or school.get("nome_istituto") or item["title"]
+        comune = school.get("comune") or item["comune"]
+        provincia = school.get("provincia") or item["province"]
+        lines.append(f"🏫 {nome}")
+        lines.append(f"📍 {comune} ({provincia})")
+        if school.get("sito_web"):
+            lines.append(f"🌐 {school['sito_web']}")
+        if school.get("telefono"):
+            lines.append(f"📞 {school['telefono']}")
+        if school.get("link_maps"):
+            lines.append(f"🗺️ {school['link_maps']}")
+    else:
+        lines.append(f"Provincia: {item['province']} | Comune: {item['comune']}")
+
+    lines.append(f"🔗 {item['url']}")
+    text = "\n".join(lines)
     return send_telegram_message(text)
 
 def notify_error(site_name, exc):
@@ -431,6 +587,10 @@ def main():
     if first_run:
         state = {"evaluated": {}, "notified": {}}
         log.info("Primo avvio rilevato: nessuna notifica verra' inviata in questa run.")
+
+    schools = load_schools()
+    by_code, by_comune = build_school_indexes(schools)
+    log.info("Indice scuole caricato: %d scuole.", len(schools))
 
     for site in sites:
         if not site.get("enabled", True):
@@ -476,7 +636,11 @@ def main():
         actually_notified_ids = set()
         if not first_run:
             for item in new_relevant_items:
-                if notify_new_item(site_name, item):
+                school = match_school(
+                    item["title"], item.get("match_text", ""),
+                    item["comune"], site_name, by_code, by_comune,
+                )
+                if notify_new_item(site_name, item, school):
                     actually_notified_ids.add(item["id"])
                 # Se l'invio fallisce (token mancante, Telegram giu', ecc.)
                 # l'id NON entra in actually_notified_ids: al prossimo run

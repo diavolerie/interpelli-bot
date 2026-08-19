@@ -1,56 +1,48 @@
 name: Monitor Interpelli
-
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
-
+    # Ogni 5 minuti, ma sfalsato di 3 (03, 08, 13, 18...) invece che sui
+    # minuti "tondi" (00, 05, 10...), i piu' congestionati su GitHub
+    # Actions perche' migliaia di altri repository li usano allo stesso
+    # modo. Stessa frequenza, ma con code di attesa piu' corte.
+    - cron: "3-59/5 * * * *"
 permissions:
   contents: write
-
 concurrency:
   group: interpelli-monitor
   cancel-in-progress: false
-
 jobs:
   check-sites:
     runs-on: ubuntu-latest
     timeout-minutes: 60
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           persist-credentials: true
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install dependencies
         run: pip install -r requirements.txt
-
       - name: Run monitor
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           PYTHONUNBUFFERED: "1"
         run: python monitor_interpelli.py
-
       - name: Commit updated state
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add state.json
-
           if git diff --cached --quiet; then
             echo "Nessuna modifica a state.json, salto il commit."
             exit 0
           fi
-
           git commit -m "Update state.json [skip ci]"
-
           attempt=1
           max_attempts=5
           until [ "$attempt" -gt "$max_attempts" ]; do
@@ -63,6 +55,5 @@ jobs:
             sleep $((RANDOM % 10 + 5))
             attempt=$((attempt + 1))
           done
-
           echo "Push fallito dopo $max_attempts tentativi."
           exit 1

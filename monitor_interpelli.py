@@ -38,6 +38,7 @@ import time
 import hashlib
 import logging
 import difflib
+from urllib.parse import urljoin
 from urllib.parse import urljoin, urlparse
 
 import requests
@@ -330,6 +331,9 @@ def detail_page_matches_target(url, target_keywords):
         return False, True, ""
 
     soup = BeautifulSoup(html, "html.parser")
+    text = normalize_text(soup.get_text(" ", strip=True))
+    if contains_any(text, target_keywords):
+        return True, False, text
     body_text = normalize_text(soup.get_text(" ", strip=True))
 
     # Testo "segnale", ristretto e affidabile, usato SOLO per cercare un
@@ -349,6 +353,7 @@ def detail_page_matches_target(url, target_keywords):
     if contains_any(body_text, target_keywords):
         return True, False, detail_signal_text
 
+    combined_text = text
     pdf_links = [
         urljoin(url, a["href"])
         for a in soup.find_all("a", href=True)
@@ -362,12 +367,14 @@ def detail_page_matches_target(url, target_keywords):
         except Exception as exc:
             log.warning("Impossibile leggere PDF allegato %s: %s", pdf_url, exc)
             continue
+        combined_text = f"{combined_text} {pdf_text}"
         combined_body = f"{combined_body} {pdf_text}"
         # i PDF allegati sono testo affidabile e specifico di QUESTO
         # annuncio (non pagina intera): possiamo usarli anche per la
         # ricerca del codice scuola.
         detail_signal_text = f"{detail_signal_text} {pdf_text}"
 
+    return contains_any(combined_text, target_keywords), False, combined_text
     return contains_any(combined_body, target_keywords), False, detail_signal_text
 
 # ---------------------------------------------------------------------------
@@ -621,12 +628,6 @@ def main():
         state = {"evaluated": {}, "notified": {}}
         log.info("Primo avvio rilevato: nessuna notifica verra' inviata in questa run.")
 
-    # workflow_dispatch = avviato manualmente (da GitHub o dal comando
-    # Telegram tramite telegram_listener.py); 'schedule' = run automatico
-    # periodico. Usato solo per decidere se mandare un riepilogo finale.
-    is_manual_run = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
-    total_new_notified = 0
-
     schools = load_schools()
     by_code, by_comune = build_school_indexes(schools)
     log.info("Indice scuole caricato: %d scuole.", len(schools))
@@ -681,7 +682,6 @@ def main():
                 )
                 if notify_new_item(site_name, item, school):
                     actually_notified_ids.add(item["id"])
-                    total_new_notified += 1
                 # Se l'invio fallisce (token mancante, Telegram giu', ecc.)
                 # l'id NON entra in actually_notified_ids: al prossimo run
                 # sara' di nuovo tra i "nuovi da notificare" e si ritentera'.
@@ -706,18 +706,6 @@ def main():
 
         state["evaluated"][site_name] = sorted(evaluated_ids)
         state["notified"][site_name] = sorted(notified_ids)
-
-    if is_manual_run and not first_run:
-        if total_new_notified == 0:
-            send_telegram_message(
-                "🔍 Ricerca manuale completata: nessun nuovo interpello di spagnolo al momento."
-            )
-        else:
-            plural = "i" if total_new_notified > 1 else "o"
-            send_telegram_message(
-                f"🔍 Ricerca manuale completata: {total_new_notified} nuovo{plural} "
-                f"interpello{plural} trovato{plural} (vedi sopra)."
-            )
 
     save_state(state)
     log.info("Esecuzione completata.")

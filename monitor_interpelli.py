@@ -621,6 +621,12 @@ def main():
         state = {"evaluated": {}, "notified": {}}
         log.info("Primo avvio rilevato: nessuna notifica verra' inviata in questa run.")
 
+    # workflow_dispatch = avviato manualmente (da GitHub o dal comando
+    # Telegram tramite telegram_listener.py); 'schedule' = run automatico
+    # periodico. Usato solo per decidere se mandare un riepilogo finale.
+    is_manual_run = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
+    total_new_notified = 0
+
     schools = load_schools()
     by_code, by_comune = build_school_indexes(schools)
     log.info("Indice scuole caricato: %d scuole.", len(schools))
@@ -675,6 +681,7 @@ def main():
                 )
                 if notify_new_item(site_name, item, school):
                     actually_notified_ids.add(item["id"])
+                    total_new_notified += 1
                 # Se l'invio fallisce (token mancante, Telegram giu', ecc.)
                 # l'id NON entra in actually_notified_ids: al prossimo run
                 # sara' di nuovo tra i "nuovi da notificare" e si ritentera'.
@@ -699,6 +706,18 @@ def main():
 
         state["evaluated"][site_name] = sorted(evaluated_ids)
         state["notified"][site_name] = sorted(notified_ids)
+
+    if is_manual_run and not first_run:
+        if total_new_notified == 0:
+            send_telegram_message(
+                "🔍 Ricerca manuale completata: nessun nuovo interpello di spagnolo al momento."
+            )
+        else:
+            plural = "i" if total_new_notified > 1 else "o"
+            send_telegram_message(
+                f"🔍 Ricerca manuale completata: {total_new_notified} nuovo{plural} "
+                f"interpello{plural} trovato{plural} (vedi sopra)."
+            )
 
     save_state(state)
     log.info("Esecuzione completata.")

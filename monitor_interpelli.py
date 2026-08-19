@@ -38,7 +38,7 @@ import time
 import hashlib
 import logging
 import difflib
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -330,16 +330,31 @@ def detail_page_matches_target(url, target_keywords):
         return False, True, ""
 
     soup = BeautifulSoup(html, "html.parser")
-    text = normalize_text(soup.get_text(" ", strip=True))
-    if contains_any(text, target_keywords):
-        return True, False, text
+    body_text = normalize_text(soup.get_text(" ", strip=True))
 
-    combined_text = text
+    # Testo "segnale", ristretto e affidabile, usato SOLO per cercare un
+    # eventuale codice scuola: prendiamo solo <title> e <h1> della pagina,
+    # non l'intero corpo. L'intero corpo puo' contenere sidebar/widget con
+    # "altri interpelli correlati" e i relativi codici di ALTRE scuole,
+    # che causerebbero un abbinamento sbagliato se usati per la ricerca.
+    signal_parts = []
+    title_tag = soup.find("title")
+    if title_tag and title_tag.get_text(strip=True):
+        signal_parts.append(normalize_text(title_tag.get_text(" ", strip=True)))
+    h1_tag = soup.find("h1")
+    if h1_tag and h1_tag.get_text(strip=True):
+        signal_parts.append(normalize_text(h1_tag.get_text(" ", strip=True)))
+    detail_signal_text = " ".join(signal_parts)
+
+    if contains_any(body_text, target_keywords):
+        return True, False, detail_signal_text
+
     pdf_links = [
         urljoin(url, a["href"])
         for a in soup.find_all("a", href=True)
         if is_pdf_url(urljoin(url, a["href"]))
     ]
+    combined_body = body_text
     for pdf_url in pdf_links[:MAX_PDF_LINKS_PER_DETAIL]:
         try:
             pdf_bytes = fetch_bytes(pdf_url)
@@ -347,9 +362,13 @@ def detail_page_matches_target(url, target_keywords):
         except Exception as exc:
             log.warning("Impossibile leggere PDF allegato %s: %s", pdf_url, exc)
             continue
-        combined_text = f"{combined_text} {pdf_text}"
+        combined_body = f"{combined_body} {pdf_text}"
+        # i PDF allegati sono testo affidabile e specifico di QUESTO
+        # annuncio (non pagina intera): possiamo usarli anche per la
+        # ricerca del codice scuola.
+        detail_signal_text = f"{detail_signal_text} {pdf_text}"
 
-    return contains_any(combined_text, target_keywords), False, combined_text
+    return contains_any(combined_body, target_keywords), False, detail_signal_text
 
 # ---------------------------------------------------------------------------
 # Estrazione annunci da una pagina-elenco
@@ -386,6 +405,8 @@ def extract_items(
     unresolved_ids = set()  # candidati NON verificati (tetto raggiunto o errore rete):
                              # non vanno marcati "evaluated", cosi' si ritentano al prossimo run
 
+    base_path = urlparse(url).path.rstrip("/")
+
     detail_checks_done = 0
     detail_checks_skipped = 0
 
@@ -395,6 +416,15 @@ def extract_items(
             continue
 
         full_url = urljoin(url, a["href"])
+
+        # Scarta i link che puntano alla pagina-elenco stessa (es. link di
+        # filtro/categoria con solo parametri diversi): non sono annunci
+        # veri, e se scambiati per tali finiscono per "trovare" nel loro
+        # stesso corpo (l'intera pagina elenco) qualsiasi parola o codice
+        # presente altrove nella pagina, causando falsi abbinamenti.
+        if urlparse(full_url).path.rstrip("/") == base_path:
+            continue
+
         item_id = make_id(site_name, full_url)
 
         if item_id in seen_this_run:
@@ -468,12 +498,15 @@ def collect_evaluated_candidate_ids(site_name, url, html, generic_keywords):
     scartati."""
     soup = BeautifulSoup(html, "html.parser")
     ids = set()
+    base_path = urlparse(url).path.rstrip("/")
 
     for a in soup.find_all("a", href=True):
         link_text = normalize_text(a.get_text(" ", strip=True))
         if not link_text:
             continue
         full_url = urljoin(url, a["href"])
+        if urlparse(full_url).path.rstrip("/") == base_path:
+            continue
         container = find_container(a)
         container_text = normalize_text(
             container.get_text(" ", strip=True)

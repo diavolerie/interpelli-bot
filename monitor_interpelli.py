@@ -26,7 +26,7 @@ Logica principale:
   si popola solo lo stato, per evitare spam con tutto lo storico.
 - Ogni <a href> viene deduplicato per item_id (site_name+full_url)
   PRIMA di qualsiasi controllo, per evitare di contare/controllare
-  piÃ¹ volte lo stesso annuncio se il link compare ripetuto nella
+  più volte lo stesso annuncio se il link compare ripetuto nella
   pagina (menu, sidebar, paginazione, ecc.).
 """
 
@@ -54,6 +54,8 @@ SCHOOLS_FILE = "schools.json"
 
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
+# Supporta piu' destinatari separati da virgola, es. "111111,222222"
+TELEGRAM_CHAT_IDS = [c.strip() for c in TELEGRAM_CHAT_ID.split(",") if c.strip()]
 
 REQUEST_TIMEOUT = 20
 REQUEST_HEADERS = {
@@ -77,10 +79,10 @@ log = logging.getLogger("monitor_interpelli")
 
 # Pattern per provare a estrarre provincia/comune dal testo dell'annuncio
 PROVINCIA_PATTERN = re.compile(
-    r"\bprovincia\s+di\s+([a-zA-ZÃ-Ã¿' ]{3,30})", re.IGNORECASE
+    r"\bprovincia\s+di\s+([a-zA-ZÀ-ÿ' ]{3,30})", re.IGNORECASE
 )
 COMUNE_SIGLA_PATTERN = re.compile(r"\(([A-Z]{2})\)")
-COMUNE_MAIUSC_PATTERN = re.compile(r"-\s*([A-ZÃ-Ã' ]{3,40})\s*$")
+COMUNE_MAIUSC_PATTERN = re.compile(r"-\s*([A-ZÀ-Ý' ]{3,40})\s*$")
 
 # ---------------------------------------------------------------------------
 # Utility di testo
@@ -237,6 +239,25 @@ def find_school_by_name(title, comune_hint, site_name, by_comune):
             title_norm = title_norm[: -len(suffix)].strip(" -")
 
     title_cf = title_norm.casefold()
+
+    # Se il titolo contiene un nome tra virgolette (es. 'Liceo Classico
+    # "Virgilio" Mantova'), e' quasi sempre il nome PROPRIO distintivo
+    # della scuola - molto piu' affidabile di parole generiche come
+    # "Liceo"/"Istituto"/il nome del comune, che possono far vincere per
+    # sbaglio un candidato diverso solo perche' condivide piu' lettere.
+    # Se un candidato contiene questo nome, lo priorizziamo.
+    quoted_match = re.search(r'["\'«»“”]([^"\'«»“”]{3,40})["\'«»“”]', title_norm)
+    quoted_name_cf = quoted_match.group(1).casefold().strip() if quoted_match else None
+
+    if quoted_name_cf:
+        priority_candidates = [
+            s for s in candidates
+            if quoted_name_cf in s.get("nome_scuola", "").casefold()
+            or quoted_name_cf in s.get("nome_istituto", "").casefold()
+        ]
+        if priority_candidates:
+            candidates = priority_candidates
+
     best, best_score = None, 0.0
 
     for s in candidates:
@@ -331,9 +352,6 @@ def detail_page_matches_target(url, target_keywords):
         return False, True, ""
 
     soup = BeautifulSoup(html, "html.parser")
-    text = normalize_text(soup.get_text(" ", strip=True))
-    if contains_any(text, target_keywords):
-        return True, False, text
     body_text = normalize_text(soup.get_text(" ", strip=True))
 
     # Testo "segnale", ristretto e affidabile, usato SOLO per cercare un
@@ -353,7 +371,6 @@ def detail_page_matches_target(url, target_keywords):
     if contains_any(body_text, target_keywords):
         return True, False, detail_signal_text
 
-    combined_text = text
     pdf_links = [
         urljoin(url, a["href"])
         for a in soup.find_all("a", href=True)
@@ -367,14 +384,12 @@ def detail_page_matches_target(url, target_keywords):
         except Exception as exc:
             log.warning("Impossibile leggere PDF allegato %s: %s", pdf_url, exc)
             continue
-        combined_text = f"{combined_text} {pdf_text}"
         combined_body = f"{combined_body} {pdf_text}"
         # i PDF allegati sono testo affidabile e specifico di QUESTO
         # annuncio (non pagina intera): possiamo usarli anche per la
         # ricerca del codice scuola.
         detail_signal_text = f"{detail_signal_text} {pdf_text}"
 
-    return contains_any(combined_text, target_keywords), False, combined_text
     return contains_any(combined_body, target_keywords), False, detail_signal_text
 
 # ---------------------------------------------------------------------------
@@ -559,31 +574,36 @@ def save_state(state):
 # ---------------------------------------------------------------------------
 
 def send_telegram_message(text):
-    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_IDS:
         log.warning("Telegram non configurato (token/chat_id mancanti), skip invio.")
         return False
+
     api_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    try:
-        resp = requests.post(
-            api_url,
-            data={
-                "chat_id": TELEGRAM_CHAT_ID,
-                "text": text,
-                "parse_mode": "HTML",
-                "disable_web_page_preview": False,
-            },
-            timeout=REQUEST_TIMEOUT,
-        )
-        resp.raise_for_status()
-        return True
-    except requests.RequestException as exc:
-        log.error("Errore invio Telegram: %s", exc)
-        return False
+    at_least_one_ok = False
+
+    for chat_id in TELEGRAM_CHAT_IDS:
+        try:
+            resp = requests.post(
+                api_url,
+                data={
+                    "chat_id": chat_id,
+                    "text": text,
+                    "parse_mode": "HTML",
+                    "disable_web_page_preview": False,
+                },
+                timeout=REQUEST_TIMEOUT,
+            )
+            resp.raise_for_status()
+            at_least_one_ok = True
+        except requests.RequestException as exc:
+            log.error("Errore invio Telegram a chat %s: %s", chat_id, exc)
+
+    return at_least_one_ok
 
 def notify_new_item(site_name, item, school):
     detail_note = " (classe trovata nel dettaglio)" if item["found_in_detail"] else ""
     lines = [
-        f"ð¢ Nuovo interpello spagnolo{detail_note}",
+        f"📢 Nuovo interpello spagnolo{detail_note}",
         f"Sito: {site_name}",
         f"Titolo: {item['title']}",
     ]
@@ -592,23 +612,23 @@ def notify_new_item(site_name, item, school):
         nome = school.get("nome_scuola") or school.get("nome_istituto") or item["title"]
         comune = school.get("comune") or item["comune"]
         provincia = school.get("provincia") or item["province"]
-        lines.append(f"ð« {nome}")
-        lines.append(f"ð {comune} ({provincia})")
+        lines.append(f"🏫 {nome}")
+        lines.append(f"📍 {comune} ({provincia})")
         if school.get("sito_web"):
-            lines.append(f"ð {school['sito_web']}")
+            lines.append(f"🌐 {school['sito_web']}")
         if school.get("telefono"):
-            lines.append(f"ð {school['telefono']}")
+            lines.append(f"📞 {school['telefono']}")
         if school.get("link_maps"):
-            lines.append(f"ðºï¸ {school['link_maps']}")
+            lines.append(f"🗺️ {school['link_maps']}")
     else:
         lines.append(f"Provincia: {item['province']} | Comune: {item['comune']}")
 
-    lines.append(f"ð {item['url']}")
+    lines.append(f"🔗 {item['url']}")
     text = "\n".join(lines)
     return send_telegram_message(text)
 
 def notify_error(site_name, exc):
-    text = f"â ï¸ Errore controllando {site_name}: {exc}"
+    text = f"⚠️ Errore controllando {site_name}: {exc}"
     log.error(text)
     send_telegram_message(text)
 

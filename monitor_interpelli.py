@@ -371,11 +371,17 @@ def detail_page_matches_target(url, target_keywords):
     if contains_any(body_text, target_keywords):
         return True, False, detail_signal_text
 
-    pdf_links = [
-        urljoin(url, a["href"])
-        for a in soup.find_all("a", href=True)
-        if is_pdf_url(urljoin(url, a["href"]))
-    ]
+    pdf_links = []
+    for a in soup.find_all("a", href=True):
+        try:
+            candidate_url = urljoin(url, a["href"])
+        except ValueError as exc:
+            # href malformato (es. simile a un indirizzo IPv6 non valido):
+            # lo scartiamo invece di far crashare l'intera esecuzione.
+            log.warning("href malformato ignorato in %s: %r (%s)", url, a["href"], exc)
+            continue
+        if is_pdf_url(candidate_url):
+            pdf_links.append(candidate_url)
     combined_body = body_text
     for pdf_url in pdf_links[:MAX_PDF_LINKS_PER_DETAIL]:
         try:
@@ -437,7 +443,11 @@ def extract_items(
         if not link_text:
             continue
 
-        full_url = urljoin(url, a["href"])
+        try:
+            full_url = urljoin(url, a["href"])
+        except ValueError as exc:
+            log.warning("href malformato ignorato in %s: %r (%s)", url, a["href"], exc)
+            continue
 
         # Scarta i link che puntano alla pagina-elenco stessa (es. link di
         # filtro/categoria con solo parametri diversi): non sono annunci
@@ -526,7 +536,11 @@ def collect_evaluated_candidate_ids(site_name, url, html, generic_keywords):
         link_text = normalize_text(a.get_text(" ", strip=True))
         if not link_text:
             continue
-        full_url = urljoin(url, a["href"])
+        try:
+            full_url = urljoin(url, a["href"])
+        except ValueError as exc:
+            log.warning("href malformato ignorato in %s: %r (%s)", url, a["href"], exc)
+            continue
         if urlparse(full_url).path.rstrip("/") == base_path:
             continue
         container = find_container(a)

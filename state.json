@@ -3836,6 +3836,7 @@
       "a0d1bb95f26b5b01",
       "a1d8b5e9ddc68a85",
       "a20f59561f217f38",
+      "a3b713f67adb021f",
       "a3cc39ba4e7bfa5a",
       "a51cae5695f900ff",
       "a57870cfb7f11cb9",
@@ -5029,6 +5030,7 @@
       "6a0c9b4363362628",
       "6a1812bc766ba26f",
       "6a62b8c509d478c0",
+      "6ad013347f5da7c9",
       "6b565300fdb52ba2",
       "6b7f1b88745885b6",
       "6cb9ea156ab39cdf",
@@ -5233,6 +5235,7 @@
       "22773df61b9d049b",
       "23d0d1ea58ba2097",
       "24572bc488b4420d",
+      "251d0ec2faa6fe82",
       "264d7e3bdd1fa470",
       "26ad03ddd9b4dc68",
       "291fe56f8d6d54bd",
@@ -7636,7 +7639,9 @@
       "9bdf26891ba5b469"
     ],
     "USR Lombardia - Pavia": [],
-    "USR Lombardia - Sondrio": [],
+    "USR Lombardia - Sondrio": [
+      "6ad013347f5da7c9"
+    ],
     "USR Lombardia - Varese": [
       "7f0ba843dc503557",
       "c081adb1c015236c"

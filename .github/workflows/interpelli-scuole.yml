@@ -1,0 +1,71 @@
+name: Monitor Interpelli Scuole (siti diretti)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Ogni 3 ore: 729 siti eterogenei richiedono piu' tempo delle 12
+    # pagine MIM, quindi una frequenza tipo ogni 30 minuti non avrebbe
+    # senso (e rischierebbe sovrapposizioni). Aggiusta pure il cron in
+    # base ai tempi reali osservati nei log delle prime esecuzioni.
+    - cron: "0 */3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: interpelli-monitor-scuole
+  cancel-in-progress: false
+
+jobs:
+  check-school-sites:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install browser Playwright (per i siti Javascript)
+        run: playwright install --with-deps chromium
+
+      - name: Run monitor (siti scuola)
+        env:
+          TELEGRAM_BOT_TOKEN_SCUOLE: ${{ secrets.TELEGRAM_BOT_TOKEN_SCUOLE }}
+          TELEGRAM_CHAT_ID_SCUOLE: ${{ secrets.TELEGRAM_CHAT_ID_SCUOLE }}
+          PYTHONUNBUFFERED: "1"
+        run: python monitor_interpelli_scuole.py
+
+      - name: Commit updated state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state_scuole.json
+          if git diff --cached --quiet; then
+            echo "Nessuna modifica a state_scuole.json, salto il commit."
+            exit 0
+          fi
+          git commit -m "Update state_scuole.json [skip ci]"
+          attempt=1
+          max_attempts=5
+          until [ "$attempt" -gt "$max_attempts" ]; do
+            echo "Tentativo di push #$attempt..."
+            if git pull --rebase origin main && git push; then
+              echo "Push riuscito."
+              exit 0
+            fi
+            echo "Push fallito, ritento tra qualche secondo..."
+            sleep $((RANDOM % 10 + 5))
+            attempt=$((attempt + 1))
+          done
+          echo "Push fallito dopo $max_attempts tentativi."
+          exit 1

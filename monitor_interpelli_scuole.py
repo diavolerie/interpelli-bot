@@ -52,7 +52,10 @@ import re
 import sys
 import time
 import hashlib
+import html as htmllib
 import logging
+from collections import Counter
+from datetime import date
 from urllib.parse import urljoin, urlparse
 
 import requests
@@ -64,6 +67,10 @@ from bs4 import BeautifulSoup
 
 SCUOLE_SITES_FILE = "scuole_sites.json"
 STATE_FILE = "state_scuole.json"
+UNREACHABLE_FILE = "unreachable_sites.json"   # elenco aggiornato ad ogni giro dei siti non raggiungibili
+
+FAILURE_ALERT_THRESHOLD = 3   # giri consecutivi falliti prima di segnalare il sito su Telegram
+SAVE_EVERY = 10               # salva lo stato ogni N siti (e subito dopo ogni notifica)
 
 # Bot/chat Telegram SEPARATI da quelli del bot MIM.
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN_SCUOLE", "")
@@ -223,10 +230,44 @@ def find_container(a_tag):
 # Rete
 # ---------------------------------------------------------------------------
 
-def fetch(url):
-    resp = requests.get(url, headers=REQUEST_HEADERS, timeout=REQUEST_TIMEOUT)
-    resp.raise_for_status()
-    return resp.text
+FETCH_STATUS_RETRY = {429, 500, 502, 503, 504, 509}
+FETCH_STATUS_RETRY_DELAYS = (5, 15)   # secondi di attesa prima dei nuovi tentativi su 5xx/509
+FETCH_NET_RETRY_DELAY = 5             # un solo nuovo tentativo per timeout/errori di connessione
+
+_DNS_PERMANENT_MARKERS = ("Name or service not known", "No address associated", "nodename nor servname")
+
+def is_permanent_dns_error(exc):
+    """Dominio inesistente: riprovare non serve. (\"Temporary failure in name
+    resolution\" invece e' transitorio e viene ritentato.)"""
+    text = str(exc)
+    return any(m in text for m in _DNS_PERMANENT_MARKERS)
+
+def fetch(url, retry=False):
+    """Scarica una pagina. Con retry=True (usato per le homepage) ritenta:
+    - 5xx/509/429: fino a 2 volte, dopo 5s e 15s;
+    - timeout/errori di connessione: 1 volta, dopo 5s.
+    Non ritenta DNS inesistente ne' errori SSL (sono indirizzi da correggere)."""
+    status_delays = list(FETCH_STATUS_RETRY_DELAYS) if retry else []
+    net_retry_left = 1 if retry else 0
+    while True:
+        try:
+            resp = requests.get(url, headers=REQUEST_HEADERS, timeout=REQUEST_TIMEOUT)
+        except requests.RequestException as exc:
+            if (net_retry_left > 0
+                    and not isinstance(exc, requests.exceptions.SSLError)
+                    and not is_permanent_dns_error(exc)):
+                net_retry_left -= 1
+                log.info("Nuovo tentativo tra %ds per %s.", FETCH_NET_RETRY_DELAY, url)
+                time.sleep(FETCH_NET_RETRY_DELAY)
+                continue
+            raise
+        if resp.status_code in FETCH_STATUS_RETRY and status_delays:
+            delay = status_delays.pop(0)
+            log.info("HTTP %d su %s: nuovo tentativo tra %ds.", resp.status_code, url, delay)
+            time.sleep(delay)
+            continue
+        resp.raise_for_status()
+        return resp.text
 
 NO_JS_RENDER_HOSTS = ("drive.google.com", "docs.google.com", "forms.gle", "mailupclient.com", "emailsp.com")
 
@@ -238,7 +279,7 @@ def _can_render(url, budget):
     host = urlparse(url).netloc.lower()
     return not any(h in host for h in NO_JS_RENDER_HOSTS)
 
-def fetch_hybrid(url, budget):
+def fetch_hybrid(url, budget, retry=False):
     """Fetch 'ibrido': prova prima requests (veloce). Poi usa il browser
     headless (Playwright) in due casi:
     - il testo visibile e' sospettosamente scarso (probabile sito
@@ -252,7 +293,7 @@ def fetch_hybrid(url, budget):
     pagina in nessun modo.
     """
     try:
-        html = fetch(url)
+        html = fetch(url, retry=retry)
     except requests.HTTPError as exc:
         status = exc.response.status_code if exc.response is not None else None
         if status == 403 and _can_render(url, budget):
@@ -463,7 +504,7 @@ def check_site(site_key, homepage_url, known_ids):
     all_unresolved = set()
 
     try:
-        html = fetch_hybrid(homepage_url, budget)
+        html = fetch_hybrid(homepage_url, budget, retry=True)
     except requests.RequestException as exc:
         log.warning("Impossibile aprire homepage %s: %s", homepage_url, exc)
         return None, exc  # segnala errore di sito (non di singolo annuncio)
@@ -518,8 +559,10 @@ def load_state():
         return json.load(f)
 
 def save_state(state):
-    with open(STATE_FILE, "w", encoding="utf-8") as f:
+    tmp = STATE_FILE + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, STATE_FILE)  # scrittura atomica: un'interruzione non corrompe il file
 
 # ---------------------------------------------------------------------------
 # Telegram
@@ -578,21 +621,22 @@ def notify_new_item(site_entry, item):
     nome = scuola.get("nome_scuola") or scuola.get("nome_istituto") or site_entry["site_name"]
     comune = scuola.get("comune") or ""
     provincia = scuola.get("provincia") or ""
+    esc = htmllib.escape  # parse_mode=HTML: <, > e & vanno escapati
 
     lines = [
         f"📢 Nuovo interpello spagnolo{detail_note} (sito scuola)",
-        f"🏫 {nome}",
+        f"🏫 {esc(nome)}",
     ]
     if comune or provincia:
-        lines.append(f"📍 {comune} ({provincia})")
-    lines.append(f"Titolo: {item['title']}")
+        lines.append(f"📍 {esc(comune)} ({esc(provincia)})")
+    lines.append(f"Titolo: {esc(item['title'])}")
     if site_entry.get("url"):
-        lines.append(f"🌐 {site_entry['url']}")
+        lines.append(f"🌐 {esc(site_entry['url'])}")
     if scuola.get("telefono"):
-        lines.append(f"📞 {scuola['telefono']}")
+        lines.append(f"📞 {esc(scuola['telefono'])}")
     if scuola.get("link_maps"):
-        lines.append(f"🗺️ {scuola['link_maps']}")
-    lines.append(f"🔗 {item['url']}")
+        lines.append(f"🗺️ {esc(scuola['link_maps'])}")
+    lines.append(f"🔗 {esc(item['url'])}")
     text = "\n".join(lines)
     return send_telegram_message(text)
 
@@ -608,6 +652,100 @@ def notify_error(site_name, exc):
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
+
+def classify_error(exc):
+    if isinstance(exc, requests.HTTPError):
+        code = exc.response.status_code if exc.response is not None else "?"
+        return f"HTTP {code}"
+    if isinstance(exc, requests.exceptions.SSLError):
+        return "SSL"
+    if is_permanent_dns_error(exc):
+        return "DNS"
+    if isinstance(exc, requests.exceptions.Timeout):
+        return "Timeout"
+    if isinstance(exc, requests.exceptions.ConnectionError):
+        return "Connessione"
+    if isinstance(exc, requests.RequestException):
+        return "Altro (rete)"
+    return "Errore interno"
+
+def record_failure(state, site, exc):
+    failures = state.setdefault("failures", {})
+    key = site["url"]
+    today = date.today().isoformat()
+    rec = failures.get(key) or {"first_seen": today, "count": 0}
+    rec.update(
+        count=rec["count"] + 1,
+        last_seen=today,
+        category=classify_error(exc),
+        name=site["site_name"],
+        url=key,
+        error=str(exc)[:200],
+    )
+    failures[key] = rec
+
+def clear_failure(state, key, name):
+    failures = state.setdefault("failures", {})
+    if key in failures:
+        log.info("%s: di nuovo raggiungibile.", name)
+        del failures[key]
+
+CATEGORY_HINTS = {
+    "DNS": "dominio inesistente: indirizzo da correggere",
+    "SSL": "certificato/handshake: controllare l'indirizzo (http/https, www)",
+    "HTTP 403": "il sito blocca le richieste automatiche",
+    "HTTP 509": "limite di banda del sito superato",
+    "Timeout": "sito lento o non raggiungibile",
+}
+
+def _chunk_lines(lines, limit=3500):
+    chunks, cur = [], ""
+    for ln in lines:
+        if cur and len(cur) + len(ln) + 1 > limit:
+            chunks.append(cur)
+            cur = ""
+        cur += ("\n" if cur else "") + ln
+    if cur:
+        chunks.append(cur)
+    return chunks
+
+def report_unreachable(sites, state):
+    """Scrive unreachable_sites.json con tutti i siti falliti in questo giro
+    e, per quelli che falliscono da almeno FAILURE_ALERT_THRESHOLD giri
+    consecutivi e non sono ancora stati segnalati, manda UN riepilogo
+    su Telegram (una sola volta per sito, finche' non torna raggiungibile)."""
+    failures = state.setdefault("failures", {})
+    active = {s["url"] for s in sites if s.get("enabled", True)}
+    for k in list(failures):
+        if k not in active:      # sito rimosso/cambiato indirizzo nel JSON
+            del failures[k]
+
+    rows = sorted(failures.values(), key=lambda r: (r["category"], -r["count"], r["name"]))
+    per_cat = Counter(r["category"] for r in rows)
+    with open(UNREACHABLE_FILE, "w", encoding="utf-8") as f:
+        json.dump({"aggiornato": date.today().isoformat(), "totale": len(rows),
+                   "per_categoria": dict(per_cat), "siti": rows},
+                  f, ensure_ascii=False, indent=2)
+    log.info("Siti non raggiungibili in questo giro: %d (%s).", len(rows),
+             ", ".join(f"{c}: {n}" for c, n in per_cat.most_common()) or "nessuno")
+
+    new_rows = [r for r in rows if r["count"] >= FAILURE_ALERT_THRESHOLD and not r.get("alerted")]
+    if not new_rows:
+        return
+    lines = [f"⚠️ Siti scuola non controllati da almeno {FAILURE_ALERT_THRESHOLD} giri: "
+             f"{len(new_rows)} nuovi ({len(rows)} non raggiungibili in totale)."]
+    for cat in sorted({r["category"] for r in new_rows}):
+        group = [r for r in new_rows if r["category"] == cat]
+        hint = CATEGORY_HINTS.get(cat)
+        lines.append("")
+        lines.append(f"<b>{htmllib.escape(cat)}</b> ({len(group)})" + (f" - {hint}" if hint else ""))
+        for r in group:
+            lines.append(f"• {htmllib.escape(r['name'])} - {htmllib.escape(r['url'])}")
+    lines.append("")
+    lines.append("Elenco completo: unreachable_sites.json nel repository.")
+    if all([send_telegram_message(chunk) for chunk in _chunk_lines(lines)]):
+        for r in new_rows:
+            r["alerted"] = True
 
 def load_scuole_sites():
     with open(SCUOLE_SITES_FILE, "r", encoding="utf-8") as f:
@@ -626,12 +764,15 @@ def main():
 
     log.info("Siti scuola da controllare: %d", len([s for s in sites if s.get("enabled", True)]))
 
+    state.setdefault("failures", {})
     start_browser()
     try:
         _run_all_sites(sites, state, first_run)
     finally:
         stop_browser()
+        save_state(state)  # anche se il giro si interrompe a meta'
 
+    report_unreachable(sites, state)
     save_state(state)
     log.info("Esecuzione completata.")
 
@@ -643,6 +784,7 @@ def _run_all_sites(sites, state, first_run):
     interpelli spagnolo attivi trovati al primo avvio vengono notificati
     subito (scelta esplicita dell'utente: potrebbero essere opportunita'
     reali gia' aperte, non ha senso scartarle in silenzio)."""
+    processed = 0
     for site in sites:
         if not site.get("enabled", True):
             continue
@@ -653,9 +795,14 @@ def _run_all_sites(sites, state, first_run):
         evaluated_ids = set(state["evaluated"].get(site_key, []))
         notified_ids = set(state["notified"].get(site_key, []))
 
-        result, error = check_site(site_key, site["url"], evaluated_ids)
+        try:
+            result, error = check_site(site_key, site["url"], evaluated_ids)
+        except Exception as exc:  # errore imprevisto: non deve fermare gli altri siti
+            log.exception("Errore imprevisto su %s", site_name)
+            result, error = None, exc
         if error is not None:
             notify_error(site_name, error)
+            record_failure(state, site, error)
             time.sleep(SITE_REQUEST_DELAY)
             continue
 
@@ -674,9 +821,14 @@ def _run_all_sites(sites, state, first_run):
 
         state["evaluated"][site_key] = sorted(evaluated_ids)
         state["notified"][site_key] = sorted(notified_ids)
+        clear_failure(state, site_key, site_name)
 
         if new_relevant_items:
             log.info("%s: %d nuovi annunci rilevanti.", site_name, len(new_relevant_items))
+
+        processed += 1
+        if actually_notified_ids or processed % SAVE_EVERY == 0:
+            save_state(state)
 
         time.sleep(SITE_REQUEST_DELAY)
 

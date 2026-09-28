@@ -42,15 +42,7 @@
         "email": "BSTD15000L@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=%22ABBA-BALLINI%22+-+BRESCIA%2C+VIA+TIRANDI+3%2C+BRESCIA%2C+BRESCIA%2C+Italia",
         "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "\"ABBA-BALLINI\" - BRESCIA",
-    "url": "http://www.abba-ballini.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
+      },
       {
         "nome_istituto": "\"ABBA-BALLINI\" - BRESCIA",
         "nome_scuola": "\"ABBA-BALLINI\" - BRESCIA (SERALE)",
@@ -146,7 +138,7 @@
   },
   {
     "site_name": "\"ANDREA FANTONI\"",
-    "url": "http://www.istitutofantoni.gov.it",
+    "url": "https://www.istitutofantoni.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -165,7 +157,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=%22ANDREA+FANTONI%22%2C+VIA+BARBARIGO%2C+27%2C+CLUSONE%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutofantoni.gov.it"
   },
   {
     "site_name": "\"ANDREA MANTEGNA\" - BRESCIA",
@@ -187,15 +180,7 @@
         "email": "BSIS031005@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=A.+MANTEGNA+-+PROF.+ALBERGHIERO+%28DIURNO%29%2C+VIA+FURA%2C+96%2C+BRESCIA%2C+BRESCIA%2C+Italia",
         "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "\"ANDREA MANTEGNA\" - BRESCIA",
-    "url": "http://www.istitutomantegna.gov.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
+      },
       {
         "nome_istituto": "\"ANDREA MANTEGNA\" - BRESCIA",
         "nome_scuola": "A. MANTEGNA - TECNICO TURISTICO",
@@ -466,7 +451,7 @@
   },
   {
     "site_name": "\"DANDOLO\" - CORZANO",
-    "url": "http://www.iisdandolo.gov.it",
+    "url": "https://iisdandolo.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -485,7 +470,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=ORZIVECCHI%28SEZ.ASS.I.S.%22DANDOLO%22CORZANO%29%2C+VIA+MATTEOTTI%2C33%2C+ORZIVECCHI%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iisdandolo.gov.it"
   },
   {
     "site_name": "\"DANIELE MANIN\"",
@@ -535,7 +521,7 @@
   },
   {
     "site_name": "\"DON LORENZO MILANI\"",
-    "url": "http://www.liceodonmilaniromano.it",
+    "url": "https://liceodonmilaniromano.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -554,7 +540,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=%22DON+LORENZO+MILANI%22%2C+VIA+BELVEDERE%2C+ROMANO+DI+LOMBARDIA%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.liceodonmilaniromano.it"
   },
   {
     "site_name": "\"E. STEIN\"",
@@ -718,7 +705,7 @@
   },
   {
     "site_name": "\"G.B. RUBINI\"",
-    "url": "http://www.gbrubini.edu.it",
+    "url": "https://www.istitutorubini.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -752,7 +739,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=%22G.B.+RUBINI%22%2C+VIA+BELVEDERE%2C+ROMANO+DI+LOMBARDIA%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.gbrubini.edu.it"
   },
   {
     "site_name": "\"G.B. VICO\"",
@@ -1370,15 +1358,7 @@
         "email": "BSIS028009@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=%22SRAFFA%22+-+BRESCIA%2C+VIA+COMBONI%2C+6%2C+BRESCIA%2C+BRESCIA%2C+Italia",
         "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "\"SRAFFA\" - BRESCIA",
-    "url": "http://www.sraffa.gov.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
+      },
       {
         "nome_istituto": "\"SRAFFA\" - BRESCIA",
         "nome_scuola": "\"SRAFFA\" SERALE BRESCIA",
@@ -1605,7 +1585,7 @@
   },
   {
     "site_name": "ALMENNO S.BARTOLOMEO L.ANGELINI",
-    "url": "http://www.iclangelini.gov.it",
+    "url": "https://www.iclangelini.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -1624,7 +1604,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.%22L.ANGELINI%22+ALMENNO+S.B.%2C+VIA+UNGARETTI%2C+ALMENNO+SAN+BARTOLOMEO%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iclangelini.gov.it"
   },
   {
     "site_name": "ALZANO LOMBARDO",
@@ -1651,7 +1632,7 @@
   },
   {
     "site_name": "ARCENE - C.CONSONNI",
-    "url": "http://www.icarcene.it",
+    "url": "https://icarcene.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -1700,7 +1681,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.%22C.CONSONNI%22+ARCENE%2C+VIA+GIOVANNI+XXIII+4%2C+ARCENE%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icarcene.it"
   },
   {
     "site_name": "ARGENTIA-MAJORANA",
@@ -1750,7 +1732,7 @@
   },
   {
     "site_name": "B. ORIANI G. MAZZINI",
-    "url": "http://www.orianimazzini.gov.it",
+    "url": "https://www.orianimazzini.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -1769,7 +1751,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=I.P.+-+B.+ORIANI+G.+MAZZINI%2C+VIA+ZANTE%2C+34+-+VIA+LIGURIA%2C+21-VIA+PISA+5%2F2%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.orianimazzini.gov.it"
   },
   {
     "site_name": "BARBARA MELZI",
@@ -1872,7 +1855,7 @@
   },
   {
     "site_name": "BERGAMO - DONADONI",
-    "url": "http://www.istitutodonadoni.it",
+    "url": "https://istitutodonadoni.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -1891,7 +1874,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.+%22DONADONI%22+BERGAMO%2C+VIA+TASSO+14%2C+BERGAMO%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutodonadoni.it"
   },
   {
     "site_name": "BERGAMO - G.D. PETTENI",
@@ -1933,7 +1917,7 @@
   },
   {
     "site_name": "BERGAMO - S.LUCIA",
-    "url": "http://www.icsantalucia.it",
+    "url": "http://icsantalucia.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -1952,7 +1936,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.+%22S.LUCIA%22+BERGAMO%2C+VIA+GRATAROLI%2C+2%2C+BERGAMO%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsantalucia.it"
   },
   {
     "site_name": "BILINGUAL EUROPEAN SCHOOL",
@@ -1979,7 +1964,7 @@
   },
   {
     "site_name": "BONATE SOTTO \"CLARA LEVI\"",
-    "url": "http://www.icbonatesotto.gov.it",
+    "url": "https://www.icbonatesotto.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -2013,7 +1998,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.+%22MAZZA%22+MADONE+-%2C+VIA+DONADONI%2C+4%2F1%2C+MADONE%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icbonatesotto.gov.it"
   },
   {
     "site_name": "BONORIS AUDIOFONETICA",
@@ -2062,31 +2048,8 @@
     ]
   },
   {
-    "site_name": "C. DELL'ACQUA",
-    "url": "http://www.isdellacqua.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
-      {
-        "nome_istituto": "C. DELL'ACQUA",
-        "nome_scuola": "I.T. ECON. E TECNOL. - C. DELL'ACQUA",
-        "tipo_istruzione": "Scuola secondaria di II grado",
-        "tipo_istituto_dettagliato": "Istituto Tecnico Commerciale",
-        "codice_istituto": "MIIS044009",
-        "codice_meccanografico": "MITD04401G",
-        "provincia": "MILANO",
-        "comune": "LEGNANO",
-        "indirizzo": "VIA BERNOCCHI,1 (ORDINARIA)-VIA CALINI, 5(SUCCUR.)",
-        "telefono": "0331446811",
-        "email": "MIIS044009@istruzione.it",
-        "link_maps": "https://www.google.com/maps/search/?api=1&query=I.T.+ECON.+E+TECNOL.+-+C.+DELL%27ACQUA%2C+VIA+BERNOCCHI%2C1+%28ORDINARIA%29-VIA+CALINI%2C+5%28SUCCUR.%29%2C+LEGNANO%2C+MILANO%2C+Italia",
-        "spagnolo": true
-      }
-    ]
-  },
-  {
     "site_name": "C. E. GADDA",
-    "url": "http://www.iisgadda.gov.it",
+    "url": "https://www.iisgadda.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -2120,7 +2083,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=LICEO+-+C.E.+GADDA%2C+VIA+LEONARDO+DA+VINCI%2C+18%2C+PADERNO+DUGNANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iisgadda.gov.it"
   },
   {
     "site_name": "C. VARALLI",
@@ -2180,15 +2144,7 @@
         "email": "COTD01000G@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=CAIO+PLINIO+SECONDO%2C+VIA+ITALIA+LIBERA+1%2C+COMO%2C+COMO%2C+Italia",
         "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "CAIO PLINIO SECONDO",
-    "url": "http://www.caioplinio.gov.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
+      },
       {
         "nome_istituto": "CAIO PLINIO SECONDO",
         "nome_scuola": "CAIO PLINIO SECONDO - SERALE",
@@ -2231,7 +2187,7 @@
   },
   {
     "site_name": "CALUSCO D'ADDA",
-    "url": "http://www.scuolacalusco.gov.it",
+    "url": "https://www.scuolacalusco.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -2250,7 +2206,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.+%22L.+DA+VINCI%22+CALUSCO%2C+VIALE+DEI+TIGLI%2C+163%2C+CALUSCO+D%27ADDA%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.scuolacalusco.gov.it"
   },
   {
     "site_name": "CAPE'",
@@ -2399,7 +2356,7 @@
   },
   {
     "site_name": "CONFALONIERI",
-    "url": "http://www.icsconfalonieri.gov.it/",
+    "url": "https://icsconfalonieri.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -2418,7 +2375,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=CONFALONIERI+-+MONZA%2C+VIA+S.+MARTINO+4%2C+MONZA%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsconfalonieri.gov.it/"
   },
   {
     "site_name": "COOP. SOCIALE ISTITUTO SAN VINCENZO",
@@ -2562,15 +2520,7 @@
         "email": "VAIS02700D@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=LICEO+CLASSICO+-+LICEO+LINGUISTICO%2C+VIA+CARDUCCI+4%2C+BUSTO+ARSIZIO%2C+VARESE%2C+Italia",
         "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "DANIELE CRESPI",
-    "url": "http://www.liceocrespi.gov.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
+      },
       {
         "nome_istituto": "DANIELE CRESPI",
         "nome_scuola": "LICEO SCIENZE UMANE",
@@ -2766,7 +2716,7 @@
   },
   {
     "site_name": "E. MONTALE",
-    "url": "http://www.istitutoeugeniomontale.it",
+    "url": "https://iismontale.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -2799,15 +2749,7 @@
         "email": "MIIS02800B@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=I.P.+E.+MONTALE+%28SERALE%29%2C+VIA+GORKI%2C+100%2C+CINISELLO+BALSAMO%2C+MILANO%2C+Italia",
         "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "E. MONTALE",
-    "url": "http://www.iismontale.gov.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
+      },
       {
         "nome_istituto": "E. MONTALE",
         "nome_scuola": "I.T. ECONOMICO - E. MONTALE",
@@ -2823,7 +2765,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=I.T.+ECONOMICO+-+E.+MONTALE%2C+VIA+GORKI%2C+100%2C+CINISELLO+BALSAMO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutoeugeniomontale.it"
   },
   {
     "site_name": "ENRICO FERMI",
@@ -2850,7 +2793,7 @@
   },
   {
     "site_name": "ENRICO TOTI",
-    "url": "http://www.iclentate.gov.it",
+    "url": "https://iclentate.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -2869,7 +2812,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SCUOLA+MEDIA+-+LENTATE+S%2FS%2C+VIA+PAPA+GIOVANNI+XXIII+32%2C+LENTATE+SUL+SEVESO%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iclentate.gov.it"
   },
   {
     "site_name": "ENZO BONTEMPI",
@@ -3018,7 +2962,7 @@
   },
   {
     "site_name": "F. SEVERI - C. CORRENTI",
-    "url": "http://www.severi-correnti.gov.it",
+    "url": "https://severi-correnti.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -3037,11 +2981,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=LICEO+-+SEVERI+CORRENTI%2C+VIA+ALCUINO%2C+4%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.severi-correnti.gov.it"
   },
   {
     "site_name": "F.LLI CERVI",
-    "url": "http://www.iccervilimbiate.gov.it",
+    "url": "https://www.iccervilimbiate.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -3060,7 +3005,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=GIOVANNI+VERGA+-+LIMBIATE%2C+VIA+MONTE+GENEROSO%2C+LIMBIATE%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iccervilimbiate.gov.it"
   },
   {
     "site_name": "FERMI",
@@ -3339,7 +3285,7 @@
   },
   {
     "site_name": "G.PARINI",
-    "url": "http://www.isgparinilecco.gov.it",
+    "url": "https://isgparinilecco.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -3358,7 +3304,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=I.I.S.S.+%22G.PARINI%22%2C+VIA+BADONI+2%2C+LECCO%2C+LECCO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.isgparinilecco.gov.it"
   },
   {
     "site_name": "G.PESSINA",
@@ -3537,7 +3484,7 @@
   },
   {
     "site_name": "GIOVANNI XXIII",
-    "url": "http://www.icgio23.it",
+    "url": "https://icgio23.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -3556,7 +3503,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+ZANELLI%2C+P.ZZA+MAGNOLIE%2C+1%2C+CUSANO+MILANINO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icgio23.it"
   },
   {
     "site_name": "GIULIA GABRIELI",
@@ -3697,7 +3645,7 @@
   },
   {
     "site_name": "I. C. \"G. CARDUCCI\"",
-    "url": "http://WWW.ICCARDUCCI.GOV.IT",
+    "url": "https://www.iccarducci.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -3716,7 +3664,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=%22G.+CAMOZZI%22%2C+VIA+A.+MANZONI%2C+37%2C+DALMINE%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://WWW.ICCARDUCCI.GOV.IT"
   },
   {
     "site_name": "I. C. CERESARA",
@@ -3789,7 +3738,7 @@
   },
   {
     "site_name": "I. C. NORD 2 BRESCIA",
-    "url": "http://www.icnord2brescia.gov.it/",
+    "url": "https://icnord2brescia.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -3808,7 +3757,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=VIRGILIO-PIRANDELLO-FOSCOLO%2C+NIKOLAJEWKA%2C+5%2C+BRESCIA%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icnord2brescia.gov.it/"
   },
   {
     "site_name": "I. S. \"OLIVELLI-PUTELLI\"- DARFO",
@@ -3881,7 +3831,7 @@
   },
   {
     "site_name": "I.C. \"B. COLLEONI\" URGNANO",
-    "url": "http://www.icurgnano.gov.it/",
+    "url": "https://icurgnano.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -3900,7 +3850,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GRADO+A.+MORO%2C+LARGO+DON+STURZO+16%2C+URGNANO%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icurgnano.gov.it/"
   },
   {
     "site_name": "I.C. \"CARLO LEVI\"",
@@ -3927,7 +3878,7 @@
   },
   {
     "site_name": "I.C. A. STOPPANI LECCO 3",
-    "url": "http://www.stoppanicomprensivo.gov.it",
+    "url": "https://stoppanicomprensivo.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -3946,11 +3897,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SMS+%22A.+STOPPANI%22%2C+VIA+GRANDI+35%2C+LECCO%2C+LECCO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.stoppanicomprensivo.gov.it"
   },
   {
     "site_name": "I.C. ALBAVILLA",
-    "url": "http://www.icalbavilla.gov.it",
+    "url": "https://icalbavilla.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -3969,7 +3921,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=J.+KENNEDY+-+ALBAVILLA%2C+VIA+PORRO+16%2C+ALBAVILLA%2C+COMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icalbavilla.gov.it"
   },
   {
     "site_name": "I.C. ALDO MORO",
@@ -4011,7 +3964,7 @@
   },
   {
     "site_name": "I.C. ANNA FRANK",
-    "url": "http://www.icsannafrankrho.gov.it",
+    "url": "https://www.icsannafrankrho.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -4030,7 +3983,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+A.+MANZONI%2C+VIA+POME%27%2C+21%2C+RHO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsannafrankrho.gov.it"
   },
   {
     "site_name": "I.C. BAROZZI BELTRAMI",
@@ -4057,7 +4011,7 @@
   },
   {
     "site_name": "I.C. BERTHER S.ZENO-MONTIRONE",
-    "url": "http://www.icsanzenomontirone.gov.it",
+    "url": "https://icsanzenomontirone.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -4091,11 +4045,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=N.BERTHER+-+S.ZENO+N.%2C+P.ZA+MARCONI+2%2C+SAN+ZENO+NAVIGLIO%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsanzenomontirone.gov.it"
   },
   {
     "site_name": "I.C. BONVESIN DE LA RIVA",
-    "url": "http://www.icsbonvesin.gov.it",
+    "url": "https://icsbonvesin.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -4114,7 +4069,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+B.+DE+LA+RIVA%2C+VIA+BONVESIN+DE+LA+RIVA%2C+1%2C+LEGNANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsbonvesin.gov.it"
   },
   {
     "site_name": "I.C. BOVEZZO",
@@ -4363,7 +4319,7 @@
   },
   {
     "site_name": "I.C. CUCCIAGO-GRANDATE-CASNATE",
-    "url": "http://iccucciago.gov.it/",
+    "url": "https://iccucciago.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -4382,7 +4338,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.+%22L.CARLUCCIO%22+-+GRANDATE%2C+VIA+A.VOLTA+13%2C+GRANDATE%2C+COMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://iccucciago.gov.it/"
   },
   {
     "site_name": "I.C. CURTATONE",
@@ -4432,7 +4389,7 @@
   },
   {
     "site_name": "I.C. DOSOLO POMPONESCO VIADANA",
-    "url": "http://www.dosolopomponescoviadana.gov.it",
+    "url": "https://icdosolopomponescoviadana.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -4451,7 +4408,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SCUOLA+MEDIA+DOSOLO%2C+VIA+PIETRO+FALCHI+2%2C+DOSOLO%2C+MANTOVA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.dosolopomponescoviadana.gov.it"
   },
   {
     "site_name": "I.C. ERMANNO OLMI",
@@ -4639,7 +4597,7 @@
   },
   {
     "site_name": "I.C. INDUNO OLONA PASSERINI",
-    "url": "http://www.icinduno.gov.it",
+    "url": "https://www.icinduno.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -4658,7 +4616,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=PASSERINI+-+INDUNO+OLONA+-%2C+VIA+ANDREOLI+7%2C+INDUNO+OLONA%2C+VARESE%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icinduno.gov.it"
   },
   {
     "site_name": "I.C. IQBAL MASIH",
@@ -4784,7 +4743,7 @@
   },
   {
     "site_name": "I.C. LOMAZZO",
-    "url": "http://www.iclomazzo.gov.it",
+    "url": "https://iclomazzo.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -4803,7 +4762,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.+%22E.+DE+AMICIS%22+-+LOMAZZO%2C+VIA+PITAGORA%2C+LOMAZZO%2C+COMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iclomazzo.gov.it"
   },
   {
     "site_name": "I.C. M. D'OGGIONO OGGIONO",
@@ -4853,7 +4813,7 @@
   },
   {
     "site_name": "I.C. MANTOVA 2",
-    "url": "http://www.comprensivodue.gov.it",
+    "url": "https://www.comprensivodue.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -4872,7 +4832,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=MANTOVA+%22SACCHI%22%2C+VIA+GANDOLFO%2C17%2FA%2C+MANTOVA%2C+MANTOVA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.comprensivodue.gov.it"
   },
   {
     "site_name": "I.C. MANTOVA 3",
@@ -4922,7 +4883,7 @@
   },
   {
     "site_name": "I.C. MOLINO VECCHIO",
-    "url": "http://www.scuolamolinovecchio.gov.it",
+    "url": "https://icmolinovecchio.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -4941,7 +4902,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECOND.+I+GR.+MOLINO+VECCHIO%2C+VIA+UMBRIA%2C+GORGONZOLA%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.scuolamolinovecchio.gov.it"
   },
   {
     "site_name": "I.C. MOLTENO",
@@ -5144,10 +5106,25 @@
   },
   {
     "site_name": "I.C. RONCOFERRARO",
-    "url": "https://www.icroncoferraro.edu.it/luoghi?id=43",
+    "url": "https://www.icroncoferraro.edu.it",
     "spagnolo": true,
     "enabled": true,
     "schools": [
+      {
+        "nome_istituto": "I.C. RONCOFERRARO",
+        "nome_scuola": "RONCOFERRARO \"LUCA FANCELLI\"",
+        "tipo_istruzione": "Scuola secondaria di I grado",
+        "tipo_istituto_dettagliato": "Scuola Media",
+        "codice_istituto": "MNIC81500N",
+        "codice_meccanografico": "MNMM81501P",
+        "provincia": "MANTOVA",
+        "comune": "RONCOFERRARO",
+        "indirizzo": "VIA PIETRO NENNI 11",
+        "telefono": "0376663118",
+        "email": "MNIC81500N@istruzione.it",
+        "link_maps": "https://www.google.com/maps/search/?api=1&query=RONCOFERRARO+%22LUCA+FANCELLI%22%2C+VIA+PIETRO+NENNI+11%2C+RONCOFERRARO%2C+MANTOVA%2C+Italia",
+        "spagnolo": true
+      },
       {
         "nome_istituto": "I.C. RONCOFERRARO",
         "nome_scuola": "CASTELDARIO \"ENRICO FERMI\"",
@@ -5176,29 +5153,6 @@
         "telefono": "0376667116",
         "email": "MNIC81500N@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=VILLIMPENTA+-+S.S.+RONCOFERRARO%2C+P.LE+W.+TOBAGI%2C+2%2C+VILLIMPENTA%2C+MANTOVA%2C+Italia",
-        "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "I.C. RONCOFERRARO",
-    "url": "https://www.icroncoferraro.edu.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
-      {
-        "nome_istituto": "I.C. RONCOFERRARO",
-        "nome_scuola": "RONCOFERRARO \"LUCA FANCELLI\"",
-        "tipo_istruzione": "Scuola secondaria di I grado",
-        "tipo_istituto_dettagliato": "Scuola Media",
-        "codice_istituto": "MNIC81500N",
-        "codice_meccanografico": "MNMM81501P",
-        "provincia": "MANTOVA",
-        "comune": "RONCOFERRARO",
-        "indirizzo": "VIA PIETRO NENNI 11",
-        "telefono": "0376663118",
-        "email": "MNIC81500N@istruzione.it",
-        "link_maps": "https://www.google.com/maps/search/?api=1&query=RONCOFERRARO+%22LUCA+FANCELLI%22%2C+VIA+PIETRO+NENNI+11%2C+RONCOFERRARO%2C+MANTOVA%2C+Italia",
         "spagnolo": true
       }
     ]
@@ -5274,7 +5228,7 @@
   },
   {
     "site_name": "I.C. SARNICO - E. DONADONI",
-    "url": "http://www.donadonisarnico.gov.it",
+    "url": "https://icdonadonisarnico.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -5293,11 +5247,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.+%22E.+DONADONI%22+SARNICO%2C+VIA+P.A.FACCANONI%2C+11%2F13%2C+SARNICO%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.donadonisarnico.gov.it"
   },
   {
     "site_name": "I.C. STATALE DI NUVOLENTO",
-    "url": "http://www.icnuvolento.it",
+    "url": "https://www.icnuvolento.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -5316,7 +5271,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=%22S.+QUASIMODO%22+NUVOLENTO%2C+VIA+CADUTI+DELLA+RESISTENZA%2C+24%2C+NUVOLENTO%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icnuvolento.it"
   },
   {
     "site_name": "I.C. T.OLIVELLI VILLA CARCINA",
@@ -5366,7 +5322,7 @@
   },
   {
     "site_name": "I.C. TOMMASO GROSSI",
-    "url": "http://www.icgrossirho.it",
+    "url": "https://www.icgrossirho.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -5385,7 +5341,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECOND.+I+GR.+VIA+T.+GROSSI%2C+VIA+T.+GROSSI%2C+35%2C+RHO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icgrossirho.it"
   },
   {
     "site_name": "I.C. TRAVAGLIATO",
@@ -5458,7 +5415,7 @@
   },
   {
     "site_name": "I.C. VEDANO OLONA \"S.PELLICO\"",
-    "url": "http://www.scuolavedano.gov.it",
+    "url": "https://scuolavedano.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -5477,11 +5434,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=PELLICO+-+VEDANO+OLONA+-%2C+PIAZZA+DEL+POPOLO+4%2C+VEDANO+OLONA%2C+VARESE%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.scuolavedano.gov.it"
   },
   {
     "site_name": "I.C. VERGIATE",
-    "url": "http://www.comprensivovergiate.gov.it",
+    "url": "https://www.comprensivovergiate.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -5500,11 +5458,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=%22DON+MILANI%22+VERGIATE%2C+LARGO+LAZZARI+N.+2%2C+VERGIATE%2C+VARESE%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.comprensivovergiate.gov.it"
   },
   {
     "site_name": "I.C. VIA ARCADIA",
-    "url": "http://www.arcadia.gov.it",
+    "url": "https://www.arcadia.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -5523,7 +5482,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+ARCADIA%2C+VIA+DELL%27ARCADIA%2C+24%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.arcadia.gov.it"
   },
   {
     "site_name": "I.C. VIA DE ANDREIS",
@@ -5550,7 +5510,7 @@
   },
   {
     "site_name": "I.C. VIA DELLA COMMENDA",
-    "url": "http://WWW.icscommenda.gov.it",
+    "url": "https://www.icscommenda.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -5569,11 +5529,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+MAJNO%2C+VIA+DELLA+COMMENDA+22+A%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://WWW.icscommenda.gov.it"
   },
   {
     "site_name": "I.C. VIA DON STURZO",
-    "url": "http://www.icbressoviadonsturzo.gov.it",
+    "url": "https://icbressoviadonsturzo.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -5592,11 +5553,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+MANZONI%2C+VIA+PATELLANI%2C43%2C+BRESSO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icbressoviadonsturzo.gov.it"
   },
   {
     "site_name": "I.C. VIA IV NOVEMBRE",
-    "url": "http://www.icsvia4novembre.gov.it/",
+    "url": "https://www.icsvia4novembre.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -5615,7 +5577,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+CURIEL%2C+VIA+FRATELLI+IMBRIANI%2C+CORNAREDO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsvia4novembre.gov.it/"
   },
   {
     "site_name": "I.C. VIA L. DA VINCI",
@@ -5642,7 +5605,7 @@
   },
   {
     "site_name": "I.C. VIA PALESTRO",
-    "url": "http://icviapalestroabbiategrasso.gov.it",
+    "url": "https://icviapalestroabbiategrasso.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -5661,7 +5624,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECO.+I+GR.+G.CARDUCCI%2C+VIA+PALESTRO+41%2C+ABBIATEGRASSO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://icviapalestroabbiategrasso.gov.it"
   },
   {
     "site_name": "I.C. VIADANA \"PARAZZI\"",
@@ -5688,7 +5652,7 @@
   },
   {
     "site_name": "I.C.\" A. VOLTA\"/ LAZZATE",
-    "url": "http://www.icvoltalazzate.gov.it",
+    "url": "https://icvoltalazzate.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -5707,7 +5671,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=MATTEO+RICCI+-LAZZATE-%2C+VIA+F.+LARATTA+1%2C+LAZZATE%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icvoltalazzate.gov.it"
   },
   {
     "site_name": "I.C.BUSTO A. \"N. TOMMASEO\"",
@@ -5841,7 +5806,7 @@
   },
   {
     "site_name": "I.C.S. CARLO BIANCHI",
-    "url": "http://icsinverigo.gov.it",
+    "url": "https://icinverigo.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -5860,7 +5825,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SCUOLA+SEC.+1%5E+DON+CARLO+BAJ%2C+VIA+L.+DA+VINCI%2C+AROSIO%2C+COMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://icsinverigo.gov.it"
   },
   {
     "site_name": "I.C.S. DON G. TICOZZI - LECCO 2",
@@ -6004,15 +5970,7 @@
         "email": "BSIS03800X@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SERVIZI+SOCIO+SANITARI+SERALE%2C+VIA+FRATELLI+SIRANI+N.+1%2C+CHIARI%2C+BRESCIA%2C+Italia",
         "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "I.I.S. \"L.EINAUDI\"",
-    "url": "http://www.iisleinaudi.it/",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
+      },
       {
         "nome_istituto": "I.I.S. \"L.EINAUDI\"",
         "nome_scuola": "I.T.C.G. \"L.EINAUDI\"",
@@ -6055,7 +6013,7 @@
   },
   {
     "site_name": "I.I.S. ALBERTI",
-    "url": "http://www.iisalbertibormio.gov.it",
+    "url": "https://www.iisalbertibormio.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -6074,7 +6032,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=ALBERTI%2C+VIA+LEOPARDI+N.+2%2C+BORMIO%2C+SONDRIO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iisalbertibormio.gov.it"
   },
   {
     "site_name": "I.I.S. CESARIS DI CASALPUSTERLENGO",
@@ -6101,7 +6060,7 @@
   },
   {
     "site_name": "I.I.S. CODOGNO",
-    "url": "http://www.iis-codogno.gov.it",
+    "url": "https://www.iis-codogno.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -6120,7 +6079,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=I.T.+CALAMANDREI+-+CODOGNO%2C+PIAZZA+DELLA+REPUBBLICA%2C+7%2C+CODOGNO%2C+LODI%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iis-codogno.gov.it"
   },
   {
     "site_name": "I.I.S. LEONARDO DA VINCI",
@@ -6353,7 +6313,7 @@
   },
   {
     "site_name": "I.S. \"PASCAL-MAZZOLARI\" - MANERBIO",
-    "url": "http://www.iis-pascal.gov.it",
+    "url": "https://iis-pascal.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -6372,7 +6332,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=VEROLANUOVA+%28SEZ.ASS.IS%22PASCAL%22MANERBIO%29%2C+VIA+ROVETTA%2C+29%2C+VEROLANUOVA%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iis-pascal.gov.it"
   },
   {
     "site_name": "I.S.I.S. \"DA VINCI-PASCOLI\"",
@@ -6462,6 +6423,21 @@
         "telefono": "0331446811",
         "email": "MIIS044009@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=I.T.ECON.+E+TECNOL.-C.+DELL%27ACQUA+%28SERAL%2C+VIA+BERNOCCHI%2C+1%2C+LEGNANO%2C+MILANO%2C+Italia",
+        "spagnolo": true
+      },
+      {
+        "nome_istituto": "C. DELL'ACQUA",
+        "nome_scuola": "I.T. ECON. E TECNOL. - C. DELL'ACQUA",
+        "tipo_istruzione": "Scuola secondaria di II grado",
+        "tipo_istituto_dettagliato": "Istituto Tecnico Commerciale",
+        "codice_istituto": "MIIS044009",
+        "codice_meccanografico": "MITD04401G",
+        "provincia": "MILANO",
+        "comune": "LEGNANO",
+        "indirizzo": "VIA BERNOCCHI,1 (ORDINARIA)-VIA CALINI, 5(SUCCUR.)",
+        "telefono": "0331446811",
+        "email": "MIIS044009@istruzione.it",
+        "link_maps": "https://www.google.com/maps/search/?api=1&query=I.T.+ECON.+E+TECNOL.+-+C.+DELL%27ACQUA%2C+VIA+BERNOCCHI%2C1+%28ORDINARIA%29-VIA+CALINI%2C+5%28SUCCUR.%29%2C+LEGNANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
     ]
@@ -6689,7 +6665,7 @@
   },
   {
     "site_name": "IC - MORANTE - FILZI",
-    "url": "http://www.icselsamorante.edu.it",
+    "url": "https://www.icsmorantefilzi.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -6708,11 +6684,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SEC.+I+GRADO+MORANTE+-+FILZI%2C+VIA+DEI+GUARNERI+21%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icselsamorante.edu.it"
   },
   {
     "site_name": "IC A. DIAZ",
-    "url": "http://www.icsdiazvaprio.gov.it",
+    "url": "https://icsdiazvaprio.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -6746,7 +6723,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+POZZO+D%27ADDA%2C+VIA+UNIONE%2C+POZZO+D%27ADDA%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsdiazvaprio.gov.it"
   },
   {
     "site_name": "IC A. MANZONI",
@@ -6773,7 +6751,7 @@
   },
   {
     "site_name": "IC A. NEGRI/CAVENAGO B.",
-    "url": "http://www.iccavenagodibrianza.gov.it",
+    "url": "https://www.iccavenagodibrianza.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -6792,7 +6770,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=FALCONE+E+BORSELLINO%2C+VIA+DE+GASPERI%2C+31%2C+CAPONAGO%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iccavenagodibrianza.gov.it"
   },
   {
     "site_name": "IC A. RIZZOLI",
@@ -6842,7 +6821,7 @@
   },
   {
     "site_name": "IC A. STOPPANI",
-    "url": "http://www.icstoppani.gov.it",
+    "url": "https://www.icstoppani.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -6861,7 +6840,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SEC.+IGRADO+S.CATERINA+DA+SIENA%2C+VIA+MONTEVERDI+6%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icstoppani.gov.it"
   },
   {
     "site_name": "IC A.B. SABIN",
@@ -6949,7 +6929,7 @@
   },
   {
     "site_name": "IC A.MANZONI",
-    "url": "http://www.icsmanzonilegnano.gov.it",
+    "url": "https://icsmanzonilegnano.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -6968,7 +6948,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GRADO+F.+TOSI%2C+VIA+S.TERESA%2C+30%2C+LEGNANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsmanzonilegnano.gov.it"
   },
   {
     "site_name": "IC A.MORO E M.RI V. FANI VAREDO",
@@ -6995,7 +6976,7 @@
   },
   {
     "site_name": "IC ADA NEGRI",
-    "url": "http://www.icadanegri.gov.it/",
+    "url": "https://icadanegri.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -7029,7 +7010,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GRADO+DON+MILANI%2C+VIA+DON+MILANI+3%2C+MAGNAGO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icadanegri.gov.it/"
   },
   {
     "site_name": "IC AGOSTI DELLO",
@@ -7125,7 +7107,7 @@
   },
   {
     "site_name": "IC ALDO MORO DI MALEO",
-    "url": "http://www.iccsmaleo.gov.it",
+    "url": "https://www.iccsmaleo.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -7189,7 +7171,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GRADO+-CORNO+G.%2C+PIAZZA+CADUTI+1%2C+CORNO+GIOVINE%2C+LODI%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iccsmaleo.gov.it"
   },
   {
     "site_name": "IC ALDO MORO/SEREGNO",
@@ -7239,7 +7222,7 @@
   },
   {
     "site_name": "IC ARBE ZARA",
-    "url": "http://www.icarbezara.gov.it",
+    "url": "https://www.icarbezara.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -7258,11 +7241,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECOND.+IGR.+FALCONE+BORSELLINO%2C+VIALE+SARCA%2C+24%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icarbezara.gov.it"
   },
   {
     "site_name": "IC BALILLA PAGANELLI",
-    "url": "http://www.isc-paganelli.gov.it",
+    "url": "https://isc-paganelli.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -7281,7 +7265,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GRADO+ANNA+FRANK%2C+VIA+FRIULI%2C+18%2C+CINISELLO+BALSAMO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.isc-paganelli.gov.it"
   },
   {
     "site_name": "IC BARLASSINA",
@@ -7369,29 +7354,6 @@
   },
   {
     "site_name": "IC BELLUSCO E MEZZAGO",
-    "url": "http://www.icsbelluscomezzago.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
-      {
-        "nome_istituto": "IC BELLUSCO E MEZZAGO",
-        "nome_scuola": "ALDO MORO - MEZZAGO",
-        "tipo_istruzione": "Scuola secondaria di I grado",
-        "tipo_istituto_dettagliato": "Scuola Media",
-        "codice_istituto": "MBIC8CP00B",
-        "codice_meccanografico": "MBMM8CP02D",
-        "provincia": "MONZA E DELLA BRIANZA",
-        "comune": "MEZZAGO",
-        "indirizzo": "VIA CONCORDIA 45",
-        "telefono": "039623798",
-        "email": "MBIC8CP00B@istruzione.it",
-        "link_maps": "https://www.google.com/maps/search/?api=1&query=ALDO+MORO+-+MEZZAGO%2C+VIA+CONCORDIA+45%2C+MEZZAGO%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
-        "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "IC BELLUSCO E MEZZAGO",
     "url": "http://www.icbelluscomezzago.edu.it/",
     "spagnolo": true,
     "enabled": true,
@@ -7410,12 +7372,27 @@
         "email": "MBIC8CP00B@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=FALCONE+E+BORSELLINO+-+BELLUSCO%2C+VIA+PASCOLI+9%2C+BELLUSCO%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
         "spagnolo": true
+      },
+      {
+        "nome_istituto": "IC BELLUSCO E MEZZAGO",
+        "nome_scuola": "ALDO MORO - MEZZAGO",
+        "tipo_istruzione": "Scuola secondaria di I grado",
+        "tipo_istituto_dettagliato": "Scuola Media",
+        "codice_istituto": "MBIC8CP00B",
+        "codice_meccanografico": "MBMM8CP02D",
+        "provincia": "MONZA E DELLA BRIANZA",
+        "comune": "MEZZAGO",
+        "indirizzo": "VIA CONCORDIA 45",
+        "telefono": "039623798",
+        "email": "MBIC8CP00B@istruzione.it",
+        "link_maps": "https://www.google.com/maps/search/?api=1&query=ALDO+MORO+-+MEZZAGO%2C+VIA+CONCORDIA+45%2C+MEZZAGO%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
+        "spagnolo": true
       }
     ]
   },
   {
     "site_name": "IC BEREGUARDO",
-    "url": "http://WWW.ICSBEREGUARDO.GOV.IT",
+    "url": "https://www.icbereguardo.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -7434,11 +7411,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=MARCIGNAGO%2C+PIAZZA+ROVIDA%2C+SNC%2C+MARCIGNAGO%2C+PAVIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://WWW.ICSBEREGUARDO.GOV.IT"
   },
   {
     "site_name": "IC BRESSANA BOTTARONE",
-    "url": "http://www.icbressana.gov.it",
+    "url": "https://www.icbressana.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -7502,7 +7480,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=DEPRETIS+-+PINAROLO+PO%2C+VIA+DEPRETIS%2C+8%2C+PINAROLO+PO%2C+PAVIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icbressana.gov.it"
   },
   {
     "site_name": "IC BRONI - PAOLO BAFFI",
@@ -7598,7 +7577,7 @@
   },
   {
     "site_name": "IC CARDUCCI",
-    "url": "http://www.icscarducci.gov.it",
+    "url": "https://icscarducci.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -7617,11 +7596,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+G.+LEOPARDI%2C+VIA+XXIV+MAGGIO+34%2F36%2C+SAN+VITTORE+OLONA%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icscarducci.gov.it"
   },
   {
     "site_name": "IC CARLO E. BUSCAGLIA",
-    "url": "http://www.icbuscaglia.gov.it",
+    "url": "https://icbuscaglia.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -7640,7 +7620,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+PAISIELLO%2C+VIA+PAISIELLO%2C+2%2C+CINISELLO+BALSAMO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icbuscaglia.gov.it"
   },
   {
     "site_name": "IC CARLO FONTANA",
@@ -7911,7 +7892,7 @@
   },
   {
     "site_name": "IC CREMA DUE",
-    "url": "http://www.iccremadue.gov.it",
+    "url": "https://iccremadue.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -7930,7 +7911,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=OMBRIANO%2C+VIA+RAMPAZZINI+14%2C+CREMA%2C+CREMONA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iccremadue.gov.it"
   },
   {
     "site_name": "IC CREMA TRE - NELSON MANDELA",
@@ -7957,7 +7939,7 @@
   },
   {
     "site_name": "IC CREMA UNO",
-    "url": "http://www.cremauno.gov.it",
+    "url": "https://cremauno.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -7976,7 +7958,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=%22GIOVANNI+VAILATI%22+%28CREMA%29%2C+VIA+DEL+GINNASIO+7%2C+CREMA%2C+CREMONA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.cremauno.gov.it"
   },
   {
     "site_name": "IC CREMONA UNO",
@@ -8141,7 +8124,7 @@
   },
   {
     "site_name": "IC DI CASALPUSTERLENGO",
-    "url": "http://www.iccasalpusterlengo.gov.it",
+    "url": "https://iccasalpusterlengo.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -8160,11 +8143,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SEC.+I+GRADO+-+GRIFFINI%2C+VIA+OLIMPO+N+.+6%2C+CASALPUSTERLENGO%2C+LODI%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iccasalpusterlengo.gov.it"
   },
   {
     "site_name": "IC DI CELLATICA - COLLEBEATO",
-    "url": "http://www.iccellaticacollebeato.it",
+    "url": "https://www.iccellaticacollebeato.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -8183,7 +8167,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SEC.I+GRADO+SILONE+COLLEBEATO%2C+VIA+S.VITO%2C+1%2C+COLLEBEATO%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iccellaticacollebeato.it"
   },
   {
     "site_name": "IC DI INZAGO",
@@ -8325,7 +8310,7 @@
   },
   {
     "site_name": "IC DI RONCADELLE",
-    "url": "http://www.icroncadelle.gov.it",
+    "url": "https://icroncadelle.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -8344,7 +8329,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SCUOLA+SECONDARIA+A.GRAMSCI%2C+VIA+TOGLIATTI%2C+5%2C+RONCADELLE%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icroncadelle.gov.it"
   },
   {
     "site_name": "IC DI VIA CAIROLI",
@@ -8684,29 +8670,6 @@
   },
   {
     "site_name": "IC ERASMO DA ROTTERDAM",
-    "url": "http://www.albaciscuole.gov.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
-      {
-        "nome_istituto": "IC ERASMO DA ROTTERDAM",
-        "nome_scuola": "SECONDARIA I GRADO CISLIANO",
-        "tipo_istruzione": "Scuola secondaria di I grado",
-        "tipo_istituto_dettagliato": "Scuola Media",
-        "codice_istituto": "MIIC86900D",
-        "codice_meccanografico": "MIMM86902G",
-        "provincia": "MILANO",
-        "comune": "CISLIANO",
-        "indirizzo": "VIA GIOVANNI XXIII, 8",
-        "telefono": "0290387061",
-        "email": "MIIC86900D@istruzione.it",
-        "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GRADO+CISLIANO%2C+VIA+GIOVANNI+XXIII%2C+8%2C+CISLIANO%2C+MILANO%2C+Italia",
-        "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "IC ERASMO DA ROTTERDAM",
     "url": "https://icserasmo.edu.it/",
     "spagnolo": true,
     "enabled": true,
@@ -8725,15 +8688,22 @@
         "email": "MIIC86900D@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+G.+PASCOLI%2C+VIA+G.+PASCOLI+N.+4%2C+CUSAGO%2C+MILANO%2C+Italia",
         "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "IC ERASMO DA ROTTERDAM",
-    "url": "http://www.albaciscuole.edu.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
+      },
+      {
+        "nome_istituto": "IC ERASMO DA ROTTERDAM",
+        "nome_scuola": "SECONDARIA I GRADO CISLIANO",
+        "tipo_istruzione": "Scuola secondaria di I grado",
+        "tipo_istituto_dettagliato": "Scuola Media",
+        "codice_istituto": "MIIC86900D",
+        "codice_meccanografico": "MIMM86902G",
+        "provincia": "MILANO",
+        "comune": "CISLIANO",
+        "indirizzo": "VIA GIOVANNI XXIII, 8",
+        "telefono": "0290387061",
+        "email": "MIIC86900D@istruzione.it",
+        "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GRADO+CISLIANO%2C+VIA+GIOVANNI+XXIII%2C+8%2C+CISLIANO%2C+MILANO%2C+Italia",
+        "spagnolo": true
+      },
       {
         "nome_istituto": "IC ERASMO DA ROTTERDAM",
         "nome_scuola": "SECONDARIA I GRADO ALBAIRATE",
@@ -8791,7 +8761,7 @@
   },
   {
     "site_name": "IC EUROPA UNITA",
-    "url": "http://www.iceuropaunita.gov.it",
+    "url": "https://www.iceuropaunita.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -8810,7 +8780,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECON.+I+GR.+L.+DA+VINCI%2C+VIA+VARZI%2C+13%2F3%2C+ARESE%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iceuropaunita.gov.it"
   },
   {
     "site_name": "IC F. S. CABRINI",
@@ -9059,7 +9030,7 @@
   },
   {
     "site_name": "IC G. FALCONE E P. BORSELLINO",
-    "url": "http://www.icscastano.gov.it",
+    "url": "https://icscastano.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9078,11 +9049,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SEC.+I+GRADO+E.+ACERBI%2C+VIA+SAN+ANTONIO%2C+CASTANO+PRIMO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icscastano.gov.it"
   },
   {
     "site_name": "IC G. GARIBALDI",
-    "url": "http://sites.google.com/site/iscgaribaldi/",
+    "url": "https://iscgaribaldi.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9101,7 +9073,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+G.+MARCONI%2C+VIA+MARCONI+46%2C+CINISELLO+BALSAMO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://sites.google.com/site/iscgaribaldi/"
   },
   {
     "site_name": "IC G. MARCONI/CONCOREZZO",
@@ -9197,7 +9170,7 @@
   },
   {
     "site_name": "IC G.PASCOLI",
-    "url": "http://www.icsestopascoli.gov.it",
+    "url": "https://icsestopascoli.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9216,7 +9189,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GRA.+I.+CALVINO%2C+VIA+F.+DI+DIO%2C+101%2C+SESTO+SAN+GIOVANNI%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsestopascoli.gov.it"
   },
   {
     "site_name": "IC G.UNGARETTI",
@@ -9388,7 +9362,7 @@
   },
   {
     "site_name": "IC GIANNI RODARI/SEREGNO",
-    "url": "http://WWW.SCUOLARODARI.GOV.IT",
+    "url": "https://www.scuolarodari.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9407,7 +9381,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=MERCALLI+-+SEREGNO%2C+VIA+GRAMSCI+17%2C+SEREGNO%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://WWW.SCUOLARODARI.GOV.IT"
   },
   {
     "site_name": "IC GIOSUE' CARDUCCI",
@@ -9434,7 +9409,7 @@
   },
   {
     "site_name": "IC GIUSTI - D'ASSISI",
-    "url": "http://www.icgiusti.it",
+    "url": "https://www.icgiusti.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9453,7 +9428,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SEC.+I+GRADO+PANZINI%2C+VIA+GIUSTI+15%2FA%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icgiusti.it"
   },
   {
     "site_name": "IC GOBETTI",
@@ -9480,7 +9456,7 @@
   },
   {
     "site_name": "IC I. CALVINO",
-    "url": "http://www.icsitalocalvino.gov.it",
+    "url": "https://www.icsitalocalvino.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9499,11 +9475,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SEC.+I+GRADO+I.+CALVINO%2C+VIA+FRIGIA%2C+4%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsitalocalvino.gov.it"
   },
   {
     "site_name": "IC IQBAL MASIH",
-    "url": "http://www.icsiqbalmasih.gov.it",
+    "url": "https://www.icsiqbalmasih.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9522,11 +9499,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECOND.+I+GR.+IQBAL+MASIH%2C+VIA+BIANCA+MILESI+4%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsiqbalmasih.gov.it"
   },
   {
     "site_name": "IC IV E. MONTALE",
-    "url": "http://www.icsmontale.it",
+    "url": "https://www.icsmontale.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9545,7 +9523,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+G.MARCONI%2C+VIA+EMILIA%2C+1%2C+COLOGNO+MONZESE%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsmontale.it"
   },
   {
     "site_name": "IC I^ DARFO BOARIO TERME",
@@ -9572,7 +9551,7 @@
   },
   {
     "site_name": "IC JACOPO BAROZZI",
-    "url": "http://www.icsbarozzi.gov.it/",
+    "url": "https://www.icsbarozzi.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9591,7 +9570,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECOND.+I+GR.+CONFALONIERI%2C+VIA+VITTADINI%2C+10%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsbarozzi.gov.it/"
   },
   {
     "site_name": "IC L.CADORNA",
@@ -9618,7 +9598,7 @@
   },
   {
     "site_name": "IC L.DA VINCI CASTENEDOLO",
-    "url": "http://www.icscastenedolo.gov.it",
+    "url": "https://www.icscastenedolo.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9637,7 +9617,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SC.+SEC.+I+GRADO+L.+DA+VINCI%2C+VIA+RIMEMBRANZE+9%2C+CASTENEDOLO%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icscastenedolo.gov.it"
   },
   {
     "site_name": "IC LANDRIANO",
@@ -9679,7 +9660,7 @@
   },
   {
     "site_name": "IC LEONARDO DA VINCI",
-    "url": "http://www.icsettalarodano.gov.it",
+    "url": "https://icsettalarodano.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9713,7 +9694,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+GINO+BARTALI%2C+S.P.+182+FRAZ.+LUCINO+DI+RODANO%2C+RODANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsettalarodano.gov.it"
   },
   {
     "site_name": "IC LEONARDO DA VINCI",
@@ -9740,7 +9722,7 @@
   },
   {
     "site_name": "IC LEONARDO DA VINCI",
-    "url": "http://www.comprensivogaggiano.gov.it",
+    "url": "https://comprensivogaggiano.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9759,7 +9741,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GRADO+BRAMANTE%2C+VIA+AL+CORNICIONE%2C35%2C+GAGGIANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.comprensivogaggiano.gov.it"
   },
   {
     "site_name": "IC LEONE TOLSTOJ",
@@ -9786,7 +9769,7 @@
   },
   {
     "site_name": "IC LUIGI GALVANI",
-    "url": "http://www.icgalvani.gov.it",
+    "url": "https://www.icgalvani.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9805,7 +9788,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECOND.+I+GR.+S.GREGORIO+-FARA%2C+VIA+SAN+GREGORIO+5+-+VIA+FARA+32%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icgalvani.gov.it"
   },
   {
     "site_name": "IC M. GANDHI",
@@ -9947,7 +9931,7 @@
   },
   {
     "site_name": "IC MARGHERITA HACK",
-    "url": "http://www.istitutocomprensivodiassago.gov.it",
+    "url": "https://www.icmargheritahackassago.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -9966,7 +9950,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GRADO+S.+PERTINI%2C+VIA+MATTEOTTI+3%2C+ASSAGO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutocomprensivodiassago.gov.it"
   },
   {
     "site_name": "IC MARTIRI DELLA LIBERTA",
@@ -9993,7 +9978,7 @@
   },
   {
     "site_name": "IC MATTEI - DI VITTORIO",
-    "url": "http://www.icmatteidivittorio.gov.it",
+    "url": "https://icmatteidivittorio.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -10012,7 +9997,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SEC.+I+GRADO+MATTEI+DI+VITTORIO%2C+VIA+BIZET%2C+1%2C+PIOLTELLO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icmatteidivittorio.gov.it"
   },
   {
     "site_name": "IC MEDE",
@@ -10085,7 +10071,7 @@
   },
   {
     "site_name": "IC MONTESSORI",
-    "url": "http://www.montessorionline.gov.it",
+    "url": "https://www.montessorionline.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -10104,7 +10090,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SEC.+I+GRADO+L.+MILANI%2C+VIA+CAVOUR+32%2C+SAN+GIULIANO+MILANESE%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.montessorionline.gov.it"
   },
   {
     "site_name": "IC MONTESSORI/RONCO B/SULBIATE",
@@ -10192,7 +10179,7 @@
   },
   {
     "site_name": "IC NARCISI",
-    "url": "http://www.istitutonarcisi.it",
+    "url": "https://www.istitutonarcisi.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -10211,11 +10198,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+VIA+ANEMONI%2C+VIA+ANEMONI+10%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutonarcisi.it"
   },
   {
     "site_name": "IC NERVIANO",
-    "url": "http://www.viadeiboschi.gov.it",
+    "url": "https://www.icnerviano.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -10234,7 +10222,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SEC.+I+GRADO+L.+DA+VINCI%2C+VIA+DIAZ+1%2C+NERVIANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.viadeiboschi.gov.it"
   },
   {
     "site_name": "IC NORD 1 BRESCIA",
@@ -10781,7 +10770,7 @@
   },
   {
     "site_name": "IC R. PEZZANI",
-    "url": "http://www.icpezzani.gov.it",
+    "url": "https://www.icpezzani.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -10800,11 +10789,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECOND.+I+GR.+VIA+MARTINENGO%2C+VIA+MARTINENGO+34%2F6%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icpezzani.gov.it"
   },
   {
     "site_name": "IC R.L. MONTALCINI",
-    "url": "http://www.icsmontalcini.it",
+    "url": "https://www.icsmontalcini.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -10823,11 +10813,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SEC.+I+GRADO+ZELO+FORAMAGNO%2C+VIA+CARDUCCI+7%2C+PESCHIERA+BORROMEO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icsmontalcini.it"
   },
   {
     "site_name": "IC REZZATO",
-    "url": "http://www.icrezzato.gov.it",
+    "url": "https://icrezzato.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -10846,7 +10837,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=G.PERLASCA+-+REZZATO%2C+VIA+L.DA+VINCI+48%2C+REZZATO%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icrezzato.gov.it"
   },
   {
     "site_name": "IC RICCARDO MASSA",
@@ -10919,7 +10911,7 @@
   },
   {
     "site_name": "IC RITA LEVI MONTALCINI",
-    "url": "http://www.icrlmontalcini.gov.it",
+    "url": "https://www.icrlmontalcini.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -10938,7 +10930,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+VIA+EMILIA%2C+VIA+EMILIA%2C+53%2F55%2C+BUCCINASCO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icrlmontalcini.gov.it"
   },
   {
     "site_name": "IC RIVANAZZANO TERME",
@@ -11057,7 +11050,7 @@
   },
   {
     "site_name": "IC S.PELLICO",
-    "url": "http://www.icspellico.gov.it",
+    "url": "https://icspellico.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -11076,30 +11069,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SEC.+I+GRADO+G.+MARCONI%2C+P.ZZA+EUROPA+9%2C+ARLUNO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
-  },
-  {
-    "site_name": "IC SALVO D'ACQUISTO/ MONZA",
-    "url": "http://www.iccdacquistomonza.gov.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
-      {
-        "nome_istituto": "IC SALVO D'ACQUISTO/ MONZA",
-        "nome_scuola": "E. SALA - MONZA",
-        "tipo_istruzione": "Scuola secondaria di I grado",
-        "tipo_istituto_dettagliato": "Scuola Media",
-        "codice_istituto": "MBIC8AA00P",
-        "codice_meccanografico": "MBMM8AA01Q",
-        "provincia": "MONZA E DELLA BRIANZA",
-        "comune": "MONZA",
-        "indirizzo": "VIA GIOVANNI SGAMBATI",
-        "telefono": "039386650",
-        "email": "MBIC8AA00P@istruzione.it",
-        "link_maps": "https://www.google.com/maps/search/?api=1&query=E.+SALA+-+MONZA%2C+VIA+GIOVANNI+SGAMBATI%2C+MONZA%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
-        "spagnolo": true
-      }
-    ]
+    ],
+    "url_precedente": "http://www.icspellico.gov.it"
   },
   {
     "site_name": "IC SALVO D'ACQUISTO/ MONZA",
@@ -11120,6 +11091,21 @@
         "telefono": "039492169",
         "email": "MBIC8AA00P@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=GIOVANNI+XXIII+-+VEDANO+AL+LAMB%2C+VIA+ITALIA+15%2C+VEDANO+AL+LAMBRO%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
+        "spagnolo": true
+      },
+      {
+        "nome_istituto": "IC SALVO D'ACQUISTO/ MONZA",
+        "nome_scuola": "E. SALA - MONZA",
+        "tipo_istruzione": "Scuola secondaria di I grado",
+        "tipo_istituto_dettagliato": "Scuola Media",
+        "codice_istituto": "MBIC8AA00P",
+        "codice_meccanografico": "MBMM8AA01Q",
+        "provincia": "MONZA E DELLA BRIANZA",
+        "comune": "MONZA",
+        "indirizzo": "VIA GIOVANNI SGAMBATI",
+        "telefono": "039386650",
+        "email": "MBIC8AA00P@istruzione.it",
+        "link_maps": "https://www.google.com/maps/search/?api=1&query=E.+SALA+-+MONZA%2C+VIA+GIOVANNI+SGAMBATI%2C+MONZA%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
         "spagnolo": true
       }
     ]
@@ -11164,7 +11150,7 @@
   },
   {
     "site_name": "IC SANTA MARIA DELLA VERSA",
-    "url": "http://www.icvalleversa.gov.it",
+    "url": "https://www.icvalleversa.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -11213,7 +11199,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SCUOLA+SEC.+CANNETO+PAVESE%2C+VIA+CASABASSA+N.6%2C+CANNETO+PAVESE%2C+PAVIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icvalleversa.gov.it"
   },
   {
     "site_name": "IC SEDRIANO",
@@ -11286,7 +11273,7 @@
   },
   {
     "site_name": "IC STRADELLA",
-    "url": "http://www.istitutocomprensivostradellapv.edu.it",
+    "url": "https://www.istitutocomprensivostradellapv.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -11305,7 +11292,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=STRADELLA+-DEPRETIS%2C+VIA+REPUBBLICA%2C+48%2C+STRADELLA%2C+PAVIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutocomprensivostradellapv.edu.it"
   },
   {
     "site_name": "IC SUZZARA 1 \"MARGHERITA HACK\"",
@@ -11378,7 +11366,7 @@
   },
   {
     "site_name": "IC VARESE 1 \"DON RIMOLDI\"",
-    "url": "http://www.icvarese1donrimoldi.gov.it",
+    "url": "https://www.icvarese1donrimoldi.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -11397,7 +11385,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=VIA+PERGINE+-+VARESE+-%2C+VIA+PERGINE%2C6%2C+VARESE%2C+VARESE%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icvarese1donrimoldi.gov.it"
   },
   {
     "site_name": "IC VARESE 2 PELLICO",
@@ -11493,7 +11482,7 @@
   },
   {
     "site_name": "IC VIA CONSOLE MARCELLO",
-    "url": "http://www.consolemarcello.gov.it",
+    "url": "https://www.consolemarcello.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -11512,7 +11501,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+COLOMBO%2C+VIA+DE+ROSSI%2C+2%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.consolemarcello.gov.it"
   },
   {
     "site_name": "IC VIA DE GASPERI/SEVESO",
@@ -11608,7 +11598,7 @@
   },
   {
     "site_name": "IC VIA PAPA GIOVANNI PAOLO II",
-    "url": "http://icsviapapagiovannipaolo2.gov.it",
+    "url": "https://icsviapapagiovannipaolo2.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -11627,7 +11617,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECOND.+I+GR.+IV+GIUGNO+1859%2C+VIA+BOCCACCIO%2C+24%2C+MAGENTA%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://icsviapapagiovannipaolo2.gov.it"
   },
   {
     "site_name": "IC VIA SAURO VERANO BRIANZA",
@@ -11723,7 +11714,7 @@
   },
   {
     "site_name": "IC VIGEVANO V.VALLETTA FOGLIANO",
-    "url": "http://www.icvallettafogliano.gov.it",
+    "url": "https://icviavallettafogliano.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -11742,7 +11733,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=IC+VIG.V.VALL.FOGLIANO-BRAMANTE%2C+VIA+VALLETTA+FOGLIANO%2C+59%2C+VIGEVANO%2C+PAVIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icvallettafogliano.gov.it"
   },
   {
     "site_name": "IC VIGEVANO VIA BOTTO",
@@ -11792,7 +11784,7 @@
   },
   {
     "site_name": "IC VITTORIO LOCCHI",
-    "url": "http://www.comprensivolocchi.gov.it",
+    "url": "https://comprensivolocchi.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -11811,7 +11803,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GR.+G.+CASSINIS%2C+VIA+HERMADA+18%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.comprensivolocchi.gov.it"
   },
   {
     "site_name": "IC VOGHERA VIA DANTE",
@@ -11838,7 +11831,7 @@
   },
   {
     "site_name": "IC XXV APRILE",
-    "url": "http://www.ic25aprilecormano.it",
+    "url": "https://ic25aprilecormano.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -11857,7 +11850,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECOND.+I+GR.+G+RODARI%2C+VIA+BECCARIA+15%2C+CORMANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.ic25aprilecormano.it"
   },
   {
     "site_name": "IC. DI ROSATE",
@@ -11884,7 +11878,7 @@
   },
   {
     "site_name": "ICS \"PAOLO BORSELLINO\" ADRO",
-    "url": "http://WWW.ICADRO.GOV.IT",
+    "url": "https://icadro.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -11903,7 +11897,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=F.LLI+DANDOLO+-+ADRO%2C+VIA+NIGOLINE+16%2C+ADRO%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://WWW.ICADRO.GOV.IT"
   },
   {
     "site_name": "ICS INTERNATIONAL SCHOOL",
@@ -11930,7 +11925,7 @@
   },
   {
     "site_name": "II I.C. DI PALAZZOLO SULL'OGLIO",
-    "url": "http://www.ic2palazzolosulloglio.gov.it",
+    "url": "https://www.ic2palazzolobs.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -11949,7 +11944,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=M.L.+KING+PALAZZOLO+S%2FO%2C+VIA+DOGANE+N.8%2C+PALAZZOLO+SULL%27OGLIO%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.ic2palazzolosulloglio.gov.it"
   },
   {
     "site_name": "IIS \"B. CAVALIERI- D. MARIGNONI\"",
@@ -11991,7 +11987,7 @@
   },
   {
     "site_name": "IIS \"MARZOLI\" - PALAZZOLO S/O",
-    "url": "http://www.istitutomarzoli.gov.it",
+    "url": "https://www.istitutomarzoli.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -12010,11 +12006,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=PALAZZOLO+S%2FO+%28SEZ.ASS.I.I.S.%22MARZOLI%22%29%2C+VIA+LEVADELLO%2C+PALAZZOLO+SULL%27OGLIO%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutomarzoli.gov.it"
   },
   {
     "site_name": "IIS \"VIRGILIO FLORIANI\"",
-    "url": "http://www.iisfloriani.gov.it",
+    "url": "https://www.iisfloriani.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -12033,7 +12030,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=LICEO+SCIENZE+UMANE+FLORIANI%2C+VIA+CREMAGNANI+18%2C+VIMERCATE%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iisfloriani.gov.it"
   },
   {
     "site_name": "IIS ANTONIETTI - ISEO",
@@ -12472,7 +12470,7 @@
   },
   {
     "site_name": "IST. COMP. \"DON MILANI\"",
-    "url": "http://www.scuolemarianodue.gov.it",
+    "url": "https://www.icmarianocomense2.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -12491,7 +12489,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SCUOLA+SECONDARIA+%22C.CALDERA%22%2C+VIA+MANZONI+9%2C+CABIATE%2C+COMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.scuolemarianodue.gov.it"
   },
   {
     "site_name": "IST. COMPRENSIVO COCCAGLIO",
@@ -12890,29 +12889,6 @@
     ]
   },
   {
-    "site_name": "ISTITUTI PROFESSIONALI E IEFP",
-    "url": "http://www.falconeiis.gov.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
-      {
-        "nome_istituto": "ISTITUTI PROFESSIONALI E IEFP",
-        "nome_scuola": "ISTITUTI PROFESSIONALI SERALI",
-        "tipo_istruzione": "Scuola secondaria di II grado",
-        "tipo_istituto_dettagliato": "Ist. Prof. Commerciale",
-        "codice_istituto": "BSRC03401G",
-        "codice_meccanografico": "BSRC034511",
-        "provincia": "BRESCIA",
-        "comune": "PALAZZOLO SULL'OGLIO",
-        "indirizzo": "VIA LEVADELLO, 24",
-        "telefono": "0307405911",
-        "email": "BSIS03400L@istruzione.it",
-        "link_maps": "https://www.google.com/maps/search/?api=1&query=ISTITUTI+PROFESSIONALI+SERALI%2C+VIA+LEVADELLO%2C+24%2C+PALAZZOLO+SULL%27OGLIO%2C+BRESCIA%2C+Italia",
-        "spagnolo": true
-      }
-    ]
-  },
-  {
     "site_name": "ISTITUTO \"MATILDE DI CANOSSA\"",
     "url": "http://www.canossianecomo.it",
     "spagnolo": true,
@@ -13028,29 +13004,6 @@
   },
   {
     "site_name": "ISTITUTO COMPRENSIVO \"C. ZONCA\"",
-    "url": "http://www.ictreviolo.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
-      {
-        "nome_istituto": "ISTITUTO COMPRENSIVO \"C. ZONCA\"",
-        "nome_scuola": "S.M.S. \"CESARE ZONCA\" TREVIOLO",
-        "tipo_istruzione": "Scuola secondaria di I grado",
-        "tipo_istituto_dettagliato": "Scuola Media",
-        "codice_istituto": "BGIC884001",
-        "codice_meccanografico": "BGMM884012",
-        "provincia": "BERGAMO",
-        "comune": "TREVIOLO",
-        "indirizzo": "VIALE PAPA GIOVANNI XXIII 40",
-        "telefono": "035691624",
-        "email": "BGIC884001@istruzione.it",
-        "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.+%22CESARE+ZONCA%22+TREVIOLO%2C+VIALE+PAPA+GIOVANNI+XXIII+40%2C+TREVIOLO%2C+BERGAMO%2C+Italia",
-        "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "ISTITUTO COMPRENSIVO \"C. ZONCA\"",
     "url": "http://www.ictreviolo.edu.it",
     "spagnolo": true,
     "enabled": true,
@@ -13068,6 +13021,21 @@
         "telefono": "035691624",
         "email": "BGIC884001@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.+DI+LALLIO%2C+VIA+XXIV+MAGGIO+4%2C+LALLIO%2C+BERGAMO%2C+Italia",
+        "spagnolo": true
+      },
+      {
+        "nome_istituto": "ISTITUTO COMPRENSIVO \"C. ZONCA\"",
+        "nome_scuola": "S.M.S. \"CESARE ZONCA\" TREVIOLO",
+        "tipo_istruzione": "Scuola secondaria di I grado",
+        "tipo_istituto_dettagliato": "Scuola Media",
+        "codice_istituto": "BGIC884001",
+        "codice_meccanografico": "BGMM884012",
+        "provincia": "BERGAMO",
+        "comune": "TREVIOLO",
+        "indirizzo": "VIALE PAPA GIOVANNI XXIII 40",
+        "telefono": "035691624",
+        "email": "BGIC884001@istruzione.it",
+        "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.+%22CESARE+ZONCA%22+TREVIOLO%2C+VIALE+PAPA+GIOVANNI+XXIII+40%2C+TREVIOLO%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
     ]
@@ -13578,6 +13546,21 @@
         "telefono": "0307405911",
         "email": "BSIS03400L@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=ISTITUTI+TECNICI%2C+VIA+LEVADELLO%2C+24%2C+PALAZZOLO+SULL%27OGLIO%2C+BRESCIA%2C+Italia",
+        "spagnolo": true
+      },
+      {
+        "nome_istituto": "ISTITUTI PROFESSIONALI E IEFP",
+        "nome_scuola": "ISTITUTI PROFESSIONALI SERALI",
+        "tipo_istruzione": "Scuola secondaria di II grado",
+        "tipo_istituto_dettagliato": "Ist. Prof. Commerciale",
+        "codice_istituto": "BSRC03401G",
+        "codice_meccanografico": "BSRC034511",
+        "provincia": "BRESCIA",
+        "comune": "PALAZZOLO SULL'OGLIO",
+        "indirizzo": "VIA LEVADELLO, 24",
+        "telefono": "0307405911",
+        "email": "BSIS03400L@istruzione.it",
+        "link_maps": "https://www.google.com/maps/search/?api=1&query=ISTITUTI+PROFESSIONALI+SERALI%2C+VIA+LEVADELLO%2C+24%2C+PALAZZOLO+SULL%27OGLIO%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
     ]
@@ -14132,7 +14115,7 @@
   },
   {
     "site_name": "ITALO CALVINO",
-    "url": "http://www.istitutocalvino.gov.it",
+    "url": "https://www.istitutocalvino.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -14151,7 +14134,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=I.T.+ECONOMICO+-+I.+CALVINO%2C+VIA+G.+ROSSA%2C+ROZZANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutocalvino.gov.it"
   },
   {
     "site_name": "ITCG CASALE - VIGEVANO",
@@ -14392,7 +14376,7 @@
   },
   {
     "site_name": "L. EINAUDI - L. DA VINCI",
-    "url": "http://www.einaudimagenta.gov.it",
+    "url": "https://einaudimagenta.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -14411,11 +14395,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=I.T.+ECON.+E+TECNOL.-L.+EINAUDI-L.DA+VIN%2C+VIA+MAZENTA%2C+51%2C+MAGENTA%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.einaudimagenta.gov.it"
   },
   {
     "site_name": "L. GALVANI",
-    "url": "http://www.istitutogalvani.gov.it",
+    "url": "https://iisgalvanimi.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -14434,7 +14419,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=L.+LINGUISTICO+-+L.+GALVANI%2C+VIA+F.+GATTI%2C+14%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutogalvani.gov.it"
   },
   {
     "site_name": "L. V. BERTARELLI - FERRARIS",
@@ -14545,7 +14531,7 @@
   },
   {
     "site_name": "LEFFE",
-    "url": "http://www.icleffe.gov.it",
+    "url": "https://icleffe.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -14564,11 +14550,12 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.+LEFFE%2C+VIA+LOCATELLI+44%2C+LEFFE%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icleffe.gov.it"
   },
   {
     "site_name": "LEONARDO DA VINCI",
-    "url": "http://www.istitutoleonardodavinci.gov.it",
+    "url": "https://www.istitutoleonardodavinci.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -14602,7 +14589,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=LICEO+-+LEONARDO+DA+VINCI%2C+VIA+LEONARDO+DA+VINCI%2C+1%2C+COLOGNO+MONZESE%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutoleonardodavinci.gov.it"
   },
   {
     "site_name": "LIC. CLASSICO \"LEGNANI\" - SARONNO",
@@ -14920,7 +14908,7 @@
   },
   {
     "site_name": "LICEO - P. LEVI",
-    "url": "http://www.levi.gov.it",
+    "url": "https://www.levi.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -14939,7 +14927,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=LICEO+LINGUISTICO+-+P.+LEVI%28SUCCURSALE%29%2C+VIA+TRIESTE%2C+48%2C+SAN+GIULIANO+MILANESE%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.levi.gov.it"
   },
   {
     "site_name": "LICEO - S. QUASIMODO",
@@ -15674,7 +15663,7 @@
   },
   {
     "site_name": "LICEO LINGUISTICO \"CESARE BATTISTI\"",
-    "url": "http://www.convittolovere.gov.it",
+    "url": "https://www.convittolovere.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -15693,7 +15682,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=LICEO+LINGUISTICO+%22CESARE+BATTISTI%22%2C+VIA+CESARE+BATTISTI%2C+1%2C+LOVERE%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.convittolovere.gov.it"
   },
   {
     "site_name": "LICEO LINGUISTICO \"FACCHETTI\"",
@@ -16566,7 +16556,7 @@
   },
   {
     "site_name": "LOVERE",
-    "url": "http://www.iclovere.gov.it",
+    "url": "https://omnicomprensivodecioceleri.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -16585,7 +16575,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=S.M.S.+%22GIOVANNI+XXIII%22+LOVERE%2C+VIA+A.+GRANDI%2C+34%2C+LOVERE%2C+BERGAMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iclovere.gov.it"
   },
   {
     "site_name": "LS GALILEO GALILEI",
@@ -17038,7 +17029,7 @@
   },
   {
     "site_name": "MANZONI",
-    "url": "http://www.icmanzonivimercate.gov.it",
+    "url": "https://www.icmanzonivimercate.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -17057,7 +17048,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=MANZONI%2C+P.LE+MARTIRI+VIMERCATESI%2C1+-VIMERCATE%2C+VIMERCATE%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.icmanzonivimercate.gov.it"
   },
   {
     "site_name": "MARCO POLO COLICO",
@@ -17148,15 +17140,7 @@
         "email": "MBIS08400L@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=MARTIN+LUTHER+KING%2C+VIA+ALLENDE+3%2C+MUGGIO%27%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
         "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "MARTIN LUTHER KING",
-    "url": "http://www.mlkmuggio.gov.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
+      },
       {
         "nome_istituto": "MARTIN LUTHER KING",
         "nome_scuola": "MARTIN LUTHER KING",
@@ -17290,7 +17274,7 @@
   },
   {
     "site_name": "N. MORESCHI",
-    "url": "http://www.istitutomoreschi.gov.it",
+    "url": "https://www.istitutomoreschi.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -17309,7 +17293,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=I.T.+ECONOMICO+-+N.+MORESCHI%2C+VIALE+SAN+MICHELE+DEL+CARSO%2C+25%2C+MILANO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutomoreschi.gov.it"
   },
   {
     "site_name": "OSIO SOPRA",
@@ -17507,6 +17492,36 @@
         "email": "BSIS016003@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=PRIMO+LEVI+SEZ.+ITCG%2C+VIA+DELLE+BOMBE%2C+2%2C+SAREZZO%2C+BRESCIA%2C+Italia",
         "spagnolo": true
+      },
+      {
+        "nome_istituto": "PRIMO LEVI",
+        "nome_scuola": "PRIMO LEVI SEZ. ASS. LICEO LINGUISTICO",
+        "tipo_istruzione": "Scuola secondaria di II grado",
+        "tipo_istituto_dettagliato": "Liceo Scientifico",
+        "codice_istituto": "BSIS016003",
+        "codice_meccanografico": "BSPS01602E",
+        "provincia": "BRESCIA",
+        "comune": "SAREZZO",
+        "indirizzo": "VIA DELLE BOMBE, 2",
+        "telefono": "030801087",
+        "email": "BSIS016003@istruzione.it",
+        "link_maps": "https://www.google.com/maps/search/?api=1&query=PRIMO+LEVI+SEZ.+ASS.+LICEO+LINGUISTICO%2C+VIA+DELLE+BOMBE%2C+2%2C+SAREZZO%2C+BRESCIA%2C+Italia",
+        "spagnolo": true
+      },
+      {
+        "nome_istituto": "PRIMO LEVI",
+        "nome_scuola": "PRIMO LEVI SEZ. IST. PROF.LE SERVIZI",
+        "tipo_istruzione": "Scuola secondaria di II grado",
+        "tipo_istituto_dettagliato": "Ist. Prof. Commerciale",
+        "codice_istituto": "BSIS016003",
+        "codice_meccanografico": "BSRC016023",
+        "provincia": "BRESCIA",
+        "comune": "SAREZZO",
+        "indirizzo": "VIA DELLE BOMBE 2",
+        "telefono": "030801087",
+        "email": "BSIS016003@istruzione.it",
+        "link_maps": "https://www.google.com/maps/search/?api=1&query=PRIMO+LEVI+SEZ.+IST.+PROF.LE+SERVIZI%2C+VIA+DELLE+BOMBE+2%2C+SAREZZO%2C+BRESCIA%2C+Italia",
+        "spagnolo": true
       }
     ]
   },
@@ -17529,52 +17544,6 @@
         "telefono": "0362224164",
         "email": "MBTD430001@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=PRIMO+LEVI%2C+VIA+BRIANTINA%2C+68%2C+SEREGNO%2C+MONZA+E+DELLA+BRIANZA%2C+Italia",
-        "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "PRIMO LEVI",
-    "url": "http://www.primolevi-bs.gov.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
-      {
-        "nome_istituto": "PRIMO LEVI",
-        "nome_scuola": "PRIMO LEVI SEZ. ASS. LICEO LINGUISTICO",
-        "tipo_istruzione": "Scuola secondaria di II grado",
-        "tipo_istituto_dettagliato": "Liceo Scientifico",
-        "codice_istituto": "BSIS016003",
-        "codice_meccanografico": "BSPS01602E",
-        "provincia": "BRESCIA",
-        "comune": "SAREZZO",
-        "indirizzo": "VIA DELLE BOMBE, 2",
-        "telefono": "030801087",
-        "email": "BSIS016003@istruzione.it",
-        "link_maps": "https://www.google.com/maps/search/?api=1&query=PRIMO+LEVI+SEZ.+ASS.+LICEO+LINGUISTICO%2C+VIA+DELLE+BOMBE%2C+2%2C+SAREZZO%2C+BRESCIA%2C+Italia",
-        "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "PRIMO LEVI",
-    "url": "http://www.primolevi-bs.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
-      {
-        "nome_istituto": "PRIMO LEVI",
-        "nome_scuola": "PRIMO LEVI SEZ. IST. PROF.LE SERVIZI",
-        "tipo_istruzione": "Scuola secondaria di II grado",
-        "tipo_istituto_dettagliato": "Ist. Prof. Commerciale",
-        "codice_istituto": "BSIS016003",
-        "codice_meccanografico": "BSRC016023",
-        "provincia": "BRESCIA",
-        "comune": "SAREZZO",
-        "indirizzo": "VIA DELLE BOMBE 2",
-        "telefono": "030801087",
-        "email": "BSIS016003@istruzione.it",
-        "link_maps": "https://www.google.com/maps/search/?api=1&query=PRIMO+LEVI+SEZ.+IST.+PROF.LE+SERVIZI%2C+VIA+DELLE+BOMBE+2%2C+SAREZZO%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
     ]
@@ -17627,7 +17596,7 @@
   },
   {
     "site_name": "RITA LEVI MONTALCINI",
-    "url": "http://www.istitutocomprensivocuggiono.gov.it",
+    "url": "https://istitutocomprensivocuggiono.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -17661,7 +17630,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SECONDARIA+I+GRADO+VIA+ROMA%2C+VIA+ROMA%2C+32%2C+BERNATE+TICINO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutocomprensivocuggiono.gov.it"
   },
   {
     "site_name": "RITA LEVI MONTALCINI-1909-2012",
@@ -17688,7 +17658,7 @@
   },
   {
     "site_name": "ROVATO - \"LORENZO GIGLI\"",
-    "url": "http://www.istitutogiglirovato.gov.it",
+    "url": "https://www.istitutogiglirovato.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -17707,7 +17677,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=ROVATO+%28SEZ.ASS.I.S.%22GIGLI%22%29%2C+VIA+EUROPA%2C+46%2FD%2C+ROVATO%2C+BRESCIA%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.istitutogiglirovato.gov.it"
   },
   {
     "site_name": "ROVETTA - IC ANDREA FANTONI",
@@ -17818,7 +17789,7 @@
   },
   {
     "site_name": "SAN CARLO BORROMEO",
-    "url": "http://www.scuolasancarlo.it",
+    "url": "https://www.scuolasancarlo.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -17837,7 +17808,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SAN+CARLO+BORROMEO%2C+V.TRENTO+3%2C+INVERIGO%2C+COMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.scuolasancarlo.it"
   },
   {
     "site_name": "SAN GIUSEPPE - BDC SCHOOL",
@@ -18108,7 +18080,7 @@
   },
   {
     "site_name": "SCUOLA MEDIA GALLIO",
-    "url": "http://www.collegiogallio.com",
+    "url": "https://www.collegiogallio.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -18127,7 +18099,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=SCUOLA+MEDIA+GALLIO%2C+VIA+GALLIO+1%2C+COMO%2C+COMO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.collegiogallio.com"
   },
   {
     "site_name": "SCUOLA MEDIA S.CHIARA",
@@ -19410,7 +19383,7 @@
   },
   {
     "site_name": "V. BACHELET",
-    "url": "http://www.iisbachelet.gov.it",
+    "url": "https://iisbachelet.edu.it/",
     "spagnolo": true,
     "enabled": true,
     "schools": [
@@ -19428,15 +19401,7 @@
         "email": "MIIS003003@istruzione.it",
         "link_maps": "https://www.google.com/maps/search/?api=1&query=I.T.+ECONOMICO+-+V.+BACHELET%2C+VIA+STIGNANI%2C+63%2F65%2C+ABBIATEGRASSO%2C+MILANO%2C+Italia",
         "spagnolo": true
-      }
-    ]
-  },
-  {
-    "site_name": "V. BACHELET",
-    "url": "http://www.iisbachelet.it",
-    "spagnolo": true,
-    "enabled": true,
-    "schools": [
+      },
       {
         "nome_istituto": "V. BACHELET",
         "nome_scuola": "LICEO - V. BACHELET",
@@ -19452,7 +19417,8 @@
         "link_maps": "https://www.google.com/maps/search/?api=1&query=LICEO+-+V.+BACHELET%2C+VIA+STIGNANI+63%2F65%2C+ABBIATEGRASSO%2C+MILANO%2C+Italia",
         "spagnolo": true
       }
-    ]
+    ],
+    "url_precedente": "http://www.iisbachelet.gov.it"
   },
   {
     "site_name": "V. BENINI",

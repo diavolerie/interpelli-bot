@@ -79,7 +79,9 @@ REQUEST_HEADERS = {
     )
 }
 
-GENERIC_KEYWORDS = ["interpello", "supplenza", "ricerca supplenti", "graduatoria d'istituto"]
+# "graduatoria d'istituto" NON e' tra le parole generiche: una graduatoria
+# non e' un interpello e faceva passare pagine di graduatorie.
+GENERIC_KEYWORDS = ["interpello", "supplenza", "ricerca supplenti"]
 TARGET_KEYWORDS = ["spagnolo", "lingua spagnola", "ac24", "ac25", "as2c", "am2c"]
 
 # Testo dei link sulla homepage che ci suggerisce di seguire quella
@@ -93,6 +95,8 @@ SECTION_KEYWORDS = [
 
 MAX_SECTION_PAGES_PER_SITE = 4   # quante pagine "figlie" seguire dalla home
 MAX_DETAIL_CHECKS_PER_SITE = 8   # quante pagine di dettaglio annuncio aprire
+MAX_CONTAINER_LINKS = 3          # un blocco con piu' link di cosi' e' un elenco, non un annuncio
+MAX_CONTAINER_CHARS = 700         # oltre questa lunghezza il blocco 'contenitore' del link viene ignorato
 DETAIL_REQUEST_DELAY = 0.5       # secondi di pausa tra una richiesta e l'altra
 SITE_REQUEST_DELAY = 0.3         # pausa tra un sito e il successivo
 
@@ -156,7 +160,10 @@ def render_with_js(url):
     page = None
     try:
         page = browser.new_page(user_agent=REQUEST_HEADERS["User-Agent"])
-        page.goto(url, timeout=PLAYWRIGHT_NAV_TIMEOUT_MS, wait_until="networkidle")
+        response = page.goto(url, timeout=PLAYWRIGHT_NAV_TIMEOUT_MS, wait_until="networkidle")
+        if response is not None and response.status >= 400:
+            log.info("Rendering Javascript: %s risponde %d anche al browser.", url, response.status)
+            return None
         html = page.content()
         return html
     except Exception as exc:
@@ -185,9 +192,21 @@ def normalize_text(text):
         return ""
     return re.sub(r"\s+", " ", text).strip()
 
+_kw_regex_cache = {}
+
+def _kw_regex(kw):
+    r = _kw_regex_cache.get(kw)
+    if r is None:
+        r = re.compile(r"(?<!\w)" + re.escape(kw.casefold()) + r"(?!\w)")
+        _kw_regex_cache[kw] = r
+    return r
+
 def contains_any(blob, keywords):
+    """True se il testo contiene una delle parole/frasi come parola
+    intera (non come pezzo di un'altra parola): cosi' "ac24" non scatta
+    dentro a "ac245" e "spagnolo" non scatta dentro a un'altra parola."""
     cf = blob.casefold()
-    return any(kw.casefold() in cf for kw in keywords)
+    return any(_kw_regex(kw).search(cf) for kw in keywords)
 
 def make_id(site_key, full_url):
     raw = f"{site_key}|{full_url}"
@@ -209,23 +228,43 @@ def fetch(url):
     resp.raise_for_status()
     return resp.text
 
-def fetch_hybrid(url, budget):
-    """Fetch 'ibrido': prova prima requests (veloce). Se il testo
-    visibile risultante e' sospettosamente scarso (probabile sito
-    Javascript) e c'e' ancora budget di render per questo sito, ritenta
-    con un browser headless e usa il risultato migliore dei due.
+NO_JS_RENDER_HOSTS = ("drive.google.com", "docs.google.com", "forms.gle", "mailupclient.com", "emailsp.com")
 
-    budget: dict condiviso per sito con contatore "js_renders_done".
-    Puo' sollevare requests.RequestException se anche il primo
-    tentativo fallisce e non c'e' nulla da renderizzare.
-    """
-    html = fetch(url)  # se fallisce qui, l'eccezione si propaga (comportamento invariato)
-    text_len = visible_text_len(html)
-
-    if (text_len >= JS_HEURISTIC_MIN_CHARS
-            or not PLAYWRIGHT_IMPORTABLE
+def _can_render(url, budget):
+    if (not PLAYWRIGHT_IMPORTABLE
             or not _browser_holder.get("browser")
             or budget["js_renders_done"] >= PLAYWRIGHT_MAX_RENDERS_PER_SITE):
+        return False
+    host = urlparse(url).netloc.lower()
+    return not any(h in host for h in NO_JS_RENDER_HOSTS)
+
+def fetch_hybrid(url, budget):
+    """Fetch 'ibrido': prova prima requests (veloce). Poi usa il browser
+    headless (Playwright) in due casi:
+    - il testo visibile e' sospettosamente scarso (probabile sito
+      Javascript);
+    - requests ha ricevuto 403 (molti siti/portali bloccano le richieste
+      "da script" ma servono normalmente un browser vero). Nessun trucco
+      anti-bot: se blocca anche il browser, si rinuncia.
+
+    budget: dict condiviso per sito con contatore "js_renders_done".
+    Solleva requests.RequestException se non si riesce ad ottenere la
+    pagina in nessun modo.
+    """
+    try:
+        html = fetch(url)
+    except requests.HTTPError as exc:
+        status = exc.response.status_code if exc.response is not None else None
+        if status == 403 and _can_render(url, budget):
+            budget["js_renders_done"] += 1
+            log.info("403 su %s: riprovo con il browser.", url)
+            rendered = render_with_js(url)
+            if rendered and visible_text_len(rendered) >= JS_HEURISTIC_MIN_CHARS:
+                return rendered
+        raise
+
+    text_len = visible_text_len(html)
+    if text_len >= JS_HEURISTIC_MIN_CHARS or not _can_render(url, budget):
         return html
 
     budget["js_renders_done"] += 1
@@ -256,6 +295,22 @@ def extract_pdf_text(pdf_bytes):
             continue
     return normalize_text(" ".join(parts))
 
+MAIN_SELECTORS = ["main", "article", "[role=main]", "#content", "#main",
+                  ".entry-content", "#contenuto", ".content"]
+
+def extract_main_node(soup):
+    """Restituisce il nodo col contenuto principale della pagina,
+    escludendo menu, piè di pagina, sidebar, script. Serve perche' i
+    menu di un sito scolastico contengono spesso parole come "spagnolo"
+    (indirizzi di studio) che non c'entrano col singolo annuncio."""
+    for tag in soup(["script", "style", "noscript", "nav", "footer", "aside", "form"]):
+        tag.decompose()
+    for sel in MAIN_SELECTORS:
+        node = soup.select_one(sel)
+        if node is not None and len(normalize_text(node.get_text(" ", strip=True))) >= 200:
+            return node
+    return soup.body or soup
+
 def detail_page_matches_target(url, target_keywords, budget):
     """Come nel bot MIM: apre la pagina di dettaglio (o il PDF) e
     controlla se contiene una target_keyword. Usa fetch_hybrid per le
@@ -274,12 +329,14 @@ def detail_page_matches_target(url, target_keywords, budget):
         return False, True
 
     soup = BeautifulSoup(html, "html.parser")
-    body_text = normalize_text(soup.get_text(" ", strip=True))
-    if contains_any(body_text, target_keywords):
+    main_node = extract_main_node(soup)
+    main_text = normalize_text(main_node.get_text(" ", strip=True))
+    if contains_any(main_text, target_keywords):
         return True, False
 
-    # controlla anche eventuali PDF allegati nella pagina di dettaglio
-    for a in soup.find_all("a", href=True)[:10]:
+    # controlla anche eventuali PDF allegati nel contenuto principale
+    # (non quelli del menu/piè di pagina, uguali su tutto il sito)
+    for a in main_node.find_all("a", href=True)[:10]:
         try:
             candidate_url = urljoin(url, a["href"])
         except ValueError:
@@ -343,6 +400,21 @@ def extract_items_from_page(site_key, page_url, html, known_ids, budget):
 
         container = find_container(a)
         container_text = normalize_text(container.get_text(" ", strip=True)) if container else ""
+        # Se il blocco che contiene il link e' enorme (menu, intero elenco
+        # di news, ecc.) non e' "la riga di quell'annuncio": basterebbe
+        # una sola riga con "spagnolo" per far sembrare rilevanti tutti
+        # i link vicini. In quel caso ci si limita al testo del link.
+        # riga "vera" (tr/li/article): fino a MAX_CONTAINER_LINKS link;
+        # altrimenti e' solo il genitore generico del link (div, body...)
+        # e lo accettiamo solo se contiene quel link e nessun altro
+        is_row = container is not None and container.name in ("tr", "li", "article")
+        max_links = MAX_CONTAINER_LINKS if is_row else 1
+        if container is not None and (
+                len(container_text) > MAX_CONTAINER_CHARS
+                or len(container.find_all("a")) > max_links):
+            # troppo grande, o con troppi link: e' un elenco/menu, non
+            # la riga di un singolo annuncio
+            container_text = ""
         blob = f"{link_text} {container_text}"
 
         if not contains_any(blob, GENERIC_KEYWORDS):
@@ -426,6 +498,13 @@ def check_site(site_key, homepage_url, known_ids):
         all_candidates |= cand
         all_unresolved |= unres
 
+    # lo stesso link puo' comparire su piu' pagine (home + sezioni):
+    # va notificato una volta sola
+    unique = {}
+    for it in all_relevant:
+        unique.setdefault(it["id"], it)
+    all_relevant = list(unique.values())
+
     return (all_relevant, all_candidates, all_unresolved), None
 
 # ---------------------------------------------------------------------------
@@ -446,7 +525,16 @@ def save_state(state):
 # Telegram
 # ---------------------------------------------------------------------------
 
+TELEGRAM_SEND_DELAY = 1.2      # pausa dopo ogni messaggio (Telegram limita a ~1 msg/sec per chat)
+TELEGRAM_MAX_ATTEMPTS = 4      # tentativi per messaggio se Telegram risponde 429
+
 def send_telegram_message(text):
+    """Invia il messaggio a tutte le chat configurate, rispettando i
+    limiti di Telegram: pausa tra un invio e l'altro e, se arriva un
+    429 (Too Many Requests), attende il tempo indicato da Telegram
+    (parameters.retry_after) e riprova. Se un messaggio non riesce
+    proprio, il chiamante non lo segna come notificato e verra' rimandato
+    al giro successivo."""
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_IDS:
         log.warning("Telegram (scuole) non configurato (token/chat_id mancanti), skip invio.")
         return False
@@ -454,21 +542,34 @@ def send_telegram_message(text):
     api_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     at_least_one_ok = False
     for chat_id in TELEGRAM_CHAT_IDS:
-        try:
-            resp = requests.post(
-                api_url,
-                data={
-                    "chat_id": chat_id,
-                    "text": text,
-                    "parse_mode": "HTML",
-                    "disable_web_page_preview": False,
-                },
-                timeout=REQUEST_TIMEOUT,
-            )
-            resp.raise_for_status()
-            at_least_one_ok = True
-        except requests.RequestException as exc:
-            log.error("Errore invio Telegram (scuole) a chat %s: %s", chat_id, exc)
+        for attempt in range(1, TELEGRAM_MAX_ATTEMPTS + 1):
+            try:
+                resp = requests.post(
+                    api_url,
+                    data={
+                        "chat_id": chat_id,
+                        "text": text,
+                        "parse_mode": "HTML",
+                        "disable_web_page_preview": False,
+                    },
+                    timeout=REQUEST_TIMEOUT,
+                )
+                if resp.status_code == 429:
+                    try:
+                        wait = int(resp.json().get("parameters", {}).get("retry_after", 5))
+                    except Exception:
+                        wait = 5
+                    log.warning("Telegram 429 per chat %s: attendo %ds (tentativo %d/%d).",
+                                chat_id, wait, attempt, TELEGRAM_MAX_ATTEMPTS)
+                    time.sleep(wait + 1)
+                    continue
+                resp.raise_for_status()
+                at_least_one_ok = True
+                break
+            except requests.RequestException as exc:
+                log.error("Errore invio Telegram (scuole) a chat %s: %s", chat_id, exc)
+                break
+        time.sleep(TELEGRAM_SEND_DELAY)
     return at_least_one_ok
 
 def notify_new_item(site_entry, item):

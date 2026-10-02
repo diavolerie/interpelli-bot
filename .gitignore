@@ -12,7 +12,6 @@ id_rsa
 *.session
 __pycache__/
 *.pyc
-.env
 
 run_locale.log
 cron.log

@@ -1,5 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
-   cd ~/interpelli-bot-main
+   cd ~/interpelli-bot
    export TELEGRAM_BOT_TOKEN="INSERISCI_IL_TOKEN"
    export TELEGRAM_CHAT_ID="INSERISCI_CHAT_ID"
    git pull --rebase origin main

@@ -2254,6 +2254,7 @@
       "cb91e88577fb5d61",
       "cbd5ec10b3cd41a8",
       "ce67c86e78649dab",
+      "d010f2990840e4c7",
       "d26367ae75461248",
       "d48886098b2ff8f0",
       "d49a562aeba3264a",
@@ -3819,6 +3820,7 @@
       "ae26c84b941b6c18",
       "aeed2a92c125a3cf",
       "aef474e91486185d",
+      "af8691cb2e296553",
       "b0161f4b8f0bf8e3",
       "b5929d09f35344f4",
       "b5cc1d43aef42067",
@@ -4338,6 +4340,7 @@
       "152564c1a2835356",
       "1562b81a519f9e7b",
       "157a147249a70ff7",
+      "15ce44282c748437",
       "15fcf23cc5436753",
       "16825d6932410436",
       "168453994cceab29",
@@ -4380,6 +4383,7 @@
       "22cc5f85c17a06cd",
       "2357ed4e2d15ee86",
       "23a9761b5ece4431",
+      "23d1530230f805dc",
       "24559d156cdf163d",
       "2584affb82b5403e",
       "26308a6065277ee9",
@@ -4421,6 +4425,7 @@
       "330734d92df868a8",
       "3316425f2abf33c1",
       "3353464dcc108665",
+      "33ca82d761755771",
       "347755e385c46dec",
       "3548abe5d152b3f7",
       "35bccbf4ceeed09a",
@@ -4525,6 +4530,7 @@
       "5b5504926f12222a",
       "5bdd80f9083144be",
       "5cf74b7f098dae89",
+      "5d0cbc641484c6f5",
       "5da41f2cb4e0ef65",
       "5dbb275d686e9a14",
       "5dec450589ef6f33",
@@ -4558,6 +4564,7 @@
       "688af822e3ef8919",
       "68dba85ab4b9d7f7",
       "68ef3249d867c38a",
+      "6980f24da46d084c",
       "6ae8b3122367fb60",
       "6aec7dfc04f24957",
       "6b211e602342874b",
@@ -4595,8 +4602,10 @@
       "76ea48576993174c",
       "77987d53c1499f1f",
       "77fc857f4055e233",
+      "7806e32bc7c918eb",
       "78281a20fd91383d",
       "78369d639186a0ca",
+      "784749702baf091c",
       "78a8dee3139294d8",
       "78c00c68e0369601",
       "798002d65eec4f38",
@@ -4606,6 +4615,7 @@
       "7a7db2e19310702e",
       "7b807cafeacef2db",
       "7b831c256cc55564",
+      "7bfe737f89349f6c",
       "7c2ee56388d448b6",
       "7c3a9deb39d31111",
       "7c5f056ea75c4445",
@@ -4631,6 +4641,7 @@
       "83b8885813cca588",
       "855472a18929ad05",
       "85ae6c18c4650da0",
+      "864e20f9f2cd28a7",
       "8653dce10f2f5033",
       "867a3df504d97e85",
       "86dbb4ea820b7989",
@@ -4788,6 +4799,7 @@
       "c4965dcc3a3d805d",
       "c525dfd0de53e3be",
       "c52f621e7ce8820d",
+      "c54533dd2f8c568a",
       "c5631af6d5bd02c4",
       "c5f139494902539f",
       "c6396ff47deb4980",
@@ -4871,6 +4883,7 @@
       "e206d88b8bdff785",
       "e36caadfda1125ef",
       "e3fec69e5f8d7839",
+      "e4251fde19bfebf5",
       "e4387c048e69fc77",
       "e502ec4e9f0a867d",
       "e50812675cb00f7e",
@@ -4955,6 +4968,7 @@
       "faf32dfc8f324a45",
       "fb44bf6748ac795a",
       "fb4edfb214b1e8bf",
+      "fb68511c0b582897",
       "fb7382fff6a579a0",
       "fb7ad1ac1216ea6c",
       "fbd83fd0a44ed92f",
@@ -8367,54 +8381,5 @@
       "c081adb1c015236c"
     ]
   },
-  "errors": {
-    "USR Lombardia - Bergamo": {
-      "count": 2,
-      "alerted": false
-    },
-    "USR Lombardia - Brescia": {
-      "count": 2,
-      "alerted": false
-    },
-    "USR Lombardia - Como": {
-      "count": 2,
-      "alerted": false
-    },
-    "USR Lombardia - Cremona": {
-      "count": 2,
-      "alerted": false
-    },
-    "USR Lombardia - Lecco": {
-      "count": 2,
-      "alerted": false
-    },
-    "USR Lombardia - Lodi": {
-      "count": 2,
-      "alerted": false
-    },
-    "USR Lombardia - Mantova": {
-      "count": 2,
-      "alerted": false
-    },
-    "USR Lombardia - Milano": {
-      "count": 2,
-      "alerted": false
-    },
-    "USR Lombardia - Monza e Brianza": {
-      "count": 2,
-      "alerted": false
-    },
-    "USR Lombardia - Pavia": {
-      "count": 2,
-      "alerted": false
-    },
-    "USR Lombardia - Sondrio": {
-      "count": 2,
-      "alerted": false
-    },
-    "USR Lombardia - Varese": {
-      "count": 2,
-      "alerted": false
-    }
-  }
+  "errors": {}
 }

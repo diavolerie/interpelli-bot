@@ -6,6 +6,7 @@
       "f8815490361fcd15"
     ],
     "http://www.abba-ballini.edu.it": [
+      "64203e33ce918a3f",
       "c0f77dcf7be49284"
     ],
     "http://www.icscanzorosciate.edu.it": [
@@ -42,6 +43,7 @@
       "3408d3a3cda21452",
       "35956e1e19cfe618",
       "dcbd11ff04ffa074",
+      "ead0f72dfafde117",
       "f7a682603783d28b"
     ],
     "http://www.liceomanin-cr.edu.it/": [],
@@ -59,21 +61,35 @@
     ],
     "http://www.gbrubini.edu.it": [],
     "http://www.linguisticovico.org": [],
-    "http://www.liceogalilei.edu.it": [],
+    "http://www.liceogalilei.edu.it": [
+      "7ba772b258e2b18c",
+      "967887f15b8e840e",
+      "bc3c97ad74b71934",
+      "cdb939a32c614c3d"
+    ],
     "https://icginostradacasirate.edu.it/": [],
     "http://www.isfalconegallarate.edu.it": [],
     "http://www.liceofalconebg.edu.it": [],
-    "http://www.oberdan.edu.it": [],
+    "http://www.oberdan.edu.it": [
+      "0d45cdcf711422b8"
+    ],
     "https://www.isgalli.edu.it/": [],
     "http://www.isiskeynes.it": [
       "012679e6d28a1320",
+      "03fad37cc998f985",
       "1b22a8ed4717e6a5",
       "4650b9806dbaf5b7",
+      "783f38e814b2028e",
+      "9d93e506ff224e59",
       "c1692c4ec0232c70",
       "ca752bbe532bb33d"
     ],
     "http://www.liceofederici.edu.it": [],
-    "http://www.liceomascheroni.it": [],
+    "http://www.liceomascheroni.it": [
+      "1f3de0866632cf47",
+      "2a5451abffaa4d78",
+      "bc3a569a928ff4a4"
+    ],
     "http://isiseinaudi.it": [
       "1f2ee6fe6be2c796",
       "94c9ffc48b173a80",
@@ -84,7 +100,9 @@
     "http://www.maironidaponte.edu.it": [
       "6bd8183a16d615bc"
     ],
-    "http://www.istitutomamoli.edu.it": [],
+    "http://www.istitutomamoli.edu.it": [
+      "531194590e0a3694"
+    ],
     "https://www.iisbassi.edu.it/": [],
     "http://www.isisromero.it/": [],
     "http://www.sraffacrema.edu.it": [],
@@ -93,14 +111,30 @@
     "https://sraffa.edu.it/": [],
     "http://www.icsanpaolodargon.edu.it": [
       "064817c76644e812",
+      "0f94f8ecfab71248",
+      "2a55d5c131ff884a",
+      "41f93e37627eb072",
       "449105ae80bea523",
       "49d8d7dd60b5ea9d",
+      "853ea19dd59cbb4a",
+      "86151b9c7cc48fba",
       "94399a3ecbeb88a2",
+      "a5eaf11df20946fe",
+      "a70d565af4f0069e",
       "aa5b4223692007e3",
       "b9bde5cb1843f805",
+      "e9ec2eb19dc328f2",
       "f6375db292495bff"
     ],
-    "http://www.icvalledargon.edu.it": [],
+    "http://www.icvalledargon.edu.it": [
+      "331da38bc1fccbdf",
+      "6deb0b8fee6353fe",
+      "8863fbb687e009ad",
+      "9fc85bacaf9e0db8",
+      "c33b5cb9f3da3d6f",
+      "f36ef7245e52f2c8",
+      "fe73c8a06fa6a8f2"
+    ],
     "https://www.istitutovalleseriana.edu.it/": [],
     "http://www.mapelli-monza.edu.it": [
       "5c4b4d3e5f2037bd"
@@ -134,7 +168,10 @@
     ],
     "http://www.centrostudiangelodellacqua.eu": [],
     "https://www.iiscaterinadasiena.edu.it/pvw/app/default/pvw_sito.php?sede_codice=MIIP0011": [],
-    "http://www.itsbattisti.edu.it": [],
+    "http://www.itsbattisti.edu.it": [
+      "2333c843bcee2044",
+      "a0603a827f723cf1"
+    ],
     "http://www.icciserano.edu.it": [
       "0d8a604374cb6435"
     ],
@@ -151,7 +188,15 @@
     "http://www.rezzarascuole.com": [],
     "http://www.istitutodonmilanimontichiari.it": [],
     "http://www.icsdonmilanivimercate.edu.it": [
-      "2359a6d57d3979fd"
+      "000909e0f69bc5d4",
+      "1562397ec8cd3d24",
+      "2359a6d57d3979fd",
+      "4202cf4ee4f48497",
+      "6343e5a09910fe21",
+      "c83a8551e947c85e",
+      "e5df519d45e16c34",
+      "ec40f03465e6fe88",
+      "f604539834065598"
     ],
     "https://iisalessandrini.edu.it/": [
       "1775207f70806f2c",
@@ -169,7 +214,9 @@
     "http://www.iisdenicola.edu.it": [],
     "http://www.liceofermicantu.edu.it": [],
     "http://icsavio.edu.it": [
+      "2eff694bf31a3442",
       "5cbb46a375463303",
+      "a226e7bc2fff9ca0",
       "acb72f4e369b04c4",
       "adbf5a984d6460d5",
       "df6f26504f62ffaf"
@@ -194,10 +241,22 @@
     "http://www.iisfalcone-righi.edu.it": [
       "d39a90eaa6d7126c"
     ],
-    "http://www.galileiostiglia.edu.it": [],
+    "http://www.galileiostiglia.edu.it": [
+      "1275c065b560c1c0",
+      "415e2f0049bb734a",
+      "bd2e2c92c3e97bdb",
+      "d92c7f66c68247cc",
+      "e878a17073a542eb",
+      "ed21da851a941d78"
+    ],
     "http://www.iislagrange.edu.it": [],
     "http://www.Meroni.edu.it": [],
-    "http://WWW.puecherolivetti.edu.it": [],
+    "http://WWW.puecherolivetti.edu.it": [
+      "1c715458c3a7bda2",
+      "1db9ce9c575bfb7d",
+      "af41f5e51af95477",
+      "bdde2fce7b1148c6"
+    ],
     "http://www.istitutotorno.edu.it": [
       "05f8b6a37c53af71"
     ],
@@ -208,13 +267,17 @@
     "http://www.mkgandhi.edu.it": [],
     "http://miis082004@istruzione.it": [],
     "http://www.fedtm.it": [],
-    "https://www.icbagnatica.edu.it/": [],
+    "https://www.icbagnatica.edu.it/": [
+      "cef1f45a238b832c",
+      "f1c3e2eb27ba6b0b"
+    ],
     "http://www.liceopariniseregno.edu.it": [],
     "http://www.liceoterragni.edu.it": [
       "097dd788174d6bb5",
       "0b37d645b4c9e453",
       "194c54e5187f505e",
       "2bacb7258dc50b2a",
+      "3c1db1fd55abe42e",
       "4d8cc7c0fdeb763a",
       "5bf3940d3ddfb3cc",
       "5cdc195d75b84b07",
@@ -231,7 +294,12 @@
     "http://www.scuolavimodrone.it": [],
     "http://www.icbesanainbrianza.edu.it": [],
     "http://www.olivelliputelli.it": [
-      "81d238c9fbdae43f"
+      "3df7fc099a52c364",
+      "4cd97219743f17d9",
+      "6b2e0a38f2eaaef8",
+      "81d238c9fbdae43f",
+      "8388e2a12faed670",
+      "939eeae424a5a343"
     ],
     "http://www.danteweb.edu.it": [],
     "http://www.icsvignate.edu.it": [
@@ -242,7 +310,9 @@
     ],
     "http://WWW.aldomoroabbiategrasso.it": [],
     "http://www.icbeltramirozzano.edu.it": [
-      "61361b1ae6646c0c"
+      "61361b1ae6646c0c",
+      "8ce144408d45f3d1",
+      "a837e231b0278c73"
     ],
     "http://www.comprensivocrespi.edu.it": [
       "3bc1439060390f6a",
@@ -269,9 +339,26 @@
     "https://www.iccomolora.edu.it/": [],
     "http://www.comprensivodicurtatone.edu.it": [],
     "http://www.icprovagliodiseo.edu.it": [],
-    "http://www.icsolmi.edu.it": [],
+    "http://www.icsolmi.edu.it": [
+      "2647b491ca19fa81",
+      "3dd794a8ddd69a51",
+      "60f4db48fbcc846d",
+      "77f94eac0c1ab154",
+      "b064c91f1acadae7",
+      "b7036691c9ce1bd4",
+      "b9a6a9cc23391e6e",
+      "d5f347a58d208d14"
+    ],
     "https://www.icsfranceschini.edu.it/": [
-      "58a788a35c8e47fe"
+      "20a6fc3d0ccc68ef",
+      "397d38b2e139585b",
+      "58a788a35c8e47fe",
+      "678b910a95d1a90b",
+      "68c4dad1f4a4f628",
+      "6b1b046ec5e98a4a",
+      "c20caf70f951fe42",
+      "cc1d23565eb22c61",
+      "f00e9e1d1be28677"
     ],
     "http://www.icfiginoserenza.edu.it": [
       "0c40523c55e97d5f",
@@ -283,13 +370,25 @@
       "b47954c5d4e89e13"
     ],
     "http://www.icsfinomornasco.edu.it": [
+      "2135b3325944117d",
       "2d9c51c206ef7a4d",
+      "616707f98c40f18d",
       "761bcf2a899f4592",
       "7e71dea8797a577f",
-      "aec2316fc8524100"
+      "998b38f8807cc690",
+      "aec2316fc8524100",
+      "b3abbf312bfd4d5f"
     ],
     "http://WWW.ICCAPPELLI.EDU.IT": [],
-    "http://www.icsgalbiate.edu.it": [],
+    "http://www.icsgalbiate.edu.it": [
+      "1a79a6c74195d448",
+      "648991e8888ecd79",
+      "7d7028b309924566",
+      "87b6f7759295bd9f",
+      "8b76e73ae158769b",
+      "b46ae3e051882a44",
+      "b5998574c71993a1"
+    ],
     "https://www.icgerolamocardano.edu.it/": [
       "657808b0939f6fcf"
     ],
@@ -299,7 +398,9 @@
     "http://www.iciqbalmasihpioltello.edu.it": [],
     "http://www.icwojtylagarbagnate.edu.it": [
       "3071e471a5497a4d",
-      "3871a326577dc5b3"
+      "3871a326577dc5b3",
+      "91569ea8120afde9",
+      "929e522117f5076a"
     ],
     "https://iclograto.edu.it/": [],
     "http://www.icsoggiono.edu.it": [],
@@ -307,27 +408,35 @@
     "http://www.icmantova3.edu.it": [
       "0295b6058df72cdc",
       "0556b99a4079a71d",
+      "0bf2f91778da7076",
       "0dcd53966b3d9356",
       "12d66dab99314338",
       "12d9fa4be62973dd",
       "3f09dedcc9349337",
+      "42ec35bfa76714cb",
       "560cdb33c2b19a82",
+      "5896baaea26fb461",
+      "5fb37ceba156e7cc",
       "624d85694564b25e",
       "650c1d3c883baf65",
       "6cf099d6bcbf0a71",
       "7389130c9c52f579",
       "758c4ed9d659d7b6",
+      "7f1ea8ac9034a3af",
       "858674e02b94df19",
       "9328341e2ddc8308",
       "9fc246ad438200c2",
       "a06583734b95c5fe",
       "a3883624f28f03ce",
       "a65f26706bc6da04",
+      "aa61051ba436d22b",
       "c797639bc93f5c51",
       "ce0fca06828e5a06",
       "d176033370843e4a",
       "d6a0f5311bb21e59",
       "d8659275f0c45c79",
+      "dbbb05f9fa43c0e3",
+      "e399dde9ea0ab67e",
       "ed95f67ae2f0c157",
       "f80b87264c60f1b8",
       "fc1fa8252832455c"
@@ -342,11 +451,26 @@
     ],
     "https://icmontessori.edu.it": [],
     "https://icolgiatemolgora.edu.it/": [],
-    "http://www.icorzinuovi.edu.it": [],
-    "http://www.icpiazzaleonardodavinci.edu.it": [],
+    "http://www.icorzinuovi.edu.it": [
+      "21a212ee503ad676",
+      "b1f812c60e6f8f39"
+    ],
+    "http://www.icpiazzaleonardodavinci.edu.it": [
+      "02380ca08d324b06",
+      "22095b818eb1ba92",
+      "22acabd7acb0a722",
+      "5334ccd50590acde",
+      "66e1d782e0ce6671",
+      "9f1bf820341ab339",
+      "de4bcf8b42554c90",
+      "fabdc4a0d60f15ef"
+    ],
     "https://www.icmontalcinicernusco.edu.it/": [],
     "https://www.icroncoferraro.edu.it/luoghi?id=43": [],
-    "https://www.icroncoferraro.edu.it": [],
+    "https://www.icroncoferraro.edu.it": [
+      "153b3f4022cbd0c1",
+      "51d35ec485e3d643"
+    ],
     "http://www.icsrovellasca.edu.it": [],
     "https://www.icroverbella.it/": [
       "17d38649695051b7",
@@ -356,12 +480,14 @@
     ],
     "http://www.icscremeno.edu.it": [],
     "https://www.icterzani.edu.it/": [
+      "0b634d27135257fb",
       "6385e44dc15ed215",
       "78645d650b32fd94",
       "9153847f96902acf",
       "9984cdea71b8612e",
       "9a39dd983530cb5e",
       "9eda8cd5aabc6140",
+      "a991d76d6fbb0ec2",
       "c4c93ba6bfb45857",
       "c72f7130dfa88bb8",
       "cf8e8d1577059049",
@@ -374,7 +500,8 @@
     "http://www.icsvalmadrera.edu.it": [],
     "http://www.icdeandreismilano.edu.it": [
       "2b3ed0f0c6fb68e8",
-      "5ddcb0037002539d"
+      "5ddcb0037002539d",
+      "a308e8ed21fd3c2d"
     ],
     "https://www.icsviadavinci.edu.it/": [
       "44737b7bca2dcbe6",
@@ -382,10 +509,15 @@
       "9df4098239456cc4",
       "b5198533b5f935a9",
       "d43aced52dd57eec",
+      "fdb1d6b3cf9a88f4",
       "fdd9c5bdf15da8f2"
     ],
-    "http://www.tommaseobusto.edu.it": [],
-    "http://www.comprensivocantu.edu.it": [],
+    "http://www.tommaseobusto.edu.it": [
+      "b888510df3f2eaf3"
+    ],
+    "http://www.comprensivocantu.edu.it": [
+      "d7de31ddef2aceb0"
+    ],
     "http://www.comprensivomontessori.edu.it": [],
     "https://www.iccmornago.edu.it/": [],
     "http://www.icsdonticozzi.edu.it": [
@@ -396,10 +528,14 @@
     ],
     "http://www.pacioli.edu.it/": [],
     "http://www.bertacchi.edu.it": [],
-    "https://iisleinaudi.edu.it/": [],
+    "https://iisleinaudi.edu.it/": [
+      "706e3aa810e0cd8a",
+      "e5d482521309d2d4"
+    ],
     "https://isrota.edu.it/": [],
     "http://www.cesaris.edu.it": [
       "22f3ad1b0fbf1c7a",
+      "3dada4ce9763f43c",
       "51929e21beed9398",
       "73e98710fe5dc31d",
       "7e66a4019fc214ba",
@@ -411,6 +547,7 @@
       "ff01ea8f676b96e1"
     ],
     "http://www.davincichiavenna.edu.it": [
+      "0236434756cd2611",
       "d45612586d579fce"
     ],
     "http://www.ipsarvespucci.edu.it": [],
@@ -429,24 +566,48 @@
       "de061701f872d698"
     ],
     "https://www.ipsiasar.edu.it/": [
-      "3052b020ad477723"
+      "081ede581ab93743",
+      "091f75009532dabe",
+      "17dda5fd5e1b1f8b",
+      "3052b020ad477723",
+      "a0feb967d772edc6"
     ],
-    "https://www.liceogallarate.edu.it/": [],
+    "https://www.liceogallarate.edu.it/": [
+      "1882d4902cb41da2"
+    ],
     "http://www.bassi.edu.it": [],
     "http://www.itetmaggiolini.edu.it": [],
     "http://www.isdellacqua.edu.it": [],
-    "http://www.matteirho.edu.it": [],
+    "http://www.matteirho.edu.it": [
+      "0d9d7de75e0d4324",
+      "15e096d7efbd3859",
+      "42e893823f063e77",
+      "5ac4c814e89b5fff",
+      "92c9a02a3709f6b8",
+      "9f3772543a5762ea",
+      "b3168917bc47882e",
+      "f5b3c77eb8b0f81c"
+    ],
     "https://www.jacoponizzola.edu.it/": [],
     "http://www.itczappa.edu.it": [
-      "2d59f2bafc834379"
+      "2d59f2bafc834379",
+      "5ee8256424a69e92"
     ],
     "http://www.centrostudi.it": [],
     "http://www.morante-limbiate.edu.it": [],
     "http://www.istitutildavinci.it": [],
     "http://www.pitentino.edu.it": [],
     "https://www.icmanzonicormano.edu.it/segreteria/iscrizioni/": [
+      "6ec0897b2a991bf8",
+      "7b7e35a3639608a9",
+      "7d246be2bd822ed2",
+      "834a8021bc048cbe",
       "86acde5b27127743",
-      "c0b2a71bd8ea73f5"
+      "adac080709ad8add",
+      "b6785d2f4797e5c1",
+      "c0b2a71bd8ea73f5",
+      "ea06852e4d1175ba",
+      "ecb24cb348ebb63e"
     ],
     "http://www.icr.edu.it": [
       "0bbe16f0ab3050d5",
@@ -469,6 +630,7 @@
       "26a6224e55c365c9",
       "2b9cd5a8bb3b8e10",
       "32ba65a0cbeab377",
+      "3491b014d667a7cf",
       "3b52d92bca4006c4",
       "4258d1a3ccda8000",
       "786bab96c302006b",
@@ -516,32 +678,59 @@
       "5d5a0367799b9af6",
       "702cbc945de12e55",
       "765377e24459ea05",
+      "93763e90539e7c8d",
       "95cfe7b990b4eb74",
       "a4002762ab903d39",
       "e8317a88bc4e08eb"
     ],
     "http://www.icbelluscomezzago.edu.it/": [
-      "69e8a3ca6cd080cb"
+      "05c59d58a1b1c083",
+      "69e8a3ca6cd080cb",
+      "7394e16361c1a148",
+      "89d499e7aca3ea29",
+      "eced66d6dde0cc9a",
+      "fca02544849d99ab"
     ],
     "http://pvic821006@istruzione.it": [],
     "https://www.istitutocomprensivobroni.edu.it/": [
+      "08076681cad8edbe",
+      "0e50fad7a5da2b45",
+      "29537acf33169977",
       "452d41b5318dbb7e",
       "89fcb205f9405b40",
       "a06db37367e9ca74",
-      "b48f347fb788d01d"
+      "b48f347fb788d01d",
+      "e9dbd1b90380a5bc"
     ],
-    "https://www.icbuonarroticorsico.edu.it/": [],
+    "https://www.icbuonarroticorsico.edu.it/": [
+      "67381ef715f0429e",
+      "7b2c081cfdb8e1a8",
+      "9d284ba132279750",
+      "a411581c2e5eeced",
+      "cf61acc9ecc2818f",
+      "ec30f0afe87b9ee9",
+      "fe55d31d25ed74ee",
+      "fe9c863eb21821a0"
+    ],
     "https://cardarelli-massaua.edu.it/": [],
     "https://www.iccasorateprimo.edu.it/": [
-      "09aa4af2c3c0078b"
+      "09aa4af2c3c0078b",
+      "4a3571f52f1161f5"
     ],
     "https://www.iccasteggio.edu.it/": [
-      "996205c918611f87"
+      "996205c918611f87",
+      "c1f09cc8c2fe1f74",
+      "e1973c9f9d04d732"
     ],
     "http://www.iccavalieri.edu.it/": [],
     "https://www.icscentro1.edu.it/": [],
     "http://www.scuolecertosa.edu.it": [
-      "be1413530dd47cf3"
+      "2f79ca7a17946a1a",
+      "42fa2c322eb789d4",
+      "46101cbefc60af90",
+      "9c36d6f4306d7178",
+      "be1413530dd47cf3",
+      "ffa1c4381f7fee87"
     ],
     "https://www.istitutocomprensivochignolopo.edu.it/": [
       "00fa4adc0df15c75",
@@ -607,12 +796,15 @@
     ],
     "https://www.icarcore.edu.it/": [
       "018f5a50b0b5c082",
+      "1e3c6252f023ccdf",
       "280f0e9e6f47037f",
       "4bb5c6416d6b2def",
       "60120a452286ff4c",
       "66dda125e1924d01",
       "807d3d143b8f8b53",
-      "adc9dd79364fdaf1"
+      "adc9dd79364fdaf1",
+      "be05b33d33af37b0",
+      "d0d4d2a9f3fab2e1"
     ],
     "https://www.comprensivocarugate.edu.it/": [
       "8b7222d6a0a7a8d6",
@@ -646,7 +838,10 @@
     ],
     "http://www.istitutocazzulani.edu.it": [],
     "http://www.scuoledipero.edu.it": [
+      "2018d7f25a770a78",
+      "2879a0c6ff78eb41",
       "8a46d695f98a8d96",
+      "c0961a63ccb2b6bd",
       "d4760b2a644b82c7"
     ],
     "http://www.icscairoli.it": [],
@@ -665,11 +860,13 @@
       "eb3dbf4b9b3d32b9"
     ],
     "http://www.icsnovate.edu.it": [
+      "1d55f76e25291525",
       "2d1ad6f765f39db2",
       "35156d635908530b",
       "60949099da795ac0",
       "852ed629941be4eb",
       "94e9cdd1a60c7961",
+      "b283ed226e00570c",
       "bdd465ee90fadeb2",
       "cd6fbb0c41b6022b",
       "dbdbf84ecc5f6af1",
@@ -678,6 +875,7 @@
       "eb24adcb7f7c5989"
     ],
     "http://scuolalocate.edu.it": [
+      "84ded996e76f01d7",
       "a2ebe646f27d0423"
     ],
     "http://www.icsdonorione.edu.it": [
@@ -715,9 +913,14 @@
     ],
     "http://www.icsfermi.edu.it": [
       "175e8924767dc35a",
+      "2f944aae1ad708a8",
       "41a9f5b17f7fe109",
+      "4d4a23efc7db1070",
+      "8868f126d512fe28",
       "8d3eb3d76c848325",
+      "9ff2c6bd297eb9af",
       "a37f91eafc432df8",
+      "b186308314ac7db1",
       "b56cc6f6f96ce3b1"
     ],
     "https://icserasmo.edu.it/": [
@@ -731,23 +934,39 @@
       "df3b311f3248c60c"
     ],
     "http://www.icecuriel.edu.it/": [],
-    "http://www.icsdeandre.it": [],
+    "http://www.icsdeandre.it": [
+      "8cdd63d2944fb362"
+    ],
     "https://www.icdeandrerho.edu.it/": [],
     "https://icfalbor.edu.it/": [
       "10ec08891e019c56",
       "1bfe318040b149c2",
-      "31e7541604d9beb1"
+      "31e7541604d9beb1",
+      "883d88e764020b5f"
     ],
-    "http://www.icdepisis.edu.it": [],
-    "http://www.icsfranceschi.edu.it": [],
+    "http://www.icdepisis.edu.it": [
+      "f00dccd472b175d0"
+    ],
+    "http://www.icsfranceschi.edu.it": [
+      "0b1e01bc9380b80a",
+      "2a5397e6f04696ab",
+      "7ebd652076a5b0a2",
+      "85406ee1d81ed71a",
+      "bf3be050c35cd47e"
+    ],
     "http://www.icfutura.edu.it": [
+      "171f3044a8872924",
       "27786bee0fc4a70e",
+      "286cc1b29de09251",
       "3dca2ae3ded4e327",
       "961df8f9bf5612d0",
-      "dc723b58cdc8347e"
+      "c0444985fbc09d6a",
+      "dc723b58cdc8347e",
+      "e7dc496bc4a2db8b"
     ],
     "http://www.istitutocomprensivoborsi.edu.it": [
       "3a55cd59a69c271c",
+      "a0550b530e122ce2",
       "a835e0a06c235dc0"
     ],
     "http://www.icscapponi.edu.it": [],
@@ -756,7 +975,15 @@
     ],
     "http://sites.google.com/site/iscgaribaldi/": [],
     "http://www.icstarra.edu.it": [
-      "3f2a1f94564fcc5c"
+      "3f2a1f94564fcc5c",
+      "42cbbe6b4ddd3daa",
+      "477e42cdbce94dfa",
+      "50878a377e7197cb",
+      "6844e1c333f83957",
+      "8d8988b314aa66c1",
+      "a852905075dfcf68",
+      "b076520547552844",
+      "ee9151a1428e5738"
     ],
     "http://www.icperasso.edu.it": [],
     "http://www.istitutodezza.edu.it": [
@@ -768,7 +995,11 @@
       "160b381fb4e27e82",
       "19c3c526d8f59b92",
       "1f4ece3b00de7a1f",
+      "43574e9d59181309",
       "770429c101ef59bb",
+      "7d434dbb6c6f17ee",
+      "86209c74c7a2d2b9",
+      "89042d4029d6766c",
       "8cb5576faee0cbbe",
       "9ddd5437fce3f544",
       "a6b45da28c7cd2b5",
@@ -784,11 +1015,19 @@
       "fded105c8ab46482"
     ],
     "https://www.icrobecchi.edu.it": [
-      "ad2c742f3dfba386"
+      "0a8d14582de9590d",
+      "3c071436527435c3",
+      "53c537725c9628d8",
+      "56c5ba5cdd05d3f9",
+      "ad2c742f3dfba386",
+      "da740856ae94c26d"
     ],
-    "https://www.istitutocomprensivogarlasco.edu.it/": [],
+    "https://www.istitutocomprensivogarlasco.edu.it/": [
+      "b7bb5ab011a34abd"
+    ],
     "http://www.icgavirate.edu.it/?page_id=20553": [],
     "http://www.iccarduccilegnano.edu.it/": [
+      "1a37b07cf79b9fd5",
       "bd08b3b3e4acf728",
       "c0169ca4368d4224"
     ],
@@ -796,7 +1035,9 @@
     "http://www.icdarfo1.edu.it": [
       "e6f401c6da6e6096"
     ],
-    "http://www.istitutocadorna.it": [],
+    "http://www.istitutocadorna.it": [
+      "73584ef267cff3cd"
+    ],
     "http://www.iclandriano.edu.it": [],
     "https://www.icsdavinci.edu.it/": [
       "0360c3be97faab86"
@@ -807,7 +1048,9 @@
     "http://www.comprensivomusicalecologno.edu.it": [],
     "http://www.icsmanzoni.edu.it": [
       "08b15729542dc643",
+      "0df4f52fa457b9b5",
       "17d06485d8e7e4a8",
+      "17e9138ff9d622c8",
       "28f7d52e531c0be6",
       "32733f0ffa467c94",
       "32bf9625cf983ad8",
@@ -818,7 +1061,9 @@
       "4ab4f3427ea690fa",
       "513d6eb840e22a00",
       "696a04a0a8324693",
+      "76a539d0dd0f7bec",
       "773be2c4a9015d26",
+      "ac63b3dae796bca5",
       "b202a48e0bfd796a",
       "b4278bd5a1cc5bc8",
       "ba2448a48263b00c",
@@ -830,10 +1075,18 @@
       "f155c14ef8dfdcbe"
     ],
     "http://www.marcopolosenago.edu.it": [
+      "19551503782ca25e",
       "27b095b9eee945e3",
+      "450b4685eb0124b0",
+      "4fe8ef3e48126306",
       "519e508ef3644745",
+      "566c7f2fe7694938",
+      "6fec4bff42690694",
       "80713c163954fe5b",
-      "b98477d51c4e4488"
+      "b98477d51c4e4488",
+      "c3797159b6f9ba4f",
+      "c399f4eb5c290950",
+      "d8383a858eb34008"
     ],
     "http://www.icscernusco.edu.it": [],
     "http://www.ic-martiridellaliberta.edu.it": [
@@ -848,7 +1101,8 @@
     "http://www.icdicorsocavourpv.it/": [],
     "http://www.icsulbiateronco.edu.it": [],
     "http://www.icmorosinimanara.edu.it": [
-      "937ef7bfc7d9caf2"
+      "937ef7bfc7d9caf2",
+      "adbdacda54b74b30"
     ],
     "https://icnord1brescia.edu.it/": [],
     "http://www.icnovigliocasarile.edu.it": [],
@@ -864,15 +1118,19 @@
     "http://www.icspadrepinopuglisi.edu.it": [],
     "http://www.icspini.net/": [],
     "https://www.icpaoloneglia.edu.it": [
+      "b240990ac0532cec",
       "b4058d77e1c82459"
     ],
     "https://icsottocorno.edu.it/": [
+      "91984c1becdf8530",
+      "98ee89a8faee271c",
       "a3a49ce56700ba00"
     ],
     "https://icacerbi.edu.it/": [],
     "http://WWW.icangelini.it": [],
     "http://www.icviascopoli.edu.it/": [
-      "7db16f37801ab4c2"
+      "7db16f37801ab4c2",
+      "bc3fe946a9278475"
     ],
     "http://www.comprensivocosta.edu.it": [
       "87761e1fca654bf9",
@@ -892,18 +1150,28 @@
       "61383a95b4292c36"
     ],
     "http://www.icfranceschi.edu.it": [
+      "22e8722b471a12d4",
       "315f8347a86cdc8c",
       "4376f5267bbd48da",
+      "707b59c078c86501",
+      "7503dd657f2d198f",
       "867f5bc273a88c6e",
+      "8e480c9d443dacdc",
+      "a9fadbbcfcb2e081",
+      "b1ab86ee3a78912a",
       "cbbc7ae034c2b6ce",
       "d2678f68aa0ecd54",
-      "e9606939e937c8f3"
+      "e93a439edef3982c",
+      "e9606939e937c8f3",
+      "f18a9a38b0e6f781"
     ],
     "http://www.scuolarinnovata.it": [],
     "http://www.gorgoscuola.edu.it": [
       "3556b1e90be33a41",
+      "3c1fabc1340fc501",
       "437caa73fd31fd3c",
       "4a009f8bf0b550b7",
+      "5592f719ca676530",
       "ab67df91c24b2103",
       "c88caaaacef2f9e3"
     ],
@@ -931,11 +1199,18 @@
       "b1a8a272454f7a75",
       "b6d76a7258310cff",
       "cbdb26c55b69bf05",
+      "cff1b292b67bdf6b",
       "d11179fd92097a62",
       "d903382e988d66f0"
     ],
     "http://www.icsedriano.edu.it": [],
-    "http://www.icsorelleagazzi.edu.it": [],
+    "http://www.icsorelleagazzi.edu.it": [
+      "137ff3f0a3a874ed",
+      "2d79b6a9c42169b2",
+      "553233160d0fa4d5",
+      "5ca471025e970436",
+      "a3e0c28cbc52ded5"
+    ],
     "http://www.icgrossimilano.it": [
       "0c15b8023061835d",
       "1bcdf912d92ad869",
@@ -946,6 +1221,7 @@
       "cbc6329bfe5d4194"
     ],
     "https://ictrilussa.edu.it/struttura/scuola-secondaria-di-i-grado-via-graf-74/": [
+      "1425bc3fdc54d68f",
       "5471812e64f71d23",
       "5497d0a165432106",
       "6e181c8cdb268d78",
@@ -954,6 +1230,7 @@
     ],
     "http://www.icvarese3.edu.it": [],
     "http://www.icadua.edu.it": [
+      "3a2e6671b638bf90",
       "53826be10c6f5c0d",
       "547461b35f0c6d88",
       "817ee3b071b9c83a",
@@ -971,6 +1248,7 @@
       "a101068c8450fbce",
       "acf6b5aee337cde5",
       "cd61bbcacf9b70f2",
+      "de99689613a41862",
       "e1822490407ce933"
     ],
     "http://www.icbernareggio.edu.it": [
@@ -1022,13 +1300,18 @@
       "e1b6670c568bb9ac"
     ],
     "http://www.icvialelibertavigevano.edu.it": [
-      "98c105aa0dd9a1e0"
+      "98c105aa0dd9a1e0",
+      "c95ea4ed11c5a5b2"
     ],
     "https://www.icviadantevoghera.edu.it/": [],
     "http://www.istitutocomprensivorosate.edu.it": [
+      "142048b698657c08",
       "2ea139015548bfb9",
+      "30e14eef32162be5",
+      "64efd5d65b82cc88",
       "851839a110e200ca",
-      "a91cf3ddee77a1eb"
+      "a91cf3ddee77a1eb",
+      "f3afc2360ec2e3ec"
     ],
     "http://www.icsmilan.it": [],
     "https://www.cavalierimarignoni.it/": [],
@@ -1047,7 +1330,9 @@
       "eea1844f1cc882aa"
     ],
     "http://www.istitutofaravelli.edu.it": [],
-    "http://www.liceogalileivoghera.edu.it": [],
+    "http://www.liceogalileivoghera.edu.it": [
+      "9785f8e6ec5bb94d"
+    ],
     "http://istitutomaserati.edu.it": [],
     "http://www.istitutosanfelice.edu.it": [],
     "http://www.isversari.edu.it": [],
@@ -1062,10 +1347,13 @@
       "ab32d83ab6bbdbb1"
     ],
     "http://www.icconcesio.edu.it": [],
-    "http://www.liceoadelaidecairoli.edu.it": [],
+    "http://www.liceoadelaidecairoli.edu.it": [
+      "3d7c7fb7071412db"
+    ],
     "http://www.bertarelli.it": [],
     "http://www.itetmantegna.edu.it": [],
     "http://www.icrosminipusiano.edu.it": [
+      "1b2a63087bbef354",
       "32da40baf2a1d678",
       "4ffa0790fff0a412",
       "56f2b135cec7a822",
@@ -1095,9 +1383,12 @@
     "http://www.ictreviolo.edu.it": [
       "0977fb2d8646b4c2",
       "09ef642bc8f95511",
+      "12ec20c1f8b0a77f",
       "219b5c4bdc15f586",
+      "2573aad925c14923",
       "4129454bb8a12188",
       "475b15caff4709e6",
+      "709e92f41e0859a3",
       "81cd19896243e148",
       "b502301af97b56b5",
       "c8fc58bb256fe06e",
@@ -1110,8 +1401,16 @@
     "http://www.icnavebrescia.edu.it": [],
     "https://www.montessoricastellanza.it/": [],
     "https://ictrescorebalneario.edu.it": [
+      "1e09f39ba62fde9c",
       "584e579eb4d30366",
-      "c9d09b100b75109b"
+      "608c45b36d4f7484",
+      "7b5d57b37b69cbe0",
+      "8363d08a82e28bae",
+      "99bc9b65247e7d51",
+      "c4612e6e805e417a",
+      "c9d09b100b75109b",
+      "d2b381367892dc05",
+      "d992c78ebc9a079f"
     ],
     "http://www.iiscberetta.edu.it": [],
     "http://www.istitutolabor.it": [],
@@ -1175,20 +1474,39 @@
     "http://www.liceomajoranarho.edu.it": [],
     "http://setticarraro.edu.it": [],
     "http://www.erasmosesto.edu.it": [],
-    "https://www.liceoagnesimilano.edu.it/new_site/": [],
+    "https://www.liceoagnesimilano.edu.it/new_site/": [
+      "00b3977832b0472a",
+      "49f0755e0a3aeec0",
+      "93142e7d1f344ab0",
+      "b989d29726602da9",
+      "bebd05837721f275",
+      "bf9531cd9794b893",
+      "c96c08a1ea11ecc5",
+      "d48d6ccfecd711cd"
+    ],
     "http://www.liceovico.edu.it": [],
     "http://www.liceogalileilegnano.edu.it": [],
     "http://www.liceofalcbors.edu.it": [],
     "http://www.marconionline.edu.it": [],
     "http://www.liceovirgiliomilano.edu.it": [],
     "http://www.liceogiovannixxiii.it": [],
-    "http://www.liceocairoli.edu.it": [],
+    "http://www.liceocairoli.edu.it": [
+      "0c4eb0a8d320b14c",
+      "56f7660b5dcb24ba",
+      "6ce0bce4377d432a",
+      "70ab8b61db4ef99d",
+      "75638e34ff92553d",
+      "aa01254f2d6772ca",
+      "f5f56f39eb6770e3"
+    ],
     "http://www.liceorebora.edu.it": [
       "793a3dcf9e37a578"
     ],
     "http://www.gonzaga-milano.it": [],
     "http://www.istitutozaccaria.it": [],
-    "http://www.auroralyceumcollege.it": [],
+    "http://www.auroralyceumcollege.it": [
+      "5a805b6d5f0c85af"
+    ],
     "https://paritariobg.clerici.lombardia.it": [],
     "http://www.liceoguidocarli.eu": [],
     "http://www.istitutosanpaolo.it": [],
@@ -1200,7 +1518,16 @@
     "https://primolevibollate.edu.it/": [
       "6b33fa575f26e7f4"
     ],
-    "http://www.itcserasmo.it": [],
+    "http://www.itcserasmo.it": [
+      "4cfb0b0be0d13727",
+      "764c658b03c4bde8",
+      "76adb1a513e96cca",
+      "7a2b709a31e2ad13",
+      "86e5e31560d86a39",
+      "8ed26ee0bfa153c5",
+      "c811c25830059acd",
+      "f98213be21fbfd45"
+    ],
     "http://liceonovello.edu.it": [
       "6288b693d6c16329",
       "aa70eaab75eb2064",
@@ -1226,6 +1553,7 @@
       "6264ece3588bfd7f",
       "71dbdc80c953c6ea",
       "80d74b7f14cbc884",
+      "81efad5d020d4260",
       "f6127a8ddb5707e5",
       "f867e0e3e7c32722"
     ],
@@ -1240,7 +1568,9 @@
       "9c48d6b3c13de57d"
     ],
     "http://www.liceimanzoni.edu.it": [],
-    "http://www.carloportamonza.edu.it": [],
+    "http://www.carloportamonza.edu.it": [
+      "e5d690f7a71e041f"
+    ],
     "https://liceomeda.edu.it/": [
       "046a326494871f87",
       "49285ae4c113857f"
@@ -1259,8 +1589,17 @@
     "http://www.liceoagnesi.edu.it": [],
     "http://www.canossadiaz.it": [],
     "http://www.marcopolocolico.edu.it": [
+      "03692f485737e458",
+      "0456d2cd1a1f6dbd",
+      "1fb710bd76c97896",
       "4a3c4864023272f9",
-      "782aaf0015e22820"
+      "782aaf0015e22820",
+      "7e0dc55eb55a6670",
+      "84c620d23653a972",
+      "ad170342e432eb5a",
+      "dbf1f7a478833315",
+      "e7040b6a76f01f14",
+      "f4b3e5a7dbda6d83"
     ],
     "http://www.imacastellanza.it": [],
     "http://www.istitutomariaimmacolata.it": [],
@@ -1280,13 +1619,26 @@
       "0d8f397037be37d6",
       "2941d144e10ef452"
     ],
-    "http://www.primolevi-bs.edu.it": [],
+    "http://www.primolevi-bs.edu.it": [
+      "2a11abaa6c0e0e2c",
+      "4d462ba2ba17d7f3",
+      "bcf4bee12fe5ca1e",
+      "dc46ad6fb98dd091"
+    ],
     "http://www.leviseregno.edu.it": [],
     "http://www.primolevi-bs.it": [],
     "http://www.racchettidavinci.edu.it": [],
     "http://www.istitutiredentore.it": [],
     "https://www.iclissonesecondo.edu.it/": [
-      "ab35ffce9aee9087"
+      "1f168f2d6ab19dae",
+      "394206ff9602ab1f",
+      "48719698d1399127",
+      "5ef41fc10b9b61c6",
+      "78d2acd363327c81",
+      "ab35ffce9aee9087",
+      "b23c1ad602158457",
+      "c92e9932edb784cf",
+      "f9acf82ad3c7e095"
     ],
     "http://www.scuolerovetta.edu.it": [],
     "http://www.allende-custodi.it": [],
@@ -1338,10 +1690,18 @@
     "http://www.canossianepavia.it": [],
     "http://www.isg.pv.it": [],
     "http://www.sanfrancesco.lodi.it": [],
-    "http://www.icbattistiseriate.edu.it": [],
+    "http://www.icbattistiseriate.edu.it": [
+      "285bb3d8610855c6",
+      "b0449017dded6c35",
+      "b1f0062d89251592"
+    ],
     "https://www.icsovere.edu.it/index.php?idpag=1712&idCategoriaLuogo=1&idLuogo=97": [],
     "http://www.istitutoarici.it": [],
-    "http://www.icternodisola.it": [],
+    "http://www.icternodisola.it": [
+      "9d31dccc07c1830f",
+      "ba900c8322eccbb4",
+      "cfc8b0d4820d7ec7"
+    ],
     "http://www.iisbachelet.it": [],
     "http://www.iispareto.it": [],
     "http://www.icviacorreggiomonza.edu.it": [
@@ -1361,7 +1721,10 @@
       "d6123805ff903ed6",
       "ecdb151ceca5ac53"
     ],
-    "http://www.icvilladiserio.edu.it/": [],
+    "http://www.icvilladiserio.edu.it/": [
+      "b7308d9b27359b2b",
+      "ebd5ded53fb8522a"
+    ],
     "http://www.isweil.edu.it": [],
     "http://www.zenale.edu.it": [],
     "http://www.iisomodeo.edu.it": [],
@@ -1370,27 +1733,78 @@
     "http://www.salesianimilano.it": [],
     "http://www.scuolasancarlo.it": [],
     "http://www.osc-mi.it": [],
-    "http://www.iclapira.edu.it": [],
+    "http://www.iclapira.edu.it": [
+      "3239ad2896434bd6",
+      "3585d45795d4f1a1",
+      "37a3b7de629f61a0",
+      "58f97fb429139b7e",
+      "80eec116f337cebe",
+      "811021c4913765e3",
+      "b3162d0bccb484fd",
+      "f6a5a76aec9915de"
+    ],
     "http://www.manzoni.edu.it": [],
     "http://www.icviapalmieri.edu.it": [],
     "http://www.icbovezzo.edu.it": [
-      "607002aff8c36d56"
+      "464a92c65e618f9a",
+      "4f6f59b77cef45c2",
+      "607002aff8c36d56",
+      "bc42b1edb98637a8",
+      "d897dddb7ed63677",
+      "eb84af34026c5bfc"
     ],
     "https://www.icleonardodavincisenago.edu.it/": [],
-    "http://www.icportomantovano.edu.it": [],
-    "http://www.icsolivelli.edu.it": [],
+    "http://www.icportomantovano.edu.it": [
+      "4e1391f5955210ee",
+      "7534dc07f8f008b3",
+      "ae393f583bff7abe",
+      "c028c06acfb72f8b",
+      "dbca483560140bd6"
+    ],
+    "http://www.icsolivelli.edu.it": [
+      "3ab138065a12c189",
+      "5563c481003b74bb",
+      "5ca86eecaa9774cd",
+      "8ed15e8769c2a794",
+      "9803913ed80088c7",
+      "a1c0f719c3e34bdb",
+      "cd9eed1c4a1cbff3"
+    ],
     "http://www.icparazziviadana.edu.it": [
+      "5066b3ac8328aaa3",
       "c497dabeaa7b902c"
     ],
-    "http://www.iccermenate.edu.it": [],
-    "https://www.icslavallettabrianza.edu.it/": [],
+    "http://www.iccermenate.edu.it": [
+      "08f9eeb9a60f58a5",
+      "1b8916e2295e951e",
+      "9aedb7fae3c2d480",
+      "da352b25e74c94ac",
+      "e70bdef7e90f697d",
+      "fdd776ddce7a476b"
+    ],
+    "https://www.icslavallettabrianza.edu.it/": [
+      "2a1567f0e3ab2b8a",
+      "2dc9b68f6b89fe97",
+      "554d3ee476e92133",
+      "65204f2fed898393",
+      "ab8c9b3805d68285",
+      "b87d5a64e9361425",
+      "bcb648efbe261d74",
+      "e586391e8e3e00b3"
+    ],
     "http://www.icscanegrate.edu.it": [
       "53694b030bffd6c2",
       "d37397d98092ab8e",
       "f991cde95cafec2e"
     ],
     "http://www.iccentro3.edu.it": [
-      "b154854e2e55128d"
+      "04b2edaa9bfecf3f",
+      "19036fd8d6a307bd",
+      "28a73b54d46e1937",
+      "975f11409ff47375",
+      "b154854e2e55128d",
+      "bd85cc2ae0c5933a",
+      "dd9561d1c58b9b60"
     ],
     "http://www.comprensivoturbigo.edu.it": [
       "232fcaf32757b9ff",
@@ -1400,9 +1814,15 @@
       "97512e93871161b7",
       "9edb4409c1065c8d"
     ],
-    "https://www.scuolamascagni.edu.it/": [],
+    "https://www.scuolamascagni.edu.it/": [
+      "ad52ce0c0ada4c62"
+    ],
     "http://www.icgalbusera.edu.it": [],
-    "http://www.is1suzzara.edu.it": [],
+    "http://www.is1suzzara.edu.it": [
+      "07618edb6c92dd61",
+      "64a21f9f819cdd8f",
+      "66783c14fcba617d"
+    ],
     "http://www.casadegliangeli.it": [],
     "http://www.lazolla.it": [],
     "http://www.liceo-melzocassano.edu.it": [],
@@ -1432,7 +1852,8 @@
     "https://istitutodonadoni.edu.it/": [],
     "http://icsantalucia.edu.it/": [],
     "https://www.icbonatesotto.edu.it/": [
-      "17ad898dcd456a2c"
+      "17ad898dcd456a2c",
+      "3f15e4e6dd04eea0"
     ],
     "https://www.iisgadda.edu.it/": [],
     "https://www.scuolacalusco.edu.it/": [],
@@ -1440,7 +1861,10 @@
       "a55b959c66c12190"
     ],
     "https://iismontale.edu.it/": [],
-    "https://iclentate.edu.it/": [],
+    "https://iclentate.edu.it/": [
+      "5e63cf3ef1100de6",
+      "c6b6f849022f0b24"
+    ],
     "https://severi-correnti.edu.it/": [],
     "https://www.iccervilimbiate.edu.it/": [],
     "https://isgparinilecco.edu.it/": [],
@@ -1450,19 +1874,31 @@
     "https://www.iccarducci.edu.it/": [],
     "https://icnord2brescia.edu.it/": [],
     "https://icurgnano.edu.it/": [],
-    "https://stoppanicomprensivo.edu.it/": [],
+    "https://stoppanicomprensivo.edu.it/": [
+      "f1b6ec36a5468593"
+    ],
     "https://icalbavilla.edu.it/": [
+      "08bb2580ba9427ab",
       "e5f9978105da0c2e"
     ],
     "https://www.icsannafrankrho.edu.it/": [],
     "https://icsanzenomontirone.edu.it/": [],
     "https://iccucciago.edu.it/": [
       "998e7d8856463491",
-      "d0171c218aa7f6ba"
+      "a141fece73aefe98",
+      "d0171c218aa7f6ba",
+      "d8f3d9256c3e08c6"
     ],
     "https://icdosolopomponescoviadana.edu.it/": [],
     "https://www.icinduno.edu.it/": [],
-    "https://iclomazzo.edu.it/": [],
+    "https://iclomazzo.edu.it/": [
+      "191d66a877812605",
+      "5377e78de1b03d90",
+      "5c82d43c602d6ed3",
+      "80c4a5ed0c9a18a3",
+      "a0368696c782ff95",
+      "af560eaab16c4c5d"
+    ],
     "https://www.comprensivodue.edu.it/": [],
     "https://icmolinovecchio.edu.it/": [],
     "https://icdonadonisarnico.edu.it/": [
@@ -1471,8 +1907,13 @@
     "https://www.icnuvolento.edu.it/": [],
     "https://www.icgrossirho.edu.it/": [
       "181c3cab248552d9",
+      "365f1711adf647c9",
       "52d0f4551b36ce4d",
-      "8202c7d235119aa6"
+      "6cb1b24ccc584e96",
+      "80391fe3aacbf38f",
+      "8202c7d235119aa6",
+      "cc9575c991d09226",
+      "f5f2fd96a6c65845"
     ],
     "https://scuolavedano.edu.it/": [
       "0267541dd8367a01",
@@ -1484,41 +1925,62 @@
       "37c9d0b72e1150bd",
       "39005b462c162591",
       "43335745ba717200",
+      "44872cde825b43c6",
       "4944edc1b3c7cfa2",
+      "4e53cbf34c122d75",
       "58f3d773326cec80",
       "6d174452c7d5e942",
       "737d1fe685749e7c",
       "8cfa3dc5a0e674a4",
+      "99d367f46dbebf6c",
       "a1c494d5d0c51b72",
       "a363b7082984af5d",
       "c27b947dd5587b72",
       "c738095bf654b136",
+      "c9f5fb8cff6766e5",
       "cf6028d9bcdcfcff",
       "e6ba4422447be555",
       "ecd66341e2e9022f",
       "fdbecbc27f0d2254"
     ],
     "https://www.comprensivovergiate.edu.it/": [
+      "15b7d583c118fab8",
       "67a3ce0d7aeede18",
-      "88a4773cdf620590"
+      "754cec4152e11181",
+      "88a4773cdf620590",
+      "99ec549bcee437d4",
+      "b4de900c9da1deb3",
+      "eaaf13fc34a62702",
+      "eba888cf221b0e5e"
     ],
     "https://www.arcadia.edu.it/": [
+      "00747df5389728bb",
       "1c68c64b7f411e4f",
       "1e9ed1d1c18ff7e3",
+      "248ee55b6593a277",
       "5203c63d1d646d4d",
+      "57c8ebc827bfc67c",
       "5943aa75b469ce07",
       "5b5946aaf18fc5f5",
+      "695ef73ac2929201",
       "6aef2e5c57b2f54f",
       "821f495b61cb050e",
       "8f77a9a3c2f63740",
+      "9412b8e1ce8d6eaa",
       "a6fb86cc284e39f7",
       "bcabc7ced344724a",
+      "cae788f374eb1173",
+      "cc47fc3c7b38087b",
       "cedd85f21ef16df0",
-      "da4921c92de65c8e"
+      "da4921c92de65c8e",
+      "e02c48175130e58a"
     ],
     "https://www.icscommenda.edu.it/": [],
     "https://icbressoviadonsturzo.edu.it/": [],
-    "https://www.icsvia4novembre.edu.it/": [],
+    "https://www.icsvia4novembre.edu.it/": [
+      "10579a592af2a5d6",
+      "f4647ff6edae7573"
+    ],
     "https://icviapalestroabbiategrasso.edu.it/": [
       "512f15d656392c73"
     ],
@@ -1531,7 +1993,9 @@
     "https://www.icsmorantefilzi.edu.it/": [
       "5c315bb235fb0c33",
       "62fa4b4de5c8aeed",
+      "75f4999458efb34f",
       "7912cdf41a9a66ff",
+      "829c9277ac1a5544",
       "f1ef355b8252c090"
     ],
     "https://icsdiazvaprio.edu.it/": [],
@@ -1548,6 +2012,7 @@
       "1a09a780d821e57e",
       "1c11069f448fce96",
       "357164a02bbfe994",
+      "3be3c2d106faa99c",
       "4b0b738d5ef81ce9",
       "4b5dd21c70bdca0a",
       "51b4437616d1907a",
@@ -1555,10 +2020,12 @@
       "5f045dfdb8304c5a",
       "629b2fe1a24b694c",
       "635b7eafa0d46bf2",
+      "637ba756ed532f79",
       "69119d8927134cc2",
       "781c9c0a30ee4fb4",
       "7a6ee277331f10bf",
       "7bcd1aad44c44674",
+      "841b954478f0e190",
       "88a7d5d9ece59563",
       "89a44415020e7077",
       "a7a3c91645ce55d0",
@@ -1570,36 +2037,72 @@
       "c235d77e0821dd14",
       "c76879a9905a0b27",
       "da5fa480c6c26ea2",
+      "dcb3b400dda69fcf",
       "e24b41cea8324310",
       "e736021b4c2426a2",
+      "eaeaf803941b84fd",
       "f66e98ef7864900e",
       "fb221ed5700e359d",
       "fdd641152d29b3ca"
     ],
     "https://www.iccsmaleo.edu.it/": [
+      "061b7f7a1e17eff0",
+      "21cdf57fbd29d79d",
+      "2b05412dbfc99baf",
+      "4c3fe4959e121b3a",
+      "86338463e116698d",
+      "9a0b699ed3b5abbd",
       "9ec7a0334820c29b",
+      "acca959154cdaf69",
       "bf74e9728124cb5d",
       "cabb67c4d67627c4",
       "e7994083e99c91d8"
     ],
     "https://www.icarbezara.edu.it/": [],
     "https://isc-paganelli.edu.it/": [
-      "9c969180238e5df4"
+      "87e8226bbe00775c",
+      "88041c0f054193de",
+      "9c969180238e5df4",
+      "abbace656dad6f28",
+      "f933ea22b10bec77"
     ],
     "https://www.icbereguardo.edu.it/": [
-      "e618f6087a4af740"
+      "0090ed8db90a5518",
+      "03dcfbc195761ca4",
+      "2dceb1c0e770b446",
+      "5a6e1ea996ff17c3",
+      "83cd709cce1d48e1",
+      "e618f6087a4af740",
+      "ea0a22deaab045dc",
+      "f2d4d80ad4f810ee"
     ],
-    "https://www.icbressana.edu.it/": [],
+    "https://www.icbressana.edu.it/": [
+      "90f78c72a1f017c6"
+    ],
     "https://icbuscaglia.edu.it/": [],
     "https://iccremadue.edu.it/": [],
-    "https://cremauno.edu.it/": [],
+    "https://cremauno.edu.it/": [
+      "3893c3bba7d6e996",
+      "4a76d548bb6eff8a",
+      "6e9f5f3e02af4cb4",
+      "781ef0397b1f6ef8",
+      "8cdcdeb478f8d0ee",
+      "a77f576603494464",
+      "ccfaf7b4b08463bf",
+      "fb82c0ad27000015"
+    ],
     "https://iccasalpusterlengo.edu.it/": [
-      "1e47e3a43b9605bf"
+      "1e47e3a43b9605bf",
+      "b57795ae3d19f2ee",
+      "f5ebb85c2119d79c"
     ],
     "https://www.iccellaticacollebeato.edu.it/": [],
     "https://icroncadelle.edu.it/": [],
     "https://www.iceuropaunita.edu.it/": [
-      "ca2e03f70c19cb3f"
+      "93be5da701fa5793",
+      "ca2e03f70c19cb3f",
+      "ea1648398e844f8d",
+      "f66f44282097723d"
     ],
     "https://icscastano.edu.it/": [
       "1480591d2a267403",
@@ -1609,9 +2112,14 @@
       "08ba5093defcb050",
       "57f5fe1e3fd50102",
       "9c0fe68576dc4aad",
-      "b83438e5750bce64"
+      "9e6b534c9dcdfb97",
+      "b4bbffdb2832ee55",
+      "b83438e5750bce64",
+      "e372c825b9eed959"
     ],
     "https://icsestopascoli.edu.it/": [
+      "6b4b702eaf5d8745",
+      "81f843909f7727fd",
       "cac15fee5adf8a55"
     ],
     "https://www.scuolarodari.edu.it/": [],
@@ -1626,17 +2134,35 @@
       "8feaf385d77a9bef"
     ],
     "https://icsettalarodano.edu.it/": [
-      "0b9defe6bae7b9fd"
+      "0b9defe6bae7b9fd",
+      "219539668066960e",
+      "25790a0c2a50e2dc",
+      "3a7a1aded9212127",
+      "5a18a275e62f6135",
+      "96216d2da1891ea2",
+      "9c7e9b22d00fe80c",
+      "cb98cb9522254855",
+      "f97c80ec24231d88"
     ],
     "https://comprensivogaggiano.edu.it/": [],
     "https://www.icgalvani.edu.it/": [
+      "0f96e46d9f597c4e",
       "dfdb9289b16ca51a"
     ],
     "https://www.icmargheritahackassago.edu.it/": [],
     "https://icmatteidivittorio.edu.it/": [],
     "https://www.montessorionline.edu.it/": [],
     "https://www.istitutonarcisi.edu.it/": [],
-    "https://www.icnerviano.edu.it/": [],
+    "https://www.icnerviano.edu.it/": [
+      "20cdbcf71472b58c",
+      "59c284643e0d4e0e",
+      "952a8567ba9c36cd",
+      "c217db2a1c30dcdf",
+      "c60520690084e386",
+      "cd689316f9630e3b",
+      "e30b6d7a4bcbc864",
+      "f11b8aa2bcca8683"
+    ],
     "https://www.icpezzani.edu.it/": [],
     "https://www.icsmontalcini.edu.it/": [],
     "https://icrezzato.edu.it/": [],
@@ -1644,8 +2170,12 @@
       "0cbcbf2d369bd470",
       "16ea2ac6add1e750",
       "1ccc3f448cbcf36f",
+      "20978df7aa7cd19c",
       "2d72a40755e55526",
       "400f50f759eebb83",
+      "47cdf5e1e5bba497",
+      "4a6b9e7152445610",
+      "4c7ec0b829b71681",
       "4d1e386ad6486e93",
       "508024d2dfaf621e",
       "66f019ca0bec0fb9",
@@ -1658,45 +2188,75 @@
       "dceb3d30501c10cd",
       "e151e1b085ee0219"
     ],
-    "https://icspellico.edu.it/": [],
+    "https://icspellico.edu.it/": [
+      "09f4fe97bc809d12",
+      "3c6ce7c714010fec",
+      "a4d35b520a08ec96",
+      "eb0e4608d06bef5e"
+    ],
     "https://www.icvalleversa.it/": [],
     "https://www.istitutocomprensivostradellapv.it/": [],
     "https://www.icvarese1donrimoldi.edu.it/": [],
     "https://www.consolemarcello.edu.it/": [
       "23e3929143703340",
+      "287be28a5398b93b",
       "2e6b27c894deb658",
+      "35592b7369f67b2b",
       "44f61fca3aefe245",
       "4a709ee82f917a70",
       "89b121f9d7271b65",
-      "9e6bbdd4cee35770"
+      "9b11d6b48c693b05",
+      "9e6bbdd4cee35770",
+      "c9640d426c0923fc",
+      "f2d6ed0dadb14abb"
     ],
     "https://icsviapapagiovannipaolo2.edu.it/": [
-      "b534fd9b319cf1f2"
+      "02f8f6e72be7cef5",
+      "23540daccf59a191",
+      "28e08f0dcde02e11",
+      "361cbca58debce3d",
+      "99083be1781b4f3e",
+      "a3bc8e1f3f18abb5",
+      "a92c3cc4fd48116c",
+      "b534fd9b319cf1f2",
+      "c6998783b6594c29"
     ],
     "https://icviavallettafogliano.edu.it/": [
       "20d8c5a2e5d9b734",
+      "3be8c7b3be30a110",
       "4de7c847d326204f",
+      "566e1628582121e0",
+      "7dcc6835ce6addbb",
+      "7f0057bef9a273aa",
       "dbb97221119d0d3d"
     ],
     "https://comprensivolocchi.edu.it/": [],
     "https://ic25aprilecormano.edu.it/": [],
     "https://icadro.edu.it/": [
-      "a1b0947e584af4c7"
+      "a1b0947e584af4c7",
+      "d6b6926c144b7eb3"
     ],
     "https://www.ic2palazzolobs.edu.it/": [
       "4436c89105216220",
       "af12ecaab43db14a",
+      "de1cc2e7f60e9f23",
       "ffc54d5111db257d"
     ],
     "https://www.istitutomarzoli.edu.it/": [],
     "https://www.iisfloriani.edu.it/": [
+      "bf8e657db1311b0f",
+      "c5510558844958dd",
       "ec8fb37c078edfb8",
       "ff6682f3a0c76110"
     ],
     "http://www.saracenoromegialli.edu.it": [],
     "http://www.collegiorotondi.it": [],
     "https://www.icmarianocomense2.edu.it/": [
-      "00be2d29aa67e07b"
+      "00be2d29aa67e07b",
+      "1405b8de037d46d9",
+      "270bbf22fd88cf00",
+      "6b489c928f6c9d92",
+      "e2a010ce2bfdd00d"
     ],
     "https://www.istitutocalvino.edu.it/": [
       "edfb471cb4e966f3"
@@ -1706,19 +2266,29 @@
     "https://icleffe.edu.it/": [
       "25b9a4377dcac172"
     ],
-    "https://www.istitutoleonardodavinci.edu.it/": [],
+    "https://www.istitutoleonardodavinci.edu.it/": [
+      "ac92cf2ebb205a0c"
+    ],
     "http://www.liceobramante.edu.it": [],
     "https://www.levi.edu.it/": [
       "bafdccac5064c7bc"
     ],
     "http://www.liceogiannibrera.it": [],
     "https://www.convittolovere.edu.it/": [],
-    "https://omnicomprensivodecioceleri.edu.it/": [],
+    "https://omnicomprensivodecioceleri.edu.it/": [
+      "17412814d5d8909e",
+      "978d9e871c307239",
+      "a1b44b2d34c11b13",
+      "d707d4c987f8d039"
+    ],
     "http://www.madonnadellaneve.it": [],
     "https://www.icmanzonivimercate.edu.it/": [
       "b93a931cae801171"
     ],
-    "https://www.istitutomoreschi.edu.it/": [],
+    "https://www.istitutomoreschi.edu.it/": [
+      "7d5240e5d469eac9",
+      "8d4f62267ef802c2"
+    ],
     "https://istitutocomprensivocuggiono.edu.it/": [
       "52b776798e83ed27"
     ],
@@ -1727,7 +2297,9 @@
     "http://www.beatavergine.it": [],
     "https://www.collegiogallio.it/": [],
     "https://iisbachelet.edu.it/": [],
-    "https://icsbonvesin.edu.it/": [],
+    "https://icsbonvesin.edu.it/": [
+      "73110039b1a447ec"
+    ],
     "https://icscarducci.edu.it/": [],
     "http://www.iccalcio.edu.it": [],
     "http://www.icsmonteamiata.edu.it": [],
@@ -1996,6 +2568,7 @@
     "http://www.icfutura.edu.it": [],
     "http://www.istitutocomprensivoborsi.edu.it": [
       "3a55cd59a69c271c",
+      "a0550b530e122ce2",
       "a835e0a06c235dc0"
     ],
     "http://www.icscapponi.edu.it": [],
@@ -2006,7 +2579,9 @@
     "http://www.istitutodezza.edu.it": [],
     "http://www.melzoscuole.edu.it": [],
     "http://www.icpiola.edu.it": [],
-    "https://www.icrobecchi.edu.it": [],
+    "https://www.icrobecchi.edu.it": [
+      "53c537725c9628d8"
+    ],
     "https://www.istitutocomprensivogarlasco.edu.it/": [],
     "http://www.icgavirate.edu.it/?page_id=20553": [],
     "http://www.iccarduccilegnano.edu.it/": [],
@@ -2228,6 +2803,7 @@
     "http://www.liceoagnesi.edu.it": [],
     "http://www.canossadiaz.it": [],
     "http://www.marcopolocolico.edu.it": [
+      "1fb710bd76c97896",
       "4a3c4864023272f9"
     ],
     "http://www.imacastellanza.it": [],
@@ -2402,7 +2978,9 @@
     "https://www.iccavenagodibrianza.edu.it/": [],
     "https://www.icstoppani.edu.it/": [],
     "https://icsmanzonilegnano.edu.it/": [],
-    "https://icadanegri.edu.it/": [],
+    "https://icadanegri.edu.it/": [
+      "629b2fe1a24b694c"
+    ],
     "https://www.iccsmaleo.edu.it/": [],
     "https://www.icarbezara.edu.it/": [],
     "https://isc-paganelli.edu.it/": [],
@@ -2483,7 +3061,7 @@
   "failures": {
     "http://www.istitutoargentia.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "ARGENTIA-MAJORANA",
@@ -2493,7 +3071,7 @@
     },
     "http://www.europaunitaenriques.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "EUROPA UNITA",
@@ -2503,7 +3081,7 @@
     },
     "http://WWW.ICMARTIRILIBERTA.IT": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "I.C. CITTA' DI CHIARI",
@@ -2513,7 +3091,7 @@
     },
     "http://www.icsviacrocerossa.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "I.C. MARGHERITA HACK",
@@ -2523,7 +3101,7 @@
     },
     "http://www.icsrizzoli.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "HTTP 403",
       "name": "IC A. RIZZOLI",
@@ -2533,7 +3111,7 @@
     },
     "http://wwwicdello.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "IC AGOSTI DELLO",
@@ -2543,7 +3121,7 @@
     },
     "http://www.icscaterinamagenta.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "IC CARLO FONTANA",
@@ -2553,7 +3131,7 @@
     },
     "http://www.istitutoconfalonieri.gov.": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "IC CONFALONIERI",
@@ -2563,7 +3141,7 @@
     },
     "http://www.iscabrinii.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "IC F. S. CABRINI",
@@ -2573,7 +3151,7 @@
     },
     "http://www.icconcorezzo.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "HTTP 403",
       "name": "IC G. MARCONI/CONCOREZZO",
@@ -2583,7 +3161,7 @@
     },
     "http://www.istitutocomprensivogalilei.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "IC GALILEI",
@@ -2593,17 +3171,17 @@
     },
     "http://www.ddmortara.it/wordpress/": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "Timeout",
       "name": "IC MORTARA",
       "url": "http://www.ddmortara.it/wordpress/",
-      "error": "HTTPConnectionPool(host='www.ddmortara.it', port=80): Max retries exceeded with url: /wordpress/ (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ddmortara.it', port=80) at 0x7f6868277750>, 'C",
+      "error": "HTTPConnectionPool(host='www.ddmortara.it', port=80): Max retries exceeded with url: /wordpress/ (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ddmortara.it', port=80) at 0x7f40da572a50>, 'C",
       "alerted": true
     },
     "http://www.icfrisimelegnano.edu.it/": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "HTTP 404",
       "name": "IC PAOLO FRISI",
@@ -2613,7 +3191,7 @@
     },
     "https://www.icsprimolevi.edu.it/wp/": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "HTTP 404",
       "name": "IC PRIMO LEVI",
@@ -2623,17 +3201,17 @@
     },
     "http://www.icriccardomassa.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "Timeout",
       "name": "IC RICCARDO MASSA",
       "url": "http://www.icriccardomassa.it",
-      "error": "HTTPConnectionPool(host='www.icriccardomassa.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.icriccardomassa.it', port=80) at 0x7f6863f8e310>, ",
+      "error": "HTTPConnectionPool(host='www.icriccardomassa.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.icriccardomassa.it', port=80) at 0x7f40d98416d0>, ",
       "alerted": true
     },
     "http://www.icsallende.com": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "IC S. ALLENDE",
@@ -2643,7 +3221,7 @@
     },
     "http://icsiziano.jimdo.com/": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "SSL",
       "name": "IC SIZIANO",
@@ -2653,7 +3231,7 @@
     },
     "http://www.varese2pellico.ed.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "IC VARESE 2 PELLICO",
@@ -2663,7 +3241,7 @@
     },
     "http://www.canossianecomo.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "HTTP 403",
       "name": "ISTITUTO \"MATILDE DI CANOSSA\"",
@@ -2673,7 +3251,7 @@
     },
     "http://www.istitutomanzoni.org": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "HTTP 403",
       "name": "ISTITUTO SUPERIORE PARITARIO MANZONI",
@@ -2683,7 +3261,7 @@
     },
     "http://www.iemcandia.org": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "HTTP 403",
       "name": "LICEO LINGUISTICO \"M. CANDIA\"",
@@ -2693,7 +3271,7 @@
     },
     "http://www.istitutleopardi.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "LICEO LINGUISTICO LEOPARDI",
@@ -2703,7 +3281,7 @@
     },
     "http://www.galileierba.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "HTTP 403",
       "name": "LS GALILEO GALILEI",
@@ -2713,17 +3291,17 @@
     },
     "http://www.sangiuseppevigevano.eu": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "Timeout",
       "name": "SCUOLA SEC 1° GRADO\"S. GIUSEPPE\" Soc. Coop. Soc. Santa Caterina da Siena a r.l.",
       "url": "http://www.sangiuseppevigevano.eu",
-      "error": "HTTPConnectionPool(host='www.sangiuseppevigevano.eu', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.sangiuseppevigevano.eu', port=80) at 0x7f6863d",
+      "error": "HTTPConnectionPool(host='www.sangiuseppevigevano.eu', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.sangiuseppevigevano.eu', port=80) at 0x7f40da4",
       "alerted": true
     },
     "http://www.scuolaismc-calusco.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "SCUOLA SEC. 1° GRADO \"MARIA CONSOLATRICE\"",
@@ -2733,7 +3311,7 @@
     },
     "http://www.istitutoscolasticomilano.preziosine.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "Timeout",
       "name": "SCUOLA SECONDARIA DI 1° GR. PREZIOSISSIMO SANGUE",
@@ -2743,7 +3321,7 @@
     },
     "http://www.scuolesacrafamigliavoghera.com": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "HTTP 403",
       "name": "SCUOLA SECONDARIA DI PRIMO GRADO \"SACRA FAMIGLIA\"",
@@ -2753,7 +3331,7 @@
     },
     "http://www.istitutobenini.eu": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "DNS",
       "name": "V. BENINI",
@@ -2763,124 +3341,40 @@
     },
     "http://www.istitutobachelet.it": {
       "first_seen": "2026-09-28",
-      "count": 14,
+      "count": 15,
       "last_seen": "2026-10-02",
       "category": "Timeout",
       "name": "VITTORIO BACHELET OGGIONO",
       "url": "http://www.istitutobachelet.it",
-      "error": "HTTPConnectionPool(host='www.istitutobachelet.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.istitutobachelet.it', port=80) at 0x7f6863de8dd0>",
+      "error": "HTTPConnectionPool(host='www.istitutobachelet.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.istitutobachelet.it', port=80) at 0x7f40da36c450>",
       "alerted": true
-    },
-    "http://www.icviapalmieri.edu.it": {
-      "first_seen": "2026-09-30",
-      "count": 5,
-      "last_seen": "2026-10-02",
-      "category": "HTTP 403",
-      "name": "I.C DI VIA PALMIERI",
-      "url": "http://www.icviapalmieri.edu.it",
-      "error": "403 Client Error: Forbidden for url: http://www.icviapalmieri.edu.it/",
-      "alerted": true
-    },
-    "http://www.casadegliangeli.it": {
-      "first_seen": "2026-10-01",
-      "count": 5,
-      "last_seen": "2026-10-02",
-      "category": "HTTP 403",
-      "name": "Ist.Profes.-settore servizi-indirizzo:servizi socio-sanitari \"CASA DEGLI ANGELI\"",
-      "url": "http://www.casadegliangeli.it",
-      "error": "403 Client Error: Forbidden for url: http://www.casadegliangeli.it/",
-      "alerted": true
-    },
-    "http://www.aurorabachelet.it": {
-      "first_seen": "2026-10-01",
-      "count": 5,
-      "last_seen": "2026-10-02",
-      "category": "HTTP 403",
-      "name": "SCUOLA SECONDARIA DI 1° GR. BACHELET",
-      "url": "http://www.aurorabachelet.it",
-      "error": "403 Client Error: Forbidden for url: http://www.aurorabachelet.it/",
-      "alerted": true
-    },
-    "http://www.islotto.edu.it": {
-      "first_seen": "2026-10-02",
-      "count": 1,
-      "last_seen": "2026-10-02",
-      "category": "HTTP 403",
-      "name": "\"LORENZO LOTTO\"",
-      "url": "http://www.islotto.edu.it",
-      "error": "403 Client Error: Forbidden for url: http://www.islotto.edu.it/"
-    },
-    "http://icsantalucia.edu.it/": {
-      "first_seen": "2026-10-02",
-      "count": 1,
-      "last_seen": "2026-10-02",
-      "category": "HTTP 403",
-      "name": "BERGAMO - S.LUCIA",
-      "url": "http://icsantalucia.edu.it/",
-      "error": "403 Client Error: Forbidden for url: http://icsantalucia.edu.it/"
-    },
-    "http://www.iisomodeo.edu.it": {
-      "first_seen": "2026-10-02",
-      "count": 1,
-      "last_seen": "2026-10-02",
-      "category": "Timeout",
-      "name": "IIS OMODEO - MORTARA",
-      "url": "http://www.iisomodeo.edu.it",
-      "error": "HTTPConnectionPool(host='www.iisomodeo.edu.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.iisomodeo.edu.it', port=80) at 0x7f6862f1cd50>, 'Con"
     },
     "http://www.collegiorotondi.it": {
       "first_seen": "2026-10-02",
-      "count": 1,
+      "count": 2,
       "last_seen": "2026-10-02",
       "category": "HTTP 403",
       "name": "IST PROF PER I SERVIZI COMMERCIALI COLLEGIO ROTONDI",
       "url": "http://www.collegiorotondi.it",
       "error": "403 Client Error: Forbidden for url: http://www.collegiorotondi.it/"
     },
-    "http://www.lazolla.it": {
+    "http://www.istitutocapirola.edu.it": {
       "first_seen": "2026-10-02",
       "count": 1,
       "last_seen": "2026-10-02",
       "category": "HTTP 403",
-      "name": "LA ZOLLA",
-      "url": "http://www.lazolla.it",
-      "error": "403 Client Error: Forbidden for url: http://www.lazolla.it/"
+      "name": "I.I.S. V.CAPIROLA",
+      "url": "http://www.istitutocapirola.edu.it",
+      "error": "403 Client Error: Forbidden for url: https://www.istitutocapirola.edu.it/"
     },
-    "http://www.liceobramante.edu.it": {
+    "http://www.scuolerovetta.edu.it": {
       "first_seen": "2026-10-02",
       "count": 1,
       "last_seen": "2026-10-02",
-      "category": "HTTP 403",
-      "name": "LICEO - D. BRAMANTE",
-      "url": "http://www.liceobramante.edu.it",
-      "error": "403 Client Error: Forbidden for url: http://www.liceobramante.edu.it/"
-    },
-    "https://www.icpmonza.preziosine.it/": {
-      "first_seen": "2026-10-02",
-      "count": 1,
-      "last_seen": "2026-10-02",
-      "category": "HTTP 403",
-      "name": "SCUOLA SECONDARIA DI 1° GR. \"PREZIOSISSIMO SANGUE\"",
-      "url": "https://www.icpmonza.preziosine.it/",
-      "error": "403 Client Error: Forbidden for url: https://www.icpmonza.preziosine.it/"
-    },
-    "http://www.scuolasanluigi.com": {
-      "first_seen": "2026-10-02",
-      "count": 1,
-      "last_seen": "2026-10-02",
-      "category": "HTTP 403",
-      "name": "SCUOLA SECONDARIA DI 1° GR. SAN LUIGI",
-      "url": "http://www.scuolasanluigi.com",
-      "error": "403 Client Error: Forbidden for url: http://www.scuolasanluigi.com/"
-    },
-    "http://www.istitutotirinnanzi.it": {
-      "first_seen": "2026-10-02",
-      "count": 1,
-      "last_seen": "2026-10-02",
-      "category": "HTTP 403",
-      "name": "SCUOLA SECONDARIA DI 1° GR. SAN MASSIMILIANO KOLBE",
-      "url": "http://www.istitutotirinnanzi.it",
-      "error": "403 Client Error: Forbidden for url: http://www.istitutotirinnanzi.it/"
+      "category": "Timeout",
+      "name": "ROVETTA - IC ANDREA FANTONI",
+      "url": "http://www.scuolerovetta.edu.it",
+      "error": "HTTPSConnectionPool(host='scuolerovetta.edu.it', port=443): Read timed out. (read timeout=15)"
     }
   }
 }

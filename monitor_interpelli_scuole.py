@@ -56,7 +56,7 @@ import html as htmllib
 import logging
 from collections import Counter
 from datetime import date
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, unquote
 
 import requests
 from bs4 import BeautifulSoup
@@ -212,12 +212,40 @@ def contains_any(blob, keywords):
     """True se il testo contiene una delle parole/frasi come parola
     intera (non come pezzo di un'altra parola): cosi' "ac24" non scatta
     dentro a "ac245" e "spagnolo" non scatta dentro a un'altra parola."""
-    cf = blob.casefold()
+    # "_" e' un carattere "di parola" per la regex: senza questa sostituzione
+    # "FIRMATO_..._interpello_spagnolo" non conterrebbe MAI le parole
+    # "interpello" e "spagnolo" come parole intere.
+    cf = blob.casefold().replace("_", " ")
     return any(_kw_regex(kw).search(cf) for kw in keywords)
 
 def make_id(site_key, full_url):
     raw = f"{site_key}|{full_url}"
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16]
+
+FILE_EXT_RE = re.compile(r"\.(pdf|docx?|odt|xlsx?|zip|jpe?g|png|gif|webp)$", re.I)
+
+def url_slug_text(url):
+    """Ultimo segmento del path dell'URL, decodificato e senza estensione,
+    con _ - . + trasformati in spazi. Es.:
+    .../FIRMATO_SEGNATURA_1790860066_interpello_spagnolo.pdf?x50882
+      -> 'FIRMATO SEGNATURA 1790860066 interpello spagnolo'
+    Serve perche' il nome del file/slug spesso contiene le parole chiave
+    anche quando il testo visibile del link e' vuoto o generico."""
+    path = urlparse(url).path.rstrip("/")
+    last = unquote(path.rsplit("/", 1)[-1]) if path else ""
+    last = FILE_EXT_RE.sub("", last)
+    return normalize_text(re.sub(r"[_\-.+]+", " ", last))
+
+def is_file_url(url):
+    return bool(FILE_EXT_RE.search(urlparse(url).path))
+
+def section_priority(text, url):
+    """0 = sezione con 'interpell'/'supplenz' nel testo o nell'URL (da
+    seguire per prima), 1 = tutte le altre. Senza questo, con il limite
+    MAX_SECTION_PAGES_PER_SITE il budget veniva speso su menu duplicati,
+    graduatorie, ecc. e la pagina degli interpelli restava fuori."""
+    hay = f"{text} {urlparse(url).path}".casefold()
+    return 0 if ("interpell" in hay or "supplenz" in hay) else 1
 
 def find_container(a_tag):
     for name in ("tr", "li", "article"):
@@ -418,10 +446,19 @@ def extract_items_from_page(site_key, page_url, html, known_ids, budget):
     for a in soup.find_all("a", href=True):
         link_text = normalize_text(a.get_text(" ", strip=True))
         if not link_text:
-            continue
+            # link-immagine (es. banner "Interpelli"): usa title/aria-label/alt
+            img = a.find("img")
+            link_text = normalize_text(
+                a.get("title") or a.get("aria-label") or (img.get("alt") if img else "") or ""
+            )
         try:
             full_url = urljoin(page_url, a["href"])
         except ValueError:
+            continue
+        slug_text = url_slug_text(full_url)
+        if not link_text:
+            link_text = slug_text   # ultimo fallback: nome file / slug dell'URL
+        if not link_text:
             continue
 
         if urlparse(full_url).path.rstrip("/") == base_path:
@@ -431,7 +468,8 @@ def extract_items_from_page(site_key, page_url, html, known_ids, budget):
 
         # link di "sezione" (circolari, albo pretorio, ...): candidati a
         # essere seguiti come pagina aggiuntiva da questo stesso sito
-        if contains_any(link_text, SECTION_KEYWORDS):
+        if contains_any(link_text, SECTION_KEYWORDS) or (
+                not is_file_url(full_url) and section_priority(link_text, full_url) == 0):
             section_links.append((link_text, full_url))
 
         item_id = make_id(site_key, full_url)
@@ -456,7 +494,8 @@ def extract_items_from_page(site_key, page_url, html, known_ids, budget):
             # troppo grande, o con troppi link: e' un elenco/menu, non
             # la riga di un singolo annuncio
             container_text = ""
-        blob = f"{link_text} {container_text}"
+        # il nome file/slug dell'URL entra nel testo controllato
+        blob = f"{link_text} {slug_text} {container_text}"
 
         if not contains_any(blob, GENERIC_KEYWORDS):
             continue
@@ -518,6 +557,7 @@ def check_site(site_key, homepage_url, known_ids):
 
     visited_pages = {urlparse(homepage_url).path.rstrip("/")}
     followed = 0
+    section_links.sort(key=lambda lu: section_priority(lu[0], lu[1]))   # sort stabile
     for link_text, url in section_links:
         if followed >= MAX_SECTION_PAGES_PER_SITE:
             break

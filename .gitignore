@@ -11,7 +11,7 @@ id_ed25519
 id_rsa
 *.session
 __pycache__/
-*.pycrun_locale.log
+*.pyc
 .env
 
 run_locale.log

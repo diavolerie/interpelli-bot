@@ -8366,51 +8366,51 @@
   },
   "errors": {
     "USR Lombardia - Bergamo": {
-      "count": 2,
+      "count": 3,
       "alerted": false
     },
     "USR Lombardia - Brescia": {
-      "count": 2,
+      "count": 3,
       "alerted": false
     },
     "USR Lombardia - Como": {
-      "count": 2,
+      "count": 3,
       "alerted": false
     },
     "USR Lombardia - Cremona": {
-      "count": 2,
+      "count": 3,
       "alerted": false
     },
     "USR Lombardia - Lecco": {
-      "count": 2,
+      "count": 3,
       "alerted": false
     },
     "USR Lombardia - Lodi": {
-      "count": 2,
+      "count": 3,
       "alerted": false
     },
     "USR Lombardia - Mantova": {
-      "count": 2,
+      "count": 3,
       "alerted": false
     },
     "USR Lombardia - Milano": {
-      "count": 2,
+      "count": 3,
       "alerted": false
     },
     "USR Lombardia - Monza e Brianza": {
-      "count": 2,
+      "count": 3,
       "alerted": false
     },
     "USR Lombardia - Pavia": {
-      "count": 2,
+      "count": 3,
       "alerted": false
     },
     "USR Lombardia - Sondrio": {
-      "count": 2,
+      "count": 3,
       "alerted": false
     },
     "USR Lombardia - Varese": {
-      "count": 2,
+      "count": 3,
       "alerted": false
     }
   }

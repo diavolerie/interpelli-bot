@@ -44,6 +44,12 @@ from urllib.parse import urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
+try:
+    from playwright.sync_api import sync_playwright
+    PLAYWRIGHT_IMPORTABLE = True
+except ImportError:
+    PLAYWRIGHT_IMPORTABLE = False
+
 # ---------------------------------------------------------------------------
 # Configurazione
 # ---------------------------------------------------------------------------
@@ -65,6 +71,11 @@ REQUEST_HEADERS = {
         "Chrome/124.0.0.0 Safari/537.36"
     )
 }
+
+PLAYWRIGHT_NAV_TIMEOUT_MS = 20000
+# Notifica Telegram di errore su un sito solo dopo N esecuzioni consecutive
+# fallite (e una sola volta per "blackout"); ogni errore resta nel log.
+ERROR_NOTIFY_AFTER = 8
 
 # Tetto di sicurezza sul numero di pagine di dettaglio aperte per sito
 # ad ogni esecuzione (per restare "educati" col sito e veloci su CI).
@@ -295,8 +306,67 @@ def match_school(title, extra_text, comune_hint, site_name, by_code, by_comune):
 # Rete
 # ---------------------------------------------------------------------------
 
+_browser_holder = {"playwright": None, "browser": None, "tried": False}
+
+def _get_browser():
+    """Avvia (una sola volta) Chromium headless, solo se serve."""
+    if _browser_holder["browser"] or _browser_holder["tried"]:
+        return _browser_holder["browser"]
+    _browser_holder["tried"] = True
+    if not PLAYWRIGHT_IMPORTABLE:
+        log.warning("Playwright non installato: nessun fallback browser sui 403.")
+        return None
+    try:
+        p = sync_playwright().start()
+        _browser_holder["playwright"] = p
+        _browser_holder["browser"] = p.chromium.launch(headless=True)
+        log.info("Browser headless avviato (fallback 403).")
+    except Exception as exc:
+        log.warning("Impossibile avviare Chromium: %s", exc)
+    return _browser_holder["browser"]
+
+def stop_browser():
+    for key in ("browser", "playwright"):
+        obj = _browser_holder.get(key)
+        try:
+            if obj:
+                obj.close() if key == "browser" else obj.stop()
+        except Exception:
+            pass
+
+def fetch_with_browser(url):
+    browser = _get_browser()
+    if not browser:
+        return None
+    page = None
+    try:
+        ctx = browser.new_context(
+            user_agent=REQUEST_HEADERS["User-Agent"], locale="it-IT"
+        )
+        page = ctx.new_page()
+        resp = page.goto(url, timeout=PLAYWRIGHT_NAV_TIMEOUT_MS, wait_until="domcontentloaded")
+        page.wait_for_timeout(1500)
+        if resp is not None and resp.status >= 400:
+            log.info("Anche il browser riceve %d su %s", resp.status, url)
+            return None
+        return page.content()
+    except Exception as exc:
+        log.info("Fetch con browser fallito su %s: %s", url, exc)
+        return None
+    finally:
+        try:
+            if page:
+                page.context.close()
+        except Exception:
+            pass
+
 def fetch(url):
     resp = requests.get(url, headers=REQUEST_HEADERS, timeout=REQUEST_TIMEOUT)
+    if resp.status_code == 403:
+        log.info("403 su %s: riprovo con il browser headless.", url)
+        html = fetch_with_browser(url)
+        if html:
+            return html
     resp.raise_for_status()
     return resp.text
 
@@ -641,10 +711,27 @@ def notify_new_item(site_name, item, school):
     text = "\n".join(lines)
     return send_telegram_message(text)
 
-def notify_error(site_name, exc):
-    text = f"⚠️ Errore controllando {site_name}: {exc}"
-    log.error(text)
-    send_telegram_message(text)
+def notify_error(site_name, exc, state=None):
+    """Logga sempre; invia su Telegram solo dopo ERROR_NOTIFY_AFTER
+    esecuzioni consecutive fallite, e una volta sola per blackout."""
+    log.error("Errore controllando %s: %s", site_name, exc)
+    if state is None:
+        return
+    errs = state.setdefault("errors", {})
+    entry = errs.setdefault(site_name, {"count": 0, "alerted": False})
+    entry["count"] += 1
+    if entry["count"] >= ERROR_NOTIFY_AFTER and not entry["alerted"]:
+        if send_telegram_message(
+            f"⚠️ {site_name} non risponde da {entry['count']} controlli "
+            f"consecutivi: {exc}"
+        ):
+            entry["alerted"] = True
+
+def clear_error(site_name, state):
+    entry = state.get("errors", {}).get(site_name)
+    if entry and entry.get("alerted"):
+        send_telegram_message(f"✅ {site_name} torna a rispondere.")
+    state.get("errors", {}).pop(site_name, None)
 
 # ---------------------------------------------------------------------------
 # Main
@@ -659,7 +746,7 @@ def main():
     state = load_state()
     first_run = state is None
     if first_run:
-        state = {"evaluated": {}, "notified": {}}
+        state = {"evaluated": {}, "notified": {}, "errors": {}}
         log.info("Primo avvio rilevato: nessuna notifica verra' inviata in questa run.")
 
     schools = load_schools()
@@ -683,8 +770,9 @@ def main():
         try:
             html = fetch(url)
         except requests.RequestException as exc:
-            notify_error(site_name, exc)
+            notify_error(site_name, exc, state)
             continue
+        clear_error(site_name, state)
 
         # 1) aggiorna 'evaluated' con TUTTI i candidati generici visti in
         # questa pagina (cosi' i futuri run non li ri-processano in
@@ -741,6 +829,7 @@ def main():
         state["evaluated"][site_name] = sorted(evaluated_ids)
         state["notified"][site_name] = sorted(notified_ids)
 
+    stop_browser()
     save_state(state)
     log.info("Esecuzione completata.")
 

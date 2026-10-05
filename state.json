@@ -4443,6 +4443,7 @@
       "27a8c3746ea8aa63",
       "282dd8b2fa6dd430",
       "291f22695ba4edd9",
+      "29465417e48b7b2c",
       "29beaa0341ff0471",
       "29d39c834b92ed30",
       "2a00cff6ef98fd87",
@@ -4842,6 +4843,7 @@
       "b7d3a94b978fb1bd",
       "b8460fa563bf7f85",
       "b86f9d44d70244a2",
+      "b877f2cb2e762e92",
       "b95d87b8e17f2cd4",
       "b9649d23a848abdd",
       "b9a1bae5ef27a032",
@@ -5784,6 +5786,7 @@
       "82342f964254333e",
       "829997eb17ab313b",
       "8439313cc04f3f85",
+      "849a039d9dbc93a7",
       "84f9fb12adb27393",
       "85ea8e9a232ab489",
       "87f94ba5c7f9dceb",
@@ -8511,54 +8514,5 @@
       "c081adb1c015236c"
     ]
   },
-  "errors": {
-    "USR Lombardia - Bergamo": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Brescia": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Como": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Cremona": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Lecco": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Lodi": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Mantova": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Milano": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Monza e Brianza": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Pavia": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Sondrio": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Varese": {
-      "count": 1,
-      "alerted": false
-    }
-  }
+  "errors": {}
 }

@@ -8797,5 +8797,54 @@
       "c4680257daa25312"
     ]
   },
-  "errors": {}
+  "errors": {
+    "USR Lombardia - Bergamo": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Brescia": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Como": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Cremona": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Lecco": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Lodi": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Mantova": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Milano": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Monza e Brianza": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Pavia": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Sondrio": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Varese": {
+      "count": 1,
+      "alerted": false
+    }
+  }
 }

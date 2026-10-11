@@ -8994,10 +8994,5 @@
       "c4680257daa25312"
     ]
   },
-  "errors": {
-    "USR Lombardia - Milano": {
-      "count": 1,
-      "alerted": false
-    }
-  }
+  "errors": {}
 }

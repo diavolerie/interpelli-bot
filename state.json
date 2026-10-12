@@ -8994,5 +8994,14 @@
       "c4680257daa25312"
     ]
   },
-  "errors": {}
+  "errors": {
+    "USR Lombardia - Sondrio": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Varese": {
+      "count": 1,
+      "alerted": false
+    }
+  }
 }

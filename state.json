@@ -9916,5 +9916,22 @@
       "c4680257daa25312"
     ]
   },
-  "errors": {}
+  "errors": {
+    "USR Lombardia - Monza e Brianza": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Pavia": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Sondrio": {
+      "count": 1,
+      "alerted": false
+    },
+    "USR Lombardia - Varese": {
+      "count": 1,
+      "alerted": false
+    }
+  }
 }

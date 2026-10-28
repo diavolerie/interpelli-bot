@@ -16,6 +16,7 @@
     "http://www.icscanzorosciate.edu.it": [
       "034f01e40edc5ca2",
       "0b0489ff7765a7d3",
+      "1ba5ad900ae82f69",
       "1ffe8a37d5041f23",
       "221d04acb8529ecd",
       "289c1f9a4ae8f26b",
@@ -29,6 +30,7 @@
       "a3c0bf40c1e8b246",
       "a63b36bcf3d1e24c",
       "b65b2cb6259d6bd6",
+      "b9042f02c417a644",
       "c5ff6af71916bb07",
       "c99113469aed4c34",
       "df89e1b9ddecf11e",
@@ -53,6 +55,7 @@
       "35956e1e19cfe618",
       "745fefe11dc80da1",
       "769208e999a10216",
+      "a3d2c8679b521507",
       "dcbd11ff04ffa074",
       "e2bbab74fc1ad5bb",
       "e7fd5d5a83a03c84",
@@ -299,6 +302,8 @@
     "http://www.iisdenicola.edu.it": [],
     "http://www.liceofermicantu.edu.it": [],
     "http://icsavio.edu.it": [
+      "0ec0a25853809e1a",
+      "129f29b20ec9f5bb",
       "2eff694bf31a3442",
       "5cbb46a375463303",
       "a226e7bc2fff9ca0",
@@ -894,6 +899,7 @@
       "5da23356c22294a7",
       "616eb33820ca20fd",
       "6a4b1401fcc8cc8f",
+      "6dafbf77f88b30f3",
       "6ec0897b2a991bf8",
       "775994ddf8fa2768",
       "7b7e35a3639608a9",
@@ -1164,6 +1170,7 @@
       "63b0c10f3c95d983",
       "6b83293ba7d6ddb2",
       "6cd3ec7b8d11a31a",
+      "719318d2b685f141",
       "7c4ca9f4830c2cf0",
       "93d42ca8dbb3013e",
       "95d6bf76da95aa8f",
@@ -1173,6 +1180,7 @@
       "af2f5a372314cdde",
       "c9927b8d86deb124",
       "c9a58f6e56f27cbc",
+      "d44f225c7b65bd87",
       "dab4fc60a2f373a0",
       "e094603a57176981",
       "e21653bb140d75aa",
@@ -1181,6 +1189,7 @@
       "e7602fc7ff58fdda",
       "eb94c540368997e4",
       "efc6cec495b79777",
+      "f058f7e5fa2deb09",
       "fbf8585e975bdd5b"
     ],
     "https://www.icarcore.edu.it/": [
@@ -1530,6 +1539,8 @@
       "e6f401c6da6e6096"
     ],
     "http://www.istitutocadorna.it": [
+      "313fcf83d086b7d9",
+      "71c7b2b1123bdc0a",
       "73584ef267cff3cd",
       "87620c10162238a7",
       "f7d371b348cac94c"
@@ -3541,8 +3552,12 @@
     "https://www.convittolovere.edu.it/": [],
     "https://omnicomprensivodecioceleri.edu.it/": [
       "17412814d5d8909e",
+      "6ef6b8c165cf92b0",
+      "7aa9bec5ed385a05",
+      "86f8a8bae306ed5e",
       "978d9e871c307239",
       "a1b44b2d34c11b13",
+      "b846f46d1460a6b7",
       "d707d4c987f8d039"
     ],
     "http://www.madonnadellaneve.it": [],
@@ -4344,7 +4359,7 @@
   "failures": {
     "http://www.istitutoargentia.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "ARGENTIA-MAJORANA",
@@ -4354,7 +4369,7 @@
     },
     "http://www.europaunitaenriques.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "EUROPA UNITA",
@@ -4364,7 +4379,7 @@
     },
     "http://WWW.ICMARTIRILIBERTA.IT": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "I.C. CITTA' DI CHIARI",
@@ -4374,7 +4389,7 @@
     },
     "http://www.icsviacrocerossa.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "I.C. MARGHERITA HACK",
@@ -4384,7 +4399,7 @@
     },
     "http://www.icsrizzoli.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "HTTP 403",
       "name": "IC A. RIZZOLI",
@@ -4394,7 +4409,7 @@
     },
     "http://wwwicdello.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "IC AGOSTI DELLO",
@@ -4404,7 +4419,7 @@
     },
     "http://www.icscaterinamagenta.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "IC CARLO FONTANA",
@@ -4414,7 +4429,7 @@
     },
     "http://www.istitutoconfalonieri.gov.": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "IC CONFALONIERI",
@@ -4424,7 +4439,7 @@
     },
     "http://www.iscabrinii.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "IC F. S. CABRINI",
@@ -4434,7 +4449,7 @@
     },
     "http://www.istitutocomprensivogalilei.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "IC GALILEI",
@@ -4444,17 +4459,17 @@
     },
     "http://www.ddmortara.it/wordpress/": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "Timeout",
       "name": "IC MORTARA",
       "url": "http://www.ddmortara.it/wordpress/",
-      "error": "HTTPConnectionPool(host='www.ddmortara.it', port=80): Max retries exceeded with url: /wordpress/ (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ddmortara.it', port=80) at 0x7f61ff504990>, 'C",
+      "error": "HTTPConnectionPool(host='www.ddmortara.it', port=80): Max retries exceeded with url: /wordpress/ (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ddmortara.it', port=80) at 0x7f73955267d0>, 'C",
       "alerted": true
     },
     "http://www.icfrisimelegnano.edu.it/": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "HTTP 404",
       "name": "IC PAOLO FRISI",
@@ -4464,7 +4479,7 @@
     },
     "https://www.icsprimolevi.edu.it/wp/": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "HTTP 404",
       "name": "IC PRIMO LEVI",
@@ -4474,17 +4489,17 @@
     },
     "http://www.icriccardomassa.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "Timeout",
       "name": "IC RICCARDO MASSA",
       "url": "http://www.icriccardomassa.it",
-      "error": "HTTPConnectionPool(host='www.icriccardomassa.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.icriccardomassa.it', port=80) at 0x7f620424d110>, ",
+      "error": "HTTPConnectionPool(host='www.icriccardomassa.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.icriccardomassa.it', port=80) at 0x7f7394bf1b50>, ",
       "alerted": true
     },
     "http://www.icsallende.com": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "IC S. ALLENDE",
@@ -4494,7 +4509,7 @@
     },
     "http://icsiziano.jimdo.com/": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "SSL",
       "name": "IC SIZIANO",
@@ -4504,7 +4519,7 @@
     },
     "http://www.varese2pellico.ed.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "IC VARESE 2 PELLICO",
@@ -4514,7 +4529,7 @@
     },
     "http://www.istitutomanzoni.org": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "HTTP 403",
       "name": "ISTITUTO SUPERIORE PARITARIO MANZONI",
@@ -4524,7 +4539,7 @@
     },
     "http://www.iemcandia.org": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "HTTP 403",
       "name": "LICEO LINGUISTICO \"M. CANDIA\"",
@@ -4534,7 +4549,7 @@
     },
     "http://www.istitutleopardi.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "LICEO LINGUISTICO LEOPARDI",
@@ -4544,7 +4559,7 @@
     },
     "http://www.galileierba.edu.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "HTTP 403",
       "name": "LS GALILEO GALILEI",
@@ -4554,17 +4569,17 @@
     },
     "http://www.sangiuseppevigevano.eu": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "Timeout",
       "name": "SCUOLA SEC 1° GRADO\"S. GIUSEPPE\" Soc. Coop. Soc. Santa Caterina da Siena a r.l.",
       "url": "http://www.sangiuseppevigevano.eu",
-      "error": "HTTPConnectionPool(host='www.sangiuseppevigevano.eu', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.sangiuseppevigevano.eu', port=80) at 0x7f61fe5",
+      "error": "HTTPConnectionPool(host='www.sangiuseppevigevano.eu', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.sangiuseppevigevano.eu', port=80) at 0x7f73950",
       "alerted": true
     },
     "http://www.scuolaismc-calusco.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "SCUOLA SEC. 1° GRADO \"MARIA CONSOLATRICE\"",
@@ -4574,7 +4589,7 @@
     },
     "http://www.istitutoscolasticomilano.preziosine.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "Timeout",
       "name": "SCUOLA SECONDARIA DI 1° GR. PREZIOSISSIMO SANGUE",
@@ -4584,7 +4599,7 @@
     },
     "http://www.scuolesacrafamigliavoghera.com": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "HTTP 403",
       "name": "SCUOLA SECONDARIA DI PRIMO GRADO \"SACRA FAMIGLIA\"",
@@ -4594,7 +4609,7 @@
     },
     "http://www.istitutobenini.eu": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "DNS",
       "name": "V. BENINI",
@@ -4604,17 +4619,17 @@
     },
     "http://www.istitutobachelet.it": {
       "first_seen": "2026-09-28",
-      "count": 115,
+      "count": 116,
       "last_seen": "2026-10-28",
       "category": "Timeout",
       "name": "VITTORIO BACHELET OGGIONO",
       "url": "http://www.istitutobachelet.it",
-      "error": "HTTPConnectionPool(host='www.istitutobachelet.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.istitutobachelet.it', port=80) at 0x7f61ff2c4a50>",
+      "error": "HTTPConnectionPool(host='www.istitutobachelet.it', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.istitutobachelet.it', port=80) at 0x7f738f900a10>",
       "alerted": true
     },
     "https://www.istitutomoreschi.edu.it/": {
       "first_seen": "2026-10-08",
-      "count": 81,
+      "count": 82,
       "last_seen": "2026-10-28",
       "category": "SSL",
       "name": "N. MORESCHI",
@@ -4624,7 +4639,7 @@
     },
     "http://www.canossianecomo.it": {
       "first_seen": "2026-10-12",
-      "count": 67,
+      "count": 68,
       "last_seen": "2026-10-28",
       "category": "HTTP 403",
       "name": "ISTITUTO \"MATILDE DI CANOSSA\"",
@@ -4634,7 +4649,7 @@
     },
     "http://www.euroscuola.eu": {
       "first_seen": "2026-10-21",
-      "count": 28,
+      "count": 29,
       "last_seen": "2026-10-28",
       "category": "HTTP 500",
       "name": "Ist. Tec. - ind. Turismo - \"Euroscuola\"",
@@ -4644,7 +4659,7 @@
     },
     "http://www.islotto.edu.it": {
       "first_seen": "2026-10-27",
-      "count": 3,
+      "count": 4,
       "last_seen": "2026-10-28",
       "category": "Connessione",
       "name": "\"LORENZO LOTTO\"",
@@ -4654,7 +4669,7 @@
     },
     "http://icsantalucia.edu.it/": {
       "first_seen": "2026-10-27",
-      "count": 3,
+      "count": 4,
       "last_seen": "2026-10-28",
       "category": "Connessione",
       "name": "BERGAMO - S.LUCIA",
@@ -4664,7 +4679,7 @@
     },
     "http://www.icviapalmieri.edu.it": {
       "first_seen": "2026-10-27",
-      "count": 3,
+      "count": 4,
       "last_seen": "2026-10-28",
       "category": "Connessione",
       "name": "I.C DI VIA PALMIERI",
@@ -4674,7 +4689,7 @@
     },
     "http://www.collegiorotondi.it": {
       "first_seen": "2026-10-27",
-      "count": 3,
+      "count": 4,
       "last_seen": "2026-10-28",
       "category": "Connessione",
       "name": "IST PROF PER I SERVIZI COMMERCIALI COLLEGIO ROTONDI",
@@ -4684,7 +4699,7 @@
     },
     "http://www.casadegliangeli.it": {
       "first_seen": "2026-10-27",
-      "count": 3,
+      "count": 4,
       "last_seen": "2026-10-28",
       "category": "Connessione",
       "name": "Ist.Profes.-settore servizi-indirizzo:servizi socio-sanitari \"CASA DEGLI ANGELI\"",
@@ -4694,7 +4709,7 @@
     },
     "http://www.lazolla.it": {
       "first_seen": "2026-10-27",
-      "count": 3,
+      "count": 4,
       "last_seen": "2026-10-28",
       "category": "Connessione",
       "name": "LA ZOLLA",
@@ -4704,7 +4719,7 @@
     },
     "http://www.liceobramante.edu.it": {
       "first_seen": "2026-10-27",
-      "count": 3,
+      "count": 4,
       "last_seen": "2026-10-28",
       "category": "Connessione",
       "name": "LICEO - D. BRAMANTE",
@@ -4714,7 +4729,7 @@
     },
     "https://www.icpmonza.preziosine.it/": {
       "first_seen": "2026-10-28",
-      "count": 3,
+      "count": 4,
       "last_seen": "2026-10-28",
       "category": "Connessione",
       "name": "SCUOLA SECONDARIA DI 1° GR. \"PREZIOSISSIMO SANGUE\"",
@@ -4724,7 +4739,7 @@
     },
     "http://www.aurorabachelet.it": {
       "first_seen": "2026-10-28",
-      "count": 3,
+      "count": 4,
       "last_seen": "2026-10-28",
       "category": "Connessione",
       "name": "SCUOLA SECONDARIA DI 1° GR. BACHELET",
@@ -4734,7 +4749,7 @@
     },
     "http://www.scuolasanluigi.com": {
       "first_seen": "2026-10-28",
-      "count": 3,
+      "count": 4,
       "last_seen": "2026-10-28",
       "category": "Connessione",
       "name": "SCUOLA SECONDARIA DI 1° GR. SAN LUIGI",
@@ -4744,7 +4759,7 @@
     },
     "http://www.istitutotirinnanzi.it": {
       "first_seen": "2026-10-28",
-      "count": 3,
+      "count": 4,
       "last_seen": "2026-10-28",
       "category": "Connessione",
       "name": "SCUOLA SECONDARIA DI 1° GR. SAN MASSIMILIANO KOLBE",
@@ -4754,12 +4769,13 @@
     },
     "http://www.istitutocapirola.edu.it": {
       "first_seen": "2026-10-28",
-      "count": 2,
+      "count": 3,
       "last_seen": "2026-10-28",
       "category": "HTTP 403",
       "name": "I.I.S. V.CAPIROLA",
       "url": "http://www.istitutocapirola.edu.it",
-      "error": "403 Client Error: Forbidden for url: https://www.istitutocapirola.edu.it/"
+      "error": "403 Client Error: Forbidden for url: https://www.istitutocapirola.edu.it/",
+      "alerted": true
     }
   }
 }

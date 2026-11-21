@@ -11413,18 +11413,6 @@
     ]
   },
   "errors": {
-    "USR Lombardia - Bergamo": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Brescia": {
-      "count": 1,
-      "alerted": false
-    },
-    "USR Lombardia - Como": {
-      "count": 1,
-      "alerted": false
-    },
     "USR Lombardia - Cremona": {
       "count": 1,
       "alerted": false
